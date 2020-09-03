@@ -75,7 +75,7 @@ int main(int argc, char** argv) {
 FROM scratch
 
 COPY premier-programme /
-ENTRYPOINT ["premier-programme"]
+ENTRYPOINT ["/premier-programme"]
 
 ```
 
