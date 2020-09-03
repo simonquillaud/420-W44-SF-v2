@@ -3,7 +3,7 @@
 ---
 **NOTE**
 
-Ceci est un aide mémoire et non un cours ni une liste exhaustif de commandes à connaître pour un examen.
+Ceci est un aide mémoire et non un cours ni une liste exhaustive de commandes à connaître pour un examen.
 
 ---
 
