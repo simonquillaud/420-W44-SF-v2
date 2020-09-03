@@ -80,7 +80,7 @@ ENTRYPOINT ["premier-programme"]
 ```
 
 - À partir du fichier et de la documentation, décrivez ce que fait le fichier Dockerfile
-- Tapez la commande ```bash docker build --tag premier-programme:latest .```
+- Tapez la commande ```docker build --tag premier-programme:latest .```
 - Validez que l'image a bien été créée
 - Lancez un conteneur qui utilise votre image
 - Modifiez le programme précédent pour qu'il corresponde au listing suivant :
@@ -89,14 +89,14 @@ ENTRYPOINT ["premier-programme"]
 #include <iostream>
 
 int main(int argc, char** argv) {
-    std::cout << argv[1] << std::cout;
+    std::cout << argv[1] << std::endl;
 }
 ```
 
 - Modifiez votre Dockerfile afin que par défaut, le programme reçoive "!!Bonjour à tous !!" en paramètres
 - Reconstruisez votre image de conteneur
 - Essayez de lancer un nouveau conteneur en utilisant les mêmes lignes de commandes que précédemment
-- Essayez de lancer un nouveau conteneur en utilisant en ajoutant à la fin la chaîne de caractères ```bash "Un paramètre qui vient de l'extérieur du conteneur" ```
+- Essayez de lancer un nouveau conteneur en utilisant en ajoutant à la fin la chaîne de caractères ```"Un paramètre qui vient de l'extérieur du conteneur" ```
 
 <details>
     <summary>Installation de g++</summary>
