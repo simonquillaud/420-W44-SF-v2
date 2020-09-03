@@ -27,7 +27,7 @@ apt install docker
 
 - À partir d'un terminal ouvert précédemment, vous allez lancer votre premier conteneur à partir de l'image docker "hello-world" :
   - Faites un "docker image ls". Que constatez-vous ?
-  - Tapez la ligne de commande "docker run --rm hello-world"
+  - Tapez la ligne de commande "docker run hello-world"
   - Recherchez la signification des dernières lignes sur la documentation en ligne de docker
 - Faites un "docker ps". Voyez-vous quelque chose ?
 - Faites un "docker ps -a". Que constatez-vous ?
