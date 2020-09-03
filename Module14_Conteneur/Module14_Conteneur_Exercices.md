@@ -65,11 +65,11 @@ docker image history hello-world
 #include <iostream>
 
 int main(int argc, char** argv) {
-    std::cout << "Bonjour à tous" << std::cout;
+    std::cout << "Bonjour à tous" << std::endl;
 }
 ```
 
-- Pour compiler votre programme, utilisez la commande ```bash g++ premier-programme.cpp -o premier-programme -static ```
+- Pour compiler votre programme, utilisez la commande ```g++ premier-programme.cpp -o premier-programme -static ```
 - Créez le fichier "Docker" avec le contenu suivant :
 ```dockerfile
 FROM scratch
