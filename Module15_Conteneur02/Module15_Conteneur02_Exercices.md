@@ -33,7 +33,7 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 ### Exercice 2.1 - Nginx - premiers tests
 
 - Sur un premier terminal, lancez en arrière plan (-d) l'image "nginx" sans spécifier de redirection de port avec le nom "mon_nginx" (--name)
-- Faite un "nginx inspect mon_nginx" afin de trouver l'adresse du conteneur
+- Faite un "docker inspect mon_nginx" afin de trouver l'adresse du conteneur
 - Sur un autre terminal, lancez l'image "browsh/browsh" en mode intéractif (-it)
 - Faites un "Ctrl-l" et tapez l'adresse IP de votre serveur web. Le site par défaut d'Nginx devrait s'afficher. Pour quitter faites un "Ctrl-q" (pour les autres commandes faites un "F1").
 - À partir de votre navigateur favori, essayer de naviguer l'adresse IP que vous aviez. Essayez avec l'adresse locale.
