@@ -6,7 +6,7 @@ Note : créez un pour le module 15 puis un répertoire par exercice.
 
 ### Exercice 1.1 - Réseau par défaut (bridge)
 
-- Ouvrez deux terminaux, powershell ou bash, et sur chacun, lancez un conteneur de l'image "busybox".
+- Ouvrez deux terminaux, powershell ou bash, et sur chacun, lancez un conteneur de l'image "busybox" en mode intéractif.
 - Trouvez l'adresse IP de chaque conteneur
 - Effectuez une requête ICMP d'un conteneur vers l'autre. Qu'observez-vous ?
 - Essayez de faire une requête ICMP vers "www.google.com". Qu'observez-vous ?
@@ -22,7 +22,7 @@ Note : créez un pour le module 15 puis un répertoire par exercice.
 
 ### Exercice 1.3 - Réseau host ([Linux seulement](https://docs.docker.com/network/host/))
 
-- Lancez un conteneur de l'image "busybox" avec l'option "--network none"
+- Lancez un conteneur de l'image "busybox" avec l'option "--network host"
 - Essayez de déduire l'adresse IP du conteneur. Qu'observez-vous ?
 - Nettoyez vos conteneurs en supprimant ceux créés dans cet exercice.
 
