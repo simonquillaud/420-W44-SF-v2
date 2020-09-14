@@ -165,6 +165,7 @@ docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -p 3306:3306 -v 
 - Créez un nouveau conteneur avec les options précédentes en modifiant le chemin du montage ainsi qu'en ajoutant les variables d'environnement suivantes :
   - MYSQL_DATABASE=wordpress
   - MYSQL_USER=wordpress
+  - MYSQL_ROOT_PASSWORD=Passw0rd
   - MYSQL_PASSWORD=Passw0rd
 - Avec MySQL Workbench, essayez de vous connecter à la base de données wordpress avec le nom d'utilisateur "wordpress" et le mot de passe "Passw0rd"
 - Cherchez l'adresse IP du conteneur mysql
