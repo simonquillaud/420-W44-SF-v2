@@ -108,3 +108,87 @@ ENTRYPOINT ["dotnet", "webapp.dll"]
 - Demandez le nom de l'image d'un de vos collègues ou utilisez mon image "pifou/webapp"
 - Démarrez un conteneur avec cette image et validez que tout fonctionne
 - Nettoyez vos conteneurs en supprimant ceux créés dans cet exercice.
+
+## Exercice 5 - MySQL
+
+### Exercice 5.1 - MySQL - Base
+
+- Si ce n'est déjà fait sur votre environnement docker, installez MySQL Workbench (https://dev.mysql.com/downloads/file/?id=497518)
+- Lancez un conteneur à partir de l'image mysql :
+  - Nom : mysql
+  - Spécifiez que le container doit être détaché (-d)
+  - Fournissez la valeur "Passw0rd" pour la variable d'environnement "MYSQL_ROOT_PASSWORD" (Voir utilisation du -e dans la documentation)
+  - Liez le port 3306 local vers le port 3306 du container
+- Avec MySQL Workbench, validez que le tout marche :
+  - Connectez-vous
+  - Créez la base de données "test" (create database test;)
+  - Validez que la base de données est bien existantes (show databases;)
+- Arrêtez et supprimez le conteneur "mysql"
+- Recréez un nouveau conteneur mysql et connectez-vous de nouveau à MySQL et listez les bases de données. Que constatez-vous et pourquoi ?
+- Supprimez votre conteneur
+
+<details>
+    <summary>Solution</summary>
+
+```bash
+docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -p 3306:3306 mysql
+```
+
+</details>
+
+### Exercice 5.2 - MySQL - Volume
+
+- Créez vous un répertoire qui va contenir vos données pour MySQL
+- Réutilisez votre ligne de commande pour créer un conteneur MySQL avec les mêmes caractéristiques que précédemment et ajoutez le montage d'un volume qui lie le répertoire de données que vous venez de créer au répertoire "/var/lib/mysql"
+- Avec MySQL Workbench, validez que le tout marche :
+  - Connectez-vous
+  - Créez la base de données "test" (create database test;)
+  - Validez que la base de données est bien existantes (show databases;)
+- Arrêtez et supprimez le conteneur "mysql"
+- Recréez un nouveau conteneur mysql et connectez-vous de nouveau à MySQL et listez les bases de données. Que constatez-vous et pourquoi ?
+- Supprimez votre conteneur
+
+<details>
+    <summary>Solution</summary>
+
+```bash
+docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -p 3306:3306 -v /Users/pfl/tmp/msyql:/var/lib/mysql mysql
+```
+
+</details>
+
+## Exercice 5 - Wordpress - On fait parler plusieurs conteneurs ?
+
+### Exercice 5.1 - Wordpress - Version manuelle
+
+- Créez-vous un nouveau répertoire pour stocker une autre installation de bases de données
+- Créez un nouveau conteneur avec les options précédentes en modifiant le chemin du montage ainsi qu'en ajoutant les variables d'environnement suivantes :
+  - MYSQL_DATABASE=wordpress
+  - MYSQL_USER=wordpress
+  - MYSQL_PASSWORD=Passw0rd
+- Avec MySQL Workbench, essayez de vous connecter à la base de données wordpress avec le nom d'utilisateur "wordpress" et le mot de passe "Passw0rd"
+- Cherchez l'adresse IP du conteneur mysql
+- Créez un conteneur à partir de l'image wordpress en liant le port locale 8080 au port 80 et avec les variables d'environnement suivantes :
+  - WORDPRESS_DB_HOST=172.17.0.2
+  - WORDPRESS_DB_USER=wordpress
+  - WORDPRESS_DB_PASSWORD=Passw0rd
+  - WORDPRESS_DB_NAME=wordpress
+  - WORDPRESS_TABLE_PREFIX=wp_
+- Testez votre site web et vérifiez que cela fonctionne
+- Que pensez-vous de toutes ces manipulations ?
+
+<details>
+    <summary>Solution</summary>
+
+```bash
+docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=Passw0rd -p 3306:3306 -v /Users/pfl/tmp/msyql:/var/lib/mysql mysql
+
+docker run --rm --name wordpress -d -e WORDPRESS_DB_HOST=172.17.0.2 -e WORDPRESS_DB_USER=wordpress -e WORDPRESS_DB_PASSWORD=Passw0rd -e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_TABLE_PREFIX=wp_ -p 8080:80 wordpress
+```
+
+</details>
+
+### Exercice 5.2 - Wordpress - Un début d'orchestration ?
+
+- Lisez et exécutez les instructions présentes à la page suivante : https://docs.docker.com/compose/wordpress/
+- Quels sont les avantages d'un tel système ?
