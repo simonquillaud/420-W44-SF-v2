@@ -157,9 +157,9 @@ docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -p 3306:3306 -v 
 
 </details>
 
-## Exercice 5 - Wordpress - On fait parler plusieurs conteneurs ?
+## Exercice 6 - Wordpress - On fait parler plusieurs conteneurs ?
 
-### Exercice 5.1 - Wordpress - Version manuelle
+### Exercice 6.1 - Wordpress - Version manuelle
 
 - Créez-vous un nouveau répertoire pour stocker une autre installation de bases de données
 - Créez un nouveau conteneur avec les options précédentes en modifiant le chemin du montage ainsi qu'en ajoutant les variables d'environnement suivantes :
@@ -189,7 +189,7 @@ docker run --rm --name wordpress -d -e WORDPRESS_DB_HOST=172.17.0.2 -e WORDPRESS
 
 </details>
 
-### Exercice 5.2 - Wordpress - Un début d'orchestration ?
+### Exercice 6.2 - Wordpress - Un début d'orchestration ?
 
 - Lisez et exécutez les instructions présentes à la page suivante : https://docs.docker.com/compose/wordpress/
 - Quels sont les avantages d'un tel système ?
