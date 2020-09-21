@@ -71,7 +71,3 @@ kubectl delete deployment nginx
 
 </details>
 
-### Exercice 3.2 - Nginx - Liaison d'un port
-
-
-kubectl run navigateur --image=browsh/browsh -it --rm
