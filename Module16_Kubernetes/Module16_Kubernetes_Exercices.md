@@ -13,10 +13,10 @@ Ce module a pour but de vous faire explorer et découvrir kubernetes. Il peut ar
 - Affichez l'ensemble de namespaces de votre cluster
 - Affichez l'ensemble des pods de votre cluster en y incluant tous les namespaces
 - Réessayez les commandes précédentes en demandant un affichage plus complet avec un -o wide. Quelles informations obtenez-vous en plus ?
+- Réessayez les commandes en spécifiant non plus une sortie étendue, mais plus json, puis yaml
 - Affichez le contexte dans lequel vous êtes en faisant un "kubectl config view"
 - Affichez la liste des contextes avec un "kubectl config get-contexts"
 - Affichez le contexte courant avec un "kubectl config current-context"
-- Réessayez les commandes en spécifiant non plus une sortie étendue, mais plus json, puis yaml
 - Listez vos pods et choisissez en un dans la liste. Repérez le nom et le namespace :
   - Faites un "get pod" suivi du nom du pod suivi de "--namespace=\<lenom du namespace>"
   - Modifiez l'affichage pour extraire les données avec le format "yaml" et redirigez la sortie vers un fichier nommé "exempleExtractionPod.yml"
