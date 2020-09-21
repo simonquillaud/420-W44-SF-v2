@@ -73,5 +73,25 @@ kubectl delete deployment nginx
 
 ### Exercice 3.2 - Nginx - Liaison d'un port
 
+- Créez un déploiement nommé "mon-nginx" avec l'image nginx
+- Validez que le pod est bien créé en visualisant le pod et le déploiement
+- Créez de nouveau réplica de votre pod en tapant la commande suivante : ```kubectl scale deployment --replicas 2 mon-nginx```
+- Listez les pods et validez que vous en avez bien 2 maintenant
+- Exposez vos pods sur votre hôte local avec la commande suivante : ```kubectl expose deployments mon-nginx --port=80 --type=LoadBalancer```
+- Testez votre site
+- Supprimez les ressources créées
 
-kubectl run navigateur --image=browsh/browsh -it --rm
+<details>
+    <summary>Solution</summary>
+
+```bash
+kubectl create deployment mon-nginx --image=nginx
+kubectl get pods -o wide
+kubectl get deployments -o wide
+kubectl scale deployment --replicas 2 mon-nginx
+kubectl expose deployments mon-nginx --port=80 --type=LoadBalancer
+kubectl delete service mon-nginx
+kubectl delete deployment mon-nginx
+```
+
+</details>
