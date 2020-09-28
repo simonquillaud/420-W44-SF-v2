@@ -24,7 +24,7 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
   name: kubernetes-distant
 ```
 
-- Ajoutez l'utilisateur "kubernetes-admin-distant" :
+- Ajoutez l'utilisateur "kubernetes-distant-admin" :
 
 ```yaml
 - name: kubernetes-distant-admin
