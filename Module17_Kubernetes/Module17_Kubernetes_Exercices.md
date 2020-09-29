@@ -14,6 +14,8 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 
 ## Exercice 2 - Ajout du cluster distant et modification du contexte
 
+!!! Si vous êtes sous windows, ne passez pas par le Ubuntu de Windows mais par powershell !!!
+
 - Faites une copie de sauvegarde de votre fichier .kube/config 
 - Éditez le fichier et ajoutez une configuration dans propriété cluster avec le nom "kubernetes-distant" :
 
@@ -36,39 +38,45 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 - Créez vous un contexte avec la commande 'kubectl config set-context', spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster et l'utilisateur que vous venez de spécifier  (Voir démonstration)
 - Définissez votre nouveau context comme étant le contexte courant (use-context, voir démonstration)
 - Affichez les noeuds et les pods du cluster (tous les namespaces) et de votre namespace pour valider que tout fonctionne
-- Créez un fichier manifeste afin de créer votre espace de noms et appliques le
+- Créez un fichier manifeste afin de créer votre espace de noms et appliques le. Attention, étant donné que vous utilisez votre numéro de matricule comme nom, il faut le mettre entre guillemets sinon YAML va le prendre pour un entier et non une chaîne de caractères.
 - Validez que l'espace de noms existe bien
 
 ## Exercice 3 - Créez plusieurs déploiements - Sélection
 
 - Créez plusieurs déploiements avec les caractéristiques suivantes (un réplica) :
   - dep1.yaml :
-    - image : nginx-demos/hello
+    - image : nginxdemos/hello
+    - replica : 1
     - labels :
       - tier : frontend
       - env : unit
   - dep2.yaml :
-    - image : nginx-demos/hello
+    - image : nginxdemos/hello
+    - replica : 1
     - labels :
       - tier : backend
       - env : unit
   - dep3.yaml :
-    - image : nginx-demos/hello
+    - image : nginxdemos/hello
+    - replica : 1
     - labels :
       - tier : frontend
       - env : fonc
   - dep4.yaml :
-    - image : nginx-demos/hello
+    - image : nginxdemos/hello
+    - replica : 1
     - labels :
       - tier : backend
       - env : fonc
   - dep5.yaml :
-    - image : nginx-demos/hello
+    - image : nginxdemos/hello
+    - replica : 1
     - labels :
       - tier : frontend
       - env : accept
   - dep6.yaml :
-    - image : nginx-demos/hello
+    - image : nginxdemos/hello
+    - replica : 1
     - labels :
       - tier : backend
       - env : accept
@@ -105,7 +113,8 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 - Créez le déploiement d'un service qui vous permet d'accéder à vos 10 réplica :
   - service :
     - nom : mon-site
-    - ne spécifiez pas de port et ne créez donc pas de propriété nodePort
+    - port : 80
+    - ne spécifiez pas de port pour le node et ne créez donc pas de propriété nodePort
     - type : nodePort
     - matchLabels : voir exercice précédent
 - À partir d'un pod qui a un shell, essayez la commande suivante :
@@ -116,3 +125,7 @@ watch -n 1 wget -qO - mon-site | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+'
 
 - Cherchez le port d'exposition sur le noeud en affichant la liste des services
 - À partir de votre VM, naviguez l'adresse IP suivie du port
+
+## Exercice 6 - Livre d'or
+
+- Suivez les instructions du site https://kubernetes.io/docs/tutorials/stateless-application/guestbook/ afin de créer un livre d'or avec un site PHP et le serveur de cache redis
