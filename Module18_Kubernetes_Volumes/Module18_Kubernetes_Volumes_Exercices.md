@@ -45,6 +45,7 @@ spec:
   resources:
     requests:
       storage: 100Mi
+  volumeName: monpvnfs
 ```
 
 Une fois le PVC créé, vous pouvez l'utiliser et le monter dans un conteneur. Ici on monte le PVC "mon-pvc-nfs" vers le chemin /usr/share/nginx/html.
@@ -98,9 +99,8 @@ mount 10.100.1.6:/srv/exports /tmp/nfs
 Le but est de créer un déploiement avec 3 replica d'une image nginx et de servir un fichier html de votre création.
 
 - Créez un PV qui pointe sur le partage "/srv/exports/<numéro_matricule>/nginx_01" de 100Mo. Assurez-vous d'avoir créé le répertoire
-- Créez un PVC pour le PV
+- Créez un PVC pour le PV : quand vous créez votre PV et PVC ajoutez votre numéro de matricule dans le nom
 - Créez un déploiement pour 3 réplica de l'image nginx qui monte le PVC créé précédemment vers le répertoire "/usr/share/nginx/html"
 - Créez un service qui expose les réplica sur les noeuds
 - Dans le répertoire pointé par le PV du partage, créez un fichier index.html avec un contenu HTML
 - Validez que le tout fonctionne
-
