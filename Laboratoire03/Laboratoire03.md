@@ -1,6 +1,6 @@
-# Laboratoire 03
+# Laboratoire 03 - Kubernetes
 
-Le but de se laboratoire est de monter un site Wordpress avec MySQL. Wordpress doit avoir 3 replica.
+Le but de se laboratoire est de monter un site Wordpress avec MySQL dans Kubernetes. Wordpress doit avoir 3 replica.
 
 Le laboratoire s'effectue en groupe de 4 maximum. Vous devez créer vos objets dans un espace de nom qui contient la liste de vos matricules séparés par un tiret. Exemple "1234567-2134567-3214567-2234567".
 
@@ -10,7 +10,7 @@ Vous devez fournir :
 
 - Tous les fichiers YAML
 - Un dessin qui illustre les noeuds, les services et les pods ainsi que leurs relations
-- Une vidéo :
+- Une vidéo d'environ 10 mins (Maximum 15 mins) :
   - Explication de tous vos fichiers
   - Démonstration que le site fonctionne
   - Démonstration que vous êtes capable de faire une mise à l'échelle
