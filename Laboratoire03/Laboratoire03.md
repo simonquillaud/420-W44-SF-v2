@@ -21,7 +21,7 @@ Vous devez fournir :
 - Il faut passer les informations de la base de données à Wordpress et à MySQL par des variables d'environnement
 - Si vous exposez votre MySQL avec un service, vous pouvez le contacter avec son adresse DNS
 
-Pour que le montage du volume fonctionne bien pour MySQL, vous devez ajouter une propriété "securityContexte" dans la spec du pod ou du template et ajouter la clef "runAsUser: 2000" :
+Pour que le montage du volume fonctionne bien pour MySQL, vous devez ajouter une propriété "securityContexte" dans la spec du pod ou du template et ajouter la clef "runAsUser: 2000" (Merci à Kevin Ricard !) :
 
 ```yaml
 ...
