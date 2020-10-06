@@ -81,7 +81,7 @@ Activez le client pour NFS en allant dans les fonctionnalités Windows :
 Pour monter le partage dans le lecteur x :
 
 ```bash
-mount 10.100.1.6:/srv/exports x:
+mount 10.100.1.6:/srv/exports x: -o fileaccess=777
 ```
 
 ### Linux
