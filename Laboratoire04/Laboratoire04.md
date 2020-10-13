@@ -54,4 +54,4 @@ Le dépot de source doit avoir deux branches : master et develop.
 
 Le déploiement contient l'infrastructure et le site.
 
-***Si vous n'arrivez pas à déployer votre infrastructure, démontrez simplement le déploiement de votre application***
+***Si vous n'arrivez pas à déployer votre infrastructure, créez votre infrastructure manuellement et démontrez simplement le déploiement de votre application***
