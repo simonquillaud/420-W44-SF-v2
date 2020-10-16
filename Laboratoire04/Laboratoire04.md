@@ -20,7 +20,7 @@ Vous devez fournir :
   - Une démonstration de requête de tirage de develop vers master
   - Explication d'un de vos pipilines et des deux releases
   - Démontrez que les ressources sont créées dans Azure
-  - Démontrez que les environnements dev, pre-prod et prod fonctionnels
+  - Démontrez que les environnements dev, pre-prod et prod sont fonctionnels
 
 ## Étape 1 - Création du projet d'équipe dans Azure DevOps
 
