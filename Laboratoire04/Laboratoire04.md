@@ -46,7 +46,7 @@ Le dépot de source doit avoir deux branches : master et develop.
   - Release develop :
     - Déclenchement : automatique
     - Déploie sur l'environnement dev
-    - Si déploiement réussi : déploie sur l'environnement fonctionnel
+    - Si déploiement réussi : déploie sur l'environnement pre-prod
   - Release master :
     - Déclenchement : automatique
     - Déploie automatiquement sur l'environnement dev et pre-prod
