@@ -10,7 +10,7 @@ Vous devez fournir :
 
 - Une adresse Azure DevOps avec :
   - Un projet
-  - Un git
+  - Un git propre (sans fichier binaire et avec la structure demandée)
   - Vos fichiers de description d'infrastructure
   - Deux branches
   - Deux pipelines
