@@ -29,6 +29,15 @@ Vous devez fournir :
 - Ajoutez pfleon@csfoy.ca comme utilisateur et administrateur.
 - Créez un dépot Git.
 - Créez un projet Visual Studio .Net core MVC 3.1 avec authentification individuelle.
+- Modifications et validations que vous devez faire dans le fichier Startup.cs :
+  - Validation du bon type de base de données : dans la méthode "ConfigureServices", vérifiez que vous utilisez bien SqlServer et non un autre type de base de données sinon remplacez le UseSqlXYZ par UseSqlServer et ajoutez le package nuget "Microsoft.EntityFrameworkCore.SqlServer".
+  - Création de la structure de la BD au démarrage de l'application : dans la méthode "Configure" ajoutez un paramètre et l'appel à "EnsureCreated" 
+  ```csharp
+  public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context)
+  {
+            context.Database.EnsureCreated();
+            // ...
+  ```
 - Ajoutez le projet dans le dépot de source : le projet doit être placé dans le répertoire src à la racine du dépot.
 
 Le dépot de source doit avoir deux branches : master et develop.
@@ -38,6 +47,7 @@ Le dépot de source doit avoir deux branches : master et develop.
 - À partir du portail Azure (https://portal.azure.com), lancez la fenêtre de création d'une ressource de type "Webapp + SQL" : choisissez le nom d'utilisateur BD "monApplication" et le mot de passe "Passw0rd".
 - À la place de confirmer la création de la ressource, choisissez "Options d'automatisation" et téléchargez les fichiers associés (Fichiers ARM : Azure Resource Manager).
 - Copiez ces fichiers dans le gestionnaire de source : les fichiers doivent être placés dans le répertoire deployment à la racine du dépot.
+- (Si vous n'arrivez pas à créer l'infrastructure à partir des fichiers JSON, continuez la création manuelle : n'oubliez pas que vous avez trois environnements)
 
 ## Étape 3 - Créez des pipelines et release
 
