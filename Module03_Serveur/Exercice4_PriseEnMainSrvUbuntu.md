@@ -5,9 +5,6 @@
 - Système d'exploitation : Ubuntu 20.04 Lts
 
 
-
-
-
 ## Prise en main de votre serveur
 
 
