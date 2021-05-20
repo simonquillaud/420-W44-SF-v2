@@ -13,28 +13,9 @@
 
 
 Lors de l'installation, vous avez coché oui à l'installation d'un serveur SSH.
+SSH signifie Secure SHell. C’est un protocole qui permet de faire des connexions sécurisées (i.e. chiffrées) entre un serveur et un client SSH.
 
 <blockquote>Celui-ci va permettre aux utilisateurs d'accéder au système à distance, en rentrant leur login et leur mot de passe (ou avec un mécanisme de clefs).
-
-
-Cela signifie aussi qu’un pirate peut essayer d’avoir un compte sur le système (pour accéder à des fichiers sur le système ou pour utiliser le système comme une passerelle pour attaquer d’autres systèmes) en essayant plein de mots de passe différents pour un même login (il peut le faire de manière automatique en s’aidant d’un dictionnaire électronique). On appelle ça une attaque en force brute. Source : Les citations sur SSH proviennent de : Formation Debian GNU/Linux ECP, janvier 2013, document PDF.
-
-
-Il y a donc trois contraintes majeures pour garder un système sécurisé après avoir
-installé un serveur SSH :
-
-1. avoir un serveur SSH à jour au niveau de la sécurité, ce qui doit être le cas si vous
-faites consciencieusement les mises à jour de sécurité en suivant la procédure;
-2. que les mots de passe de TOUS les utilisateurs soient suffisamment complexes
-pour résister à une attaque en force brute ;
-3. surveiller les connexions en lisant régulièrement le fichier de log /var/log/auth.log.</blockquote>
-Source : Les citations sur SSH proviennent de : Formation Debian GNU/Linux ECP, janvier 2013, document PDF.
-
-
-<i>Nous aborderons la notion de mise de sécurité et la lecture des logs plus .tard.</i>
-
-## L’établissement d’une connexion SSH
-
 
 #### Le système de clefs de SSH
 <details>
@@ -52,6 +33,23 @@ contient la clef privée et a les permissions 600. Le fichier ssh_host_rsa_key.p
 3. Pour le prouver au client, il chiffre un message standard avec la clef secrète et l’envoie au client. Si le client retrouve le message standard en utilisant la clef secrète, il a la preuve que le serveur est bien le vrai serveur. 
 4. Une fois la clef secrète échangée, le client et le serveur peuvent alors établir un canal sécurisé grâce à la clef secrète commune (chiffrement symétrique).
 5. Une fois que le canal sécurisé est en place, le client va pouvoir envoyer au serveur le login et le mot de passe de l’utilisateur pour vérification. La canal sécurisé reste en place jusqu’à ce que l’utilisateur se déconnecte.
+
+
+Il y a donc trois contraintes majeures pour garder un système sécurisé après avoir installé un serveur SSH :
+
+1. avoir un serveur SSH à jour au niveau de la sécurité, ce qui doit être le cas si vous
+faites consciencieusement les mises à jour de sécurité en suivant la procédure;
+2. que les mots de passe de TOUS les utilisateurs soient suffisamment complexes
+pour résister à une attaque en force brute ;
+3. surveiller les connexions en lisant régulièrement le fichier de log /var/log/auth.log.
+
+Source : Les citations sur SSH proviennent de : Formation Debian GNU/Linux ECP, janvier 2013, document PDF.</blockquote>
+
+
+
+<i>Nous aborderons la notion de mise de sécurité et la lecture des logs plus .tard.</i>
+
+## L’établissement d’une connexion SSH
 
 
 
