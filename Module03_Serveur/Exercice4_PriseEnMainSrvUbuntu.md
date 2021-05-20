@@ -17,14 +17,14 @@ SSH signifie Secure SHell. C’est un protocole qui permet de faire des connexio
 
 <blockquote>Celui-ci va permettre aux utilisateurs d'accéder au système à distance, en rentrant leur login et leur mot de passe (ou avec un mécanisme de clefs).
 
-#### Le système de clefs de SSH
-<details>
-<blockquote>SSH utilise la cryptographie asymétrique RSA ou DSA. En cryptographie asymétrique, chaque personne dispose d’un couple de clefs : une clé publique et une clef privée. La clé publique peut être librement publiée tandis que la clef privée doit rester secrète. La connaissance de la clef publique ne permet pas d’en déduire la clé privée.
-</blockquote>
+**Le système de clefs de SSH**
+
+SSH utilise la cryptographie asymétrique RSA ou DSA. En cryptographie asymétrique, chaque personne dispose d’un couple de clefs : une clé publique et une clef privée. La clé publique peut être librement publiée tandis que la clef privée doit rester secrète. La connaissance de la clef publique ne permet pas d’en déduire la clé privée.
+
 Un serveur SSH dispose d’un couple de clefs RSA stocké dans le répertoire /etc/
 ssh/ et généré lors de l’installation du serveur. Le fichier ssh_host_rsa_key
 contient la clef privée et a les permissions 600. Le fichier ssh_host_rsa_key.pub contient la clef publique et a les permissions 644.
-</details>
+
 
 **Voici les étapes de l’établissement d’une connexion SSH**
 
