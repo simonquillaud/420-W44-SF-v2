@@ -1,9 +1,8 @@
 # Exercice 4 - prise en main de votre serveur
 
-
-Évaluation : formative
-Durée estimée : 1 heure
-Système d'exploitation : Ubuntu 20.04 Lts
+- Évaluation : formative
+- Durée estimée : 1 heure
+- Système d'exploitation : Ubuntu 20.04 Lts
 
 
 
