@@ -44,7 +44,7 @@ Un serveur SSH dispose d’un couple de clefs RSA stocké dans le répertoire /e
 ssh/ et généré lors de l’installation du serveur. Le fichier ssh_host_rsa_key
 contient la clef privée et a les permissions 600. Le fichier ssh_host_rsa_key.pub contient la clef publique et a les permissions 644.
 </details>
-### Voici les étapes de l’établissement d’une connexion SSH :
+###### Voici les étapes de l’établissement d’une connexion SSH :
 
 
 1. Le serveur envoie sa clef publique au client. Celui-ci vérifie qu’il s’agit bien de la clef du serveur, s’il l’a déjà reçue lors d’une connexion précédente.
@@ -79,7 +79,38 @@ $top
 - Taper les mêmes commandes dans un autre terminal, mais cette fois sur votre poste client. 
 - Au besoin, vérifier le manuel de chaque commande (man).
 
-####Vérifier les logs du serveur
+###### Faire les mises à jour 
+
+<blockquote>L’instruction **apt update** va rechercher les mises à jour disponibles pour votre système et vos programmes installés en se basant sur les sources définies dans /etc/apt/source.list. Un fichier d’index est créé pour lister les mises à jour disponibles. Il servira de référence pour l’installation de nouvelles mises à jour.
+
+L’option **apt upgrade** installe les mises à jour identifiée avec apt update sans supprimer les paquets installés. S’il y a de nouvelles dépendances à installer, les paquets peuvent être installés ou non selon le type de commande utilisée apt, apt-get ou aptitude.
+
+Les options **apt dist-upgrade** ou **full-upgrade** sont identiques, utiliser l’une ou l’autre revient donc au même.
+
+Ces deux options agissent plus « intelligemment » que la fonction upgrade. En plus de mettre à jour les paquets existants, elles vont également être en mesure de gérer les dépendances. Si de nouveaux paquets doivent être installés pour satisfaire des dépendances, ils le seront. Ceux qui ne sont plus utiles, sont supprimés et les paquets essentiels ou requis, sont installés. Les paquets les plus importants sont traités en priorité.
+
+**Dois-je utiliser apt upgrade ou apt full-upgrade?**
+
+Dans un environnement hautement critique et qui doit rester stable, la commande upgrade est plus sûr. Si vous désirez faire une opération de mise à jour courante et minorer le risque, il en est de même. Seuls les paquets actuellement installés sont traités. Les risques de dysfonctionnement suite à la suppression ou l’installation d’un nouveau paquet sont réduits.
+
+Dans la plupart des autres cas, l’option dist-upgrade ou full-upgrade est à privilégier car vous obtiendrez toutes les dernières mises à jour sur votre système et du noyau. Lorsque vous souhaitez changer de version majeure de distribution (par exemple pour passer de Debian 8 à Debian 9), c’est cette commande que vous devez utiliser.
+
+Dans tous les cas, je vous conseille vivement de réaliser une sauvegarde avant toute mise à jour et de réaliser des essais au préalable sur un environnement de test.
+Source : [https://www.lecoindunet.com/difference-apt-update-upgrade-full-upgrade](https://www.lecoindunet.com/difference-apt-update-upgrade-full-upgrade) </blockquote>
+
+- Tapez les commandes suivantes sur votre serveur : 
+```bash
+$sudo apt update
+$sudo apt upgrade
+```
+- Tapez les commandes suivantes sur poste client : 
+
+```bash
+$sudo apt update
+$sudo apt full-upgrade
+```
+
+###### Vérifier les logs du serveur
 
 
 - Tapez la commande suivante sur votre  poste client et sur le serveur pour observer les connexions.
@@ -88,7 +119,7 @@ $top
 ```bash
 $tail /var/log/auth.log
 ```
-### Vérifier les droits sur des fichiers et des répertoires
+###### Vérifier les droits sur des fichiers et des répertoires
 
 
 Pour comprendre les droits : [https://doc.ubuntu-fr.org/droits](https://doc.ubuntu-fr.org/droits)
@@ -125,3 +156,4 @@ $ls -l /home/{votre usager}
 ```
 Vous pouvez visualiser mes résultats [ici](Images/droit.png).
 
+**Fin exercice 4**
