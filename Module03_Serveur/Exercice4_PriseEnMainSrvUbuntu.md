@@ -23,12 +23,11 @@ Cela signifie aussi qu’un pirate peut essayer d’avoir un compte sur le syst�
 Il y a donc trois contraintes majeures pour garder un système sécurisé après avoir
 installé un serveur SSH :
 
-1 avoir un serveur SSH à jour au niveau de la sécurité, ce qui doit être le cas si vous
+1. avoir un serveur SSH à jour au niveau de la sécurité, ce qui doit être le cas si vous
 faites consciencieusement les mises à jour de sécurité en suivant la procédure;
-2 que les mots de passe de TOUS les utilisateurs soient suffisamment complexes
+2. que les mots de passe de TOUS les utilisateurs soient suffisamment complexes
 pour résister à une attaque en force brute ;
-3 surveiller les connexions en lisant régulièrement le fichier de log /var/log/
-auth.log.</blockquote>
+3. surveiller les connexions en lisant régulièrement le fichier de log /var/log/auth.log.</blockquote>
 Source : Les citations sur SSH proviennent de : Formation Debian GNU/Linux ECP, janvier 2013, document PDF.
 
 
