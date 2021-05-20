@@ -5,3 +5,6 @@ obj
 **/*.zip
 **/.vs
 **/*.user
+
+/Documentation/*
+/Gestion/*
