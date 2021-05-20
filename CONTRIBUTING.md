@@ -1,0 +1,3 @@
+- Été 2020 : Jean-Pierre Duchesneau 14 premier cours.
+- Été 2020 : Pierre-François Léon 16 dernier cours.
+- Été 2021 : Jean-Pierre Duchesneau
