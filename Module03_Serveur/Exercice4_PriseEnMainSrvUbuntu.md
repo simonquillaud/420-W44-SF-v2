@@ -13,7 +13,7 @@
 
 
 Lors de l'installation, vous avez coché oui à l'installation d'un serveur SSH.
-<details> 
+
 <blockquote>Celui-ci va permettre aux utilisateurs d'accéder au système à distance, en rentrant leur login et leur mot de passe (ou avec un mécanisme de clefs).
 
 
@@ -33,7 +33,7 @@ Source : Les citations sur SSH proviennent de : Formation Debian GNU/Linux ECP, 
 
 
 <i>Nous aborderons la notion de mise de sécurité et la lecture des logs plus .tard.</i>
-</details>
+
 ## L’établissement d’une connexion SSH
 
 
