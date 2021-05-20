@@ -25,8 +25,8 @@ Un serveur SSH dispose d’un couple de clefs RSA stocké dans le répertoire /e
 ssh/ et généré lors de l’installation du serveur. Le fichier ssh_host_rsa_key
 contient la clef privée et a les permissions 600. Le fichier ssh_host_rsa_key.pub contient la clef publique et a les permissions 644.
 </details>
-###### Voici les étapes de l’établissement d’une connexion SSH :
 
+**Voici les étapes de l’établissement d’une connexion SSH**
 
 1. Le serveur envoie sa clef publique au client. Celui-ci vérifie qu’il s’agit bien de la clef du serveur, s’il l’a déjà reçue lors d’une connexion précédente.
 2. Le client génère une clef secrète et l’envoie au serveur, en chiffrant l’échange avec la clef publique du serveur (chiffrement asymétrique). Le serveur déchiffre cette clef secrète en utilisant sa clé privée, ce qui prouve qu’il est bien le vrai serveur.
