@@ -1,0 +1,21 @@
+\BOOKMARK [1][-]{section.1}{D\351finition}{}% 1
+\BOOKMARK [1][-]{section.2}{Pr\351requis VMware tools}{}% 2
+\BOOKMARK [1][-]{section.3}{On a besoin de quoi au juste ?}{}% 3
+\BOOKMARK [1][-]{section.4}{Espace disque}{}% 4
+\BOOKMARK [1][-]{section.5}{Outils compl\351mentaires}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Installation de Git}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{Installer la machine virtuelle Java}{section.5}% 7
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Cr\351ation d'un application Java}{subsection.5.2}% 8
+\BOOKMARK [2][-]{subsection.5.3}{Installer .NET Core }{section.5}% 9
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Installation de .NET Core SDK}{subsection.5.3}% 10
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Cr\351ation d'une application C \043}{subsection.5.3}% 11
+\BOOKMARK [2][-]{subsection.5.4}{Syst\350me de gestion de base de donn\351es}{section.5}% 12
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Installation MySQL Serveur 8.0}{subsection.5.4}% 13
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Tester l'installation de MySQL}{subsection.5.4}% 14
+\BOOKMARK [1][-]{section.6}{Enrionnement de d\351veloppement}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{IDE : Eclipse}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.2}{Visual Studio Code}{section.6}% 17
+\BOOKMARK [1][-]{section.7}{Espace disque apr\350s installation}{}% 18
+\BOOKMARK [1][-]{section.8}{Comp\351tences d\351velopp\351es en partie dans l'exercice 2}{}% 19
+\BOOKMARK [1][-]{section.8}{Sommaire}{}% 20
+\BOOKMARK [1][-]{section*.1}{R\351f\351rences}{}% 21

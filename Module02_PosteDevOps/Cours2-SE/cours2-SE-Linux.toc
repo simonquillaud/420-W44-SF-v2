@@ -1,0 +1,10 @@
+\babel@toc {french}{}
+\beamer@sectionintoc {1}{Installation d’un système d’exploitation}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Procédures de configuration d’un disque dur}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Procédure d'installation}{10}{0}{1}
+\beamer@sectionintoc {2}{Installation Ubuntu 20.04 LTS}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Espace disque}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Système de fichiers}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{FHS}{17}{0}{2}
+\beamer@subsectionintoc {2}{4}{Partitions}{20}{0}{2}
+\beamer@subsectionintoc {2}{5}{Logical Volume Manager}{25}{0}{2}
