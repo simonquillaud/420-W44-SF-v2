@@ -47,15 +47,11 @@ Source : Les citations sur SSH proviennent de : Formation Debian GNU/Linux ECP, 
 
 
 
-<i>Nous aborderons la notion de mise de sécurité et la lecture des logs plus .tard.</i>
+<i>Nous aborderons la notion de sécurité et la lecture des logs plus tard.</i>
 
 ## L’établissement d’une connexion SSH
 
-
-
-
-
-### Connexion depuis votre poste de développeur
+**Connexion depuis votre poste de développeur**
 
 
 Utilisez votre machine Ubuntu client (poste de développeur) pour établir une connexion avec votre serveur.
@@ -74,12 +70,13 @@ $df
 $pwd
 $top
 ```
-- Taper les mêmes commandes dans un autre terminal, mais cette fois sur votre poste client. 
+- Taper les mêmes commandes dans un autre terminal, mais cette fois pour votre poste client. 
 - Au besoin, vérifier le manuel de chaque commande (man).
 
 ###### Faire les mises à jour 
 
-<blockquote>L’instruction **apt update** va rechercher les mises à jour disponibles pour votre système et vos programmes installés en se basant sur les sources définies dans /etc/apt/source.list. Un fichier d’index est créé pour lister les mises à jour disponibles. Il servira de référence pour l’installation de nouvelles mises à jour.
+<blockquote>
+L’instruction **apt update** va rechercher les mises à jour disponibles pour votre système et vos programmes installés en se basant sur les sources définies dans /etc/apt/source.list. Un fichier d’index est créé pour lister les mises à jour disponibles. Il servira de référence pour l’installation de nouvelles mises à jour.
 
 L’option **apt upgrade** installe les mises à jour identifiée avec apt update sans supprimer les paquets installés. S’il y a de nouvelles dépendances à installer, les paquets peuvent être installés ou non selon le type de commande utilisée apt, apt-get ou aptitude.
 
@@ -117,17 +114,17 @@ $sudo apt full-upgrade
 ```bash
 $tail /var/log/auth.log
 ```
-###### Vérifier les droits sur des fichiers et des répertoires
+###### Vérifier des droits sur des fichiers et des répertoires
 
 
-Pour comprendre les droits : [https://doc.ubuntu-fr.org/droits](https://doc.ubuntu-fr.org/droits)
-- Vérifier les droits sur le fichier des logs
+Pour comprendre les droits : [https://doc.ubuntu-fr.org/droits](https://doc.ubuntu-fr.org/droits), nous y reviendrons dans un prochain cours.
+- Vérifier les droits sur le fichier des logs :
 
 
 ```bash
 $ls -l /var/log/auth.log
 ```
-- Garder l'information pour la comparer plus tard. Notez les droits de cette façon :
+- Garder les informations pour la comparer plus tard. Notez les droits de cette façon :
 
 
     **exemple appliqué sur /var/log/auth.log**
