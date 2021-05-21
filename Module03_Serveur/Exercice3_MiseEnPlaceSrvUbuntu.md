@@ -14,6 +14,7 @@ Système d'exploitation : Ubuntu 20.04 serveur Lts
 
 - Sélectectionnez le dossier E21_4391_420244_ITV_JPD
 - Créer une nouvelle machine virtuelle avec comme nom H21_4391_420W44_ITV_Ub_2004Srv_Matricule
+
 - Donnez-lui les spécifications suivantes :
   -- CPU : 2
   -- Mémoire : 4 Go
