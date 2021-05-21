@@ -59,7 +59,7 @@ Cette section demande demande plusieurs manipulations, soyez prudent !
 - Sélectionnez create a logical volume
 - Dans la nouvelle fenêtre changer le Name pour LV-Root avec une taille de 15G.
 - Vous avez maintenant un premier volume logique sur monté sur / de 15G
-- Faite la même chose pour créer des volumes logiques lv-home pour /home de /10G et le restes pour lv-var /var de 19.992 G.
+- Faite la même chose pour créer des volumes logiques lv-home pour /home de /10G et le restes pour lv-var /var de 14.992 G.
 - Toutes vos partitions sont maintenant créer vous pouvez sélectionnez [Terminé] et par la suite confirmer l'action.
 
 Images de références : <a href="Images/PartitionFen1.png">Partitions</a> , <a href="Images/PartitionFen2.png">Partition deuxième fenêtre</a>.
