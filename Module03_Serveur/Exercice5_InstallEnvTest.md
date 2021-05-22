@@ -36,7 +36,7 @@ $chmod a+x espace.sh
 
 
 
-[Cliquez pour voir  mon résultat](df1.png)
+[Cliquez pour voir  mon résultat](Images/df1.png)
 ```bash
 
 - Procéder à la mise à jour 
