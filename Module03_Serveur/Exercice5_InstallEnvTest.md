@@ -137,7 +137,7 @@ $sudo mysql -u root -p
 ```
 -- Entrez le nouveau mot de passe de root tel que définit plus haut.
 
-[Cliquez pour voir  mon résultat](Images/conMySQLe.png)
+[Cliquez pour voir  mon résultat](Images/conMySQL.png)
 **Fin exercice 5**
 
 
