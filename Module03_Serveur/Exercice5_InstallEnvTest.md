@@ -116,6 +116,28 @@ $sudo service mysql statussudsud
 ```
 [Cliquez pour voir  mon résultat](Images/espace2.png)
 
+
+- Comme pour votre poste client, vérifier les connexions possibles au serveur MySQL : 
+
+```bash
+sudo apt install net-tools
+netstat -paunt |grep 3306
+```
+Résultat attendus : 
+```bash
+tcp     0    0    127.0.0.1:33060     0.0.0.0:*     LISTEN
+tcp     0    0    127.0.0.1:3306      0.0.0.0:*     LISTEN
+```
+### Tester l’installation de MySQL
+
+Le client MySQL a également été installé. Nous allons l’utiliser pour tester notre installation.
+— Tapez la commande suivante pour accéderr au client :
+```bash
+$sudo mysql -u root -p
+```
+-- Entrez le nouveau mot de passe de root tel que définit plus haut.
+
+[Cliquez pour voir  mon résultat](Images/conMySQLe.png)
 **Fin exercice 5**
 
 
