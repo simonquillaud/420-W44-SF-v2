@@ -37,12 +37,14 @@ $chmod a+x espace.sh
 
 
 [Cliquez pour voir  mon résultat](Images/espace.png)
-```bash
 
 - Procéder à la mise à jour 
+```bash
 $sudo apt update
 $sudo apt upgrade
 ```
+- et de nouveau, lancer votre script espace.sh
+- Vous ne devriez pas voir un différence notable car une mise à jour ne prend pas beaucoup d'espace disque.
 
 ## Installation de Git
 
@@ -53,6 +55,42 @@ $sudo apt upgrade
 $sudo apt install git
 $git --version
 ```
+## Installation MySQL Serveur 8.0
+- Nous allons utiliser la version mysql-server-8.0
+
+```bash
+$sudo apt install mysql-server-8.0
+```
+- Répondez oui
+- Installer le script de sécurité MySQL.([Documentation MySQL](https://dev.mysql.com/doc/refman/5.7/en/mysql-secure-installation.html))
+- Pour rappel, ce programme vous permet d'améliorer la sécurité de votre installation MySQL de la manière suivante :
+    - Vous pouvez définir un mot de passe pour les comptes root.
+    - Vous pouvez supprimer les comptes root qui sont accessibles depuis l'extérieur de l'hôte local.
+    - Vous pouvez supprimer les comptes d'utilisateurs anonymes.
+    - Vous pouvez supprimer la base de données de test (à laquelle tous les utilisateurs, même les utilisateurs anonymes, peuvent accéder par défaut) et les privilèges qui permettent à quiconque d'accéder aux bases de données dont le nom commence par test_.
+
+```bash
+$sudo mysql_secure_installation
+```
+- Le plugin validate_password peut être utilisé pour vérifier la force des mots de passe. Si le plugin n'est pas installé, mysql_secure_installation demande à l'utilisateur s'il doit l'installer. Tous les mots de passe saisis ultérieurement sont vérifiés à l'aide du plugin s'il est activé. 
+- Le système vous demandera le mot de passe root MySQL. Tapez Y
+- Ensuite, le programme d’installation décrira les fonctionnalités du plugin Validate Password. Vous devrez sélectionner le niveau de sécurité. 
+    - Vous devez utiliser  **2 pour STRONG** . 
+    - Nous devons placer notre serveur comme si nous étions en production, et non en développement comme votre poste client. Donc le niveau de sécurité et plus importants.
+    - Vous devrez par la suite répondre niveaux de politique de validation des mots de passe suivante  :  STRONG Longueur >=8 numérique, chagement de la case, caractères spéciaux et ne pas être un mot du dictionnaire.
+    - **Exemple** : e4l*j3Wj
+
+- Votre mot de passe root devra suivre toutes les exigences que vous avez configurées à l’étape précédente.
+- Le système vous demandera les fonctions de sécurités suivantes : 
+    - Supprimer les utilisateurs anonymes ? Y
+    - Désactiver la connexion root à distance ? Y
+    - Supprimer la base de données de test et y accéder ? Y
+    - Recharger les tables de privilèges maintenant ? Y
+
+- Vérifier que MySQL fonctionne, entrez le commande : 
+```bash
+$sudo service mysql status
+``` 
 
 **Fin exercice 5**
 
