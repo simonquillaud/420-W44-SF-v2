@@ -89,8 +89,15 @@ $sudo mysql_secure_installation
 
 - Vérifier que MySQL fonctionne, entrez le commande : 
 ```bash
-$sudo service mysql status
+$sudo service mysql statussudsud
 ``` 
+- Par courriosité, lancé votre script d'espace disque. Vous verrez combien d'espace disque utilise le serveur de base de donnée MySQL sans la présence des bases de données bien sur. 
+ 
 
+```bash
+./espace.sh
+```
+[Cliquez pour voir  mon résultat](Images/espace2.png)
+ 
 **Fin exercice 5**
 
