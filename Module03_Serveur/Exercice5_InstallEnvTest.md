@@ -67,6 +67,19 @@ $sudo apt upgrade
 $sudo apt install git
 $git --version
 ```
+
+## Installation NGINX
+
+```bash
+$sudo apt install nginx
+```
+- Répondez oui
+- Vérifier le fonctionnement du serveur en tapant la commande suivante :
+```bash
+$systemctl status nginx
+```
+- Véfifier le fonctionnement de votre serveur Web dans votre navigateur du poste client. ([images](Images/nginx.png))
+
 ## Installation MySQL Serveur 8.0
 - Nous allons utiliser la version mysql-server-8.0
 
@@ -105,7 +118,7 @@ $sudo mysql_secure_installation
 
 - Vérifier que MySQL fonctionne, entrer le commande : 
 ```bash
-$sudo service mysql statussudsud
+$sudo service mysql status
 ``` 
 - Par curiosité, lancer votre script d'espace disque. Vous verrez combien d'espace disque utilise le serveur de base de données MySQL sans la présence des bases de données bien sûr. 
 
@@ -115,6 +128,7 @@ $sudo service mysql statussudsud
 ./espace.sh
 ```
 [Cliquez pour voir  mon résultat](Images/espace2.png)
+- Remarquez seule les partitions /root et /var ont changés.sudo
 
 
 - Comme pour votre poste client, vérifier les connexions possibles au serveur MySQL : 
@@ -138,6 +152,41 @@ $sudo mysql -u root -p
 -- Entrez le nouveau mot de passe de root tel que définit plus haut.
 
 [Cliquez pour voir  mon résultat](Images/conMySQL.png)
+
+- Quelques vérfications d'usages : 
+```bash
+show databases;
+select user, host from mysql.user;
+```
+- Création d'un usager pour l'administration :
+
+```bash
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'change-with-your-secure-password';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+```
+- Vérifier la présence de l'usager : 
+```bash
+select user, host from mysql.user;
+quit
+```
+
+
+## Le langage de programmation PHP
+
+Mise en situation :  Nous allons avoir besoins du langage de programmation PHP pour la mise ne production de notre site Web avec WorPress dans les futures exercices.
+
+```bash
+$sudo apt install php-fpm php-mysql
+```
+- Répondez oui 
+
+## Installation de phpMyAdmin 
+- Vous pouvez procédez à l'installation de phpMyAdmin en suivant ce tutoriel en ligne :
+[How To Install and Secure phpMyAdmin with Nginx on an Ubuntu 20.04 Server](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-nginx-on-an-ubuntu-20-04-server)
+
+
+## Finalisation
+- Lancez le script espace.sh
+- Analysez l'espace disque utilisé pour notre installation.
+
 **Fin exercice 5**
-
-
