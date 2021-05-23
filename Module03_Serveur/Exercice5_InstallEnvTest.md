@@ -1,18 +1,23 @@
 ﻿# Exercice 5 - Installation d'un environnement de tests
 
 
+
 - Évaluation : formative
 - Durée estimée : 2 heures
 - Système d'exploitation : Ubuntu 20.04 Lts Serveur
 
 
+
 ## Mise à jour du système
+
 
 
 Il est une bonne habitude de mettre à jour vos dépôts et votre système avant de procéder à des installations.
 
 
+
 Utilisez votre machine Ubuntu client (poste de développeur) pour établir une connexion avec votre serveur.
+
 
 
 - Vérifier l'espace disque avant l'installation des applications supplémentaires.
@@ -25,15 +30,18 @@ $nano espace.sh
 Fichier="espaceDisque.txt"
 
 
+
 date >> $Fichier
 df -H | grep /dev/sda >> $Fichier
 df -H | grep /dev/mapper/vgo*  >> $Fichier
+
 
 
 cat $Fichier
 ```
 - Sauvegardez votre fichier en tapant sur Crtl+X et répondez Yes
 - Faite la commande suivante pour rendre le script bash exécutable : 
+
 
 
 ```bash
@@ -45,7 +53,9 @@ $chmod a+x espace.sh
 
 
 
+
 [Cliquez pour voir  mon résultat](Images/espace.png)
+
 
 
 - Procéder à la mise à jour 
@@ -57,7 +67,9 @@ $sudo apt upgrade
 - Vous ne devriez pas voir une différence notable, car une mise à jour ne prend pas beaucoup d'espace disque.
 
 
+
 ## Installation de Git
+
 
 
 ```bash
@@ -68,7 +80,9 @@ $sudo apt install git
 $git --version
 ```
 
+
 ## Installation NGINX
+
 
 ```bash
 $sudo apt install nginx
@@ -80,8 +94,10 @@ $systemctl status nginx
 ```
 - Véfifier le fonctionnement de votre serveur Web dans votre navigateur du poste client. ([images](Images/nginx.png))
 
+
 ## Installation MySQL Serveur 8.0
 - Nous allons utiliser la version mysql-server-8.0
+
 
 
 ```bash
@@ -96,6 +112,7 @@ $sudo apt install mysql-server-8.0
     - Vous pouvez supprimer la base de données de test (à laquelle tous les utilisateurs, même les utilisateurs anonymes, peuvent accéder par défaut) et les privilèges qui permettent à quiconque d'accéder aux bases de données dont le nom commence par test_.
 
 
+
 ```bash
 $sudo mysql_secure_installation
 ```
@@ -108,12 +125,14 @@ $sudo mysql_secure_installation
     - **Exemple** : e4l*j3Wj
 
 
+
 - Votre mot de passe root devra suivre toutes les exigences que vous avez configurées à l’étape précédente.
 - Le système vous demandera les fonctions de sécurités suivantes : 
     - Supprimer les utilisateurs anonymes ? Y
     - Désactiver la connexion root à distance ? Y
     - Supprimer la base de données de test et y accéder ? Y
     - Recharger les tables de privilèges maintenant ? Y
+
 
 
 - Vérifier que MySQL fonctionne, entrer le commande : 
@@ -124,6 +143,7 @@ $sudo service mysql status
 
 
 
+
 ```bash
 ./espace.sh
 ```
@@ -131,34 +151,40 @@ $sudo service mysql status
 - Remarquez seule les partitions /root et /var ont changés.sudo
 
 
+
 - Comme pour votre poste client, vérifier les connexions possibles au serveur MySQL : 
+
 
 ```bash
 sudo apt install net-tools
 netstat -paunt |grep 3306
 ```
-Résultat attendus : 
+Résultat attendu : 
 ```bash
 tcp     0    0    127.0.0.1:33060     0.0.0.0:*     LISTEN
 tcp     0    0    127.0.0.1:3306      0.0.0.0:*     LISTEN
 ```
 ### Tester l’installation de MySQL
 
+
 Le client MySQL a également été installé. Nous allons l’utiliser pour tester notre installation.
-— Tapez la commande suivante pour accéderr au client :
+— Tapez la commande suivante pour accéder au client :
 ```bash
 $sudo mysql -u root -p
 ```
--- Entrez le nouveau mot de passe de root tel que définit plus haut.
+-- Entrez le nouveau mot de passe de root tel que défini plus haut.
+
 
 [Cliquez pour voir  mon résultat](Images/conMySQL.png)
 
-- Quelques vérfications d'usages : 
+
+- Quelques vérifications d'usages : 
 ```bash
 show databases;
 select user, host from mysql.user;
 ```
 - Création d'un usager pour l'administration :
+
 
 ```bash
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'change-with-your-secure-password';
@@ -171,17 +197,22 @@ quit
 ```
 
 
+
 ## Le langage de programmation PHP
 
-Mise en situation :  Nous allons avoir besoins du langage de programmation PHP pour la mise ne production de notre site Web avec WorPress dans les futures exercices.
+
+Mise en situation :  Nous allons avoir besoin du langage de programmation PHP pour la mise ne production de notre site Web avec WorPress dans les futurs exercices.
+
 
 ```bash
 $sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
 
+
 ```
 - Répondez oui 
 
-- Maitenant vous devez éditer le fichier de configuration du site virtuel par défaut de Nginx.
+
+- Maitenant, vous devez éditer le fichier de configuration du site virtuel par défaut de Nginx.
 - Ajoutez les lignes suivantes :
 ```bash
 server {
@@ -190,14 +221,17 @@ server {
         root /var/www/html;
         index index.php;
 
+
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
         fastcgi_pass unix:/run/php/php7.4-fpm.sock;
     }
 }
 
+
 ```
 [Image du fichier modifier](Images/default.png)
+
 
 - Enregistrez et fermez le fichier puis activez le fichier de configuration de l'hôte virtuel Nginx avec la commande suivante :
 ```bash
@@ -214,15 +248,19 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 - Enfin, redémarrez le service Nginx pour appliquer les changements de configuration :
 
+
 ```bash
 $sudo systemctl restart nginx
 ```
 
+
 **Vérifier le fonctionnement de PHP**
+
 
 - Éditez le fichier info.php dans votre répertoire racine du serveur Web (/var/www/html) avec le code php en procédant ainsi: 
 ```bash
 sudo nano /var/www/html/info.php
+
 
 #contenu du fichier
 <?php
@@ -230,16 +268,21 @@ phpinfo();
 ?>
 ```
 
+
 - Exécutez ce fichier dans votre navigateur en tapant l'URL suivant :
 
-***[adresse ip du serveur]\info.php***
+
+***[adresse IP du serveur]\info.php***
+
 
 [Image du navigateur](Images/info.png)
 
-- Un fichier info.php permet d'afficher les paramètres de PHP. Ces informations sont utiles si vous souhaitez vérifier votre configuration d’hébergement ou exécuter un logiciel qui nécessite des modules PHP spécifiqueé
-- Après avoir vérifier l'information, dans un environnement de production vous devriez suprimmer ce fichier.
+
+- Un fichier info.php permet d'afficher les paramètres de PHP. Ces informations sont utiles si vous souhaitez vérifier votre configuration d’hébergement ou exécuter un logiciel qui nécessite des modules PHP spécifiques.
+- Après avoir vérifié l'information, dans un environnement de production vous devriez supprimer ce fichier.
 ## Finalisation
 - Lancez le script espace.sh
 - Analysez l'espace disque utilisé par vos installations.
+
 
 **Fin exercice 5**
