@@ -176,17 +176,67 @@ quit
 Mise en situation :  Nous allons avoir besoins du langage de programmation PHP pour la mise ne production de notre site Web avec WorPress dans les futures exercices.
 
 ```bash
-$sudo apt install php-fpm php-mysql
+$sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
+
 ```
 - Répondez oui 
 
-## Installation de phpMyAdmin 
-- Vous pouvez procédez à l'installation de phpMyAdmin en suivant ce tutoriel en ligne :
-[How To Install and Secure phpMyAdmin with Nginx on an Ubuntu 20.04 Server](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-nginx-on-an-ubuntu-20-04-server)
+- Maitenant vous devez éditer le fichier de configuration du site virtuel par défaut de Nginx.
+- Ajoutez les lignes suivantes :
+```bash
+server {
+        listen 80;
+        server_name test.example.com;
+        root /var/www/html;
+        index index.php;
 
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+    }
+}
 
+```
+[Image du fichier modifier](Images/default.png)
+
+- Enregistrez et fermez le fichier puis activez le fichier de configuration de l'hôte virtuel Nginx avec la commande suivante :
+```bash
+$sudo ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/
+```
+-Ensuite, vérifiez la configuration Nginx pour éviter  toute erreur de syntaxe avec la commande suivante :
+```bash
+$sudo nginx -t
+```
+- Vous devriez obtenir le résultat suivant :
+```bash
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+- Enfin, redémarrez le service Nginx pour appliquer les changements de configuration :
+
+```bash
+$sudo systemctl restart nginx
+```
+
+**Vérifier le fonctionnement de PHP**
+
+- Éditez le fichier info.php dans votre répertoire racine du serveur Web (/var/www/html) avec le code php en procédant ainsi: 
+```bash
+sudo nano /var/www/html/info.php
+
+#contenu du fichier
+<?php
+phpinfo();
+?>
+```
+
+- Exécutez ce fichier dans votre navigateur en tapant l'URL suivant :
+***[adresse ip du serveur]\info.php***
+[Image du navigateur](Images/info.png)
+- Un fichier info.php permet d'afficher les paramètres de PHP. Ces informations sont utiles si vous souhaitez vérifier votre configuration d’hébergement ou exécuter un logiciel qui nécessite des modules PHP spécifiqueé
+- Après avoir vérifier l'information, dans un environnement de production vous devriez suprimmer ce fichier.
 ## Finalisation
 - Lancez le script espace.sh
-- Analysez l'espace disque utilisé pour notre installation.
+- Analysez l'espace disque utilisé par vos installations.
 
 **Fin exercice 5**
