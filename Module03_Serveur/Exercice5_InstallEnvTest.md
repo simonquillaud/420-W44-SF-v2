@@ -232,7 +232,9 @@ phpinfo();
 
 - Exécutez ce fichier dans votre navigateur en tapant l'URL suivant :
 ***[adresse ip du serveur]\info.php***
+
 [Image du navigateur](Images/info.png)
+
 - Un fichier info.php permet d'afficher les paramètres de PHP. Ces informations sont utiles si vous souhaitez vérifier votre configuration d’hébergement ou exécuter un logiciel qui nécessite des modules PHP spécifiqueé
 - Après avoir vérifier l'information, dans un environnement de production vous devriez suprimmer ce fichier.
 ## Finalisation
