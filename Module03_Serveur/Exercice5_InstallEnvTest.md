@@ -206,13 +206,14 @@ Mise en situation :  Nous allons avoir besoin du langage de programmation PHP po
 
 ```bash
 $sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
-
-
 ```
 - Répondez oui 
 
-
 - Maitenant, vous devez éditer le fichier de configuration du site virtuel par défaut de Nginx.
+- Éditez le fichier suivant : 
+```bash
+$sudo nano /etc/nginx/sites-available/default
+```
 - Ajoutez les lignes suivantes :
 ```bash
 server {
