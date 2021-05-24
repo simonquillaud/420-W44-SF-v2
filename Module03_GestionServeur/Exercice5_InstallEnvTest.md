@@ -1,10 +1,10 @@
-﻿# Exercice 5 - Installation d'un environnement de tests
+﻿# Exercice 6 - Administratin système
 
 
 
 - Évaluation : formative
 - Durée estimée : 2 heures
-- Système d'exploitation : Ubuntu 20.04 Lts Serveur
+- Système d'exploitation : Ubuntu 20.04 Lts Client et serveur
 
 
 
@@ -232,7 +232,7 @@ server {
 
 ```
 [Image du fichier modifier](Images/default.png)
-
+***Attention***: J'ai supprimé des commentaires dans le fichier pour pouvoir faire une capture de l'ensemble nous concernant.
 
 - Enregistrez et fermez le fichier puis activez le fichier de configuration de l'hôte virtuel Nginx avec la commande suivante :
 ```bash
