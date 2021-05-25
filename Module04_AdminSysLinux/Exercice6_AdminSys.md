@@ -377,4 +377,3 @@ $ping {domaine de votre choix}
 ### Lecture complémentaire :
 
 [Tutoriel pour comprendre et changer de noyaux Linux avec Ubuntu 20.04 LTS](https://lafibre.info/serveur-linux/noyaux-linux/)
-
