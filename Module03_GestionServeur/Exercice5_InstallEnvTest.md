@@ -1,6 +1,4 @@
-﻿# Exercice 6 - Administratin système
-
-
+﻿# Exercice 5 - Installation d'un environnement de tests 
 
 - Évaluation : formative
 - Durée estimée : 2 heures
