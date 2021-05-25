@@ -370,10 +370,11 @@ $ping {Adresse IP DNS}
 $ping {domaine de votre choix}
 ```
 - Si tous fonctionnent, vous êtes satisfait ;-)
+
 **Fin exercice 6**
 
 
+### Lecture complémentaire :
 
-##Lecture complémentaire :
 [Tutoriel pour comprendre et changer de noyaux Linux avec Ubuntu 20.04 LTS](https://lafibre.info/serveur-linux/noyaux-linux/)
 
