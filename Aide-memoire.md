@@ -1,4 +1,4 @@
-# Commandes communes
+ls# Commandes communes
 
 ---
 **NOTE**
@@ -84,6 +84,16 @@ Ceci est un aide mémoire et non un cours ni une liste exhaustive de commandes �
 | ps | Affiche les processus |
 | top | Affiche les processus en temps réel |
 | kill | Arrête un processus |
+
+## Gestion du noyau et des modules
+
+| Commande |  Courte description |
+|---|---|
+| lsmode | Afficher l'état des modules dans le noyau Linux  |
+| modprode | Ajouter et supprimer des modules du noyau Linux  |
+| modinfo | | kill | Arrête un processusafficher des informations sur un module du noyau Linux  |
+ |
+
 
 ## Commande réseau
 
