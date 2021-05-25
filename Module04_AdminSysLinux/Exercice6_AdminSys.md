@@ -323,7 +323,7 @@ $man which
 
 
 <hr>
-### Vérifier votre configuration réseau
+## Vérifier votre configuration réseau
 
 **Sur votre serveur :**
 
