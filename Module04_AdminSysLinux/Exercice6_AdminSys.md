@@ -42,9 +42,9 @@ cat /proc/modules | less
 - Ce sont tous les modules actifs avec le kernel.
 - Tapez la commande :
 ```bash
-$lsmode |less
+$lsmod |less
 ```
-- Faite man lsmode, y a t'il un manuel pour cette commande ? Non
+- Faite man lsmod, y a t'il un manuel pour cette commande ? Non
 - Cherchez sur le Web pour trouver des informations.
 - On vous proposera aussi de lire sur modprobe et modinfo.
 - Essayer la commande suivante: 
@@ -177,7 +177,7 @@ www-data
 
 
 <details>
-cat /etc/password |grep www-data
+cat /etc/passwd |grep www-data
 </details>
 
 
