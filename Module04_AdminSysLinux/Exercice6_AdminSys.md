@@ -307,7 +307,7 @@ Vous faites une recherche sur la racine (/) donc dans des répertoires ou vous n
 
 
 Changez la commande en ajoutant sudo devant et ça vas fonctionner. Mais le temps de réponse est un peu long, car vous lui avez demandé de chercher dans toutes l'arborescence de fichier (/) et non seulement dans l'emplacement courante (.).
-</details>q
+</details>
 
 
 - Taper maintenant la commande :
@@ -323,6 +323,7 @@ $man which
 
 
 <hr>
+
 ## Vérifier votre configuration réseau
 
 **Sur votre serveur :**
