@@ -40,12 +40,12 @@ Le temps alloué en classe est d'une (1) séance.
 
    Cette procédure doit démontrer le bon fonctionnent du site Web Wordpress.
 
-Vous devez fournir :
+## Vous devez fournir :
 
 - Votre fichier avec toutes les parties demandées. Vous pouvez utiliser les formats suivant : Word (docx) ou Markdown (md).
 - Un dessin qui illustre le poste client, le serveur, les services et ainsi que leurs relations
 
-Références à consulter :
+## Références à consulter :
 
 - WordPress : https://fr-ca.wordpress.org/
 - Installation de WordPress sur Ubuntu : https://www.linuxshelltips.com/install-wordpress-on-ubuntu/, attention il s'agit d'une installation sur Apache et non Nginx.# Laboratoire 01 - Procédure d'installation d'une application Web
