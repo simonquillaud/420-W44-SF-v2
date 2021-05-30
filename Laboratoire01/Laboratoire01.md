@@ -36,7 +36,8 @@ Le temps alloué en classe est d'une (1) séance.
    - Nom d'usager pour le programme au sein du système et dans l'application.
    - Liste des commandes nécessaires pouvant être exécutées par une tierce personne.
 
-5. Procédure de validation de l'installation
+5. Procédure de validation de l'installation.
+
    Cette procédure doit démontrer le bon fonctionnent du site Web Wordpress.
 
 Vous devez fournir :
