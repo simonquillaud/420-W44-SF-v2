@@ -1,4 +1,4 @@
-ls# Commandes communes
+# Commandes communes
 
 ---
 **NOTE**
@@ -89,7 +89,7 @@ Ceci est un aide mémoire et non un cours ni une liste exhaustive de commandes �
 
 | Commande |  Courte description |
 |---|---|
-| lsmode | Afficher l'état des modules dans le noyau Linux  |
+| lsmod | Afficher l'état des modules dans le noyau Linux  |
 | modprode | Ajouter et supprimer des modules du noyau Linux  |
 | modinfo | Afficher des informations sur un module du noyau Linux  |
 
