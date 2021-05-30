@@ -4,7 +4,7 @@
 
 **Contexte :** Le laboratoire s'effectue en groupe de 2 personnes.
 
-**Remise :** Vous devez déposer votre travail dans l'espace prévu sur LÉA au plus tard, le 7 juin à 11h59.
+**Remise :** Vous devez déposer votre travail dans l'espace prévu sur LÉA au plus tard, le 7 juin à 23h59.
 Le temps alloué en classe est d'une (1) séance.
 
 ## Voici les sections qui doivent être incluses dans votre procédure:
