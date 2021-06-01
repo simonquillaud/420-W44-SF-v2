@@ -1,4 +1,5 @@
-﻿# Exercice 6 - Administration système
+﻿# Exercice 7 - Accès distant avec SSH
+
 
 - Évaluation : formative
 - Durée estimée : 2 heures
@@ -6,374 +7,298 @@
 
 
 **Objectifs :**
-- Localiser l'emplacement et la taille du noyau (kernel) Linux
-- Localiser les modules associés au noyau de Linux
-- Vérifier les modules chargés en mémoire
-- Localiser les fichiers sources de Linux
-- Utiliser des commandes d'administration système
-
-## Environnement Linux
-
-- Connectez-vous à votre serveur depuis votre station de travail.
-- Indiquez la version de votre noyau :
-
-```bash
-$cat /proc/version 
-# Ou 
-$uname -r
-```
-- Localisez le  noyau Linux et donnez sa taille :
-
-```bash
-$cd /boot
-```
-- Dans ce répertoire, le noyau compressé et binaire Linux commence avec le mot vmlinuz-*version*.
-- Regardez son nom complet et sa taille :
-
-```bash
-$ls -lh
-```
-- À partir des liens symboliques, essayez de déterminer qu'elle est la version utilisée.
-
-- Pour voir les modules qui peuvent être associés au noyau : 
-```bash
-cat /proc/modules | less
-```
-- Ce sont tous les modules actifs avec le kernel.
-- Tapez la commande :
-```bash
-$lsmode |less
-```
-- Faite man lsmode, y a t'il un manuel pour cette commande ? Non
-- Cherchez sur le Web pour trouver des informations.
-- On vous proposera aussi de lire sur modprobe et modinfo.
-- Essayer la commande suivante: 
-```bash
-$modinfo cryptd
-```
-- Vous voyez un module qui est responsable de cryptographies asynchrones.
-- En y regardant de plus près, voyez-vous un module nommé ip_qtable (firewall Linux) ?
-- Taper maintenant la commande :
-```bash
-$sudo iptables -vnL 
-```
-- Cette commande affiche les règles du pare-feu par défaut. Actuellement il n'y a aucune règle de pare-feu sur votre serveur.
-- Taper la commande 
-```bash
-$lsmod|grep iptable
-```
-[Pour en savoir un peu plus sur iptable](https://www.linuxtricks.fr/wiki/iptables-quelques-trucs-utiles)
-- Vous pouvez refaire l'ensemble de la partie précédente sur votre poste client. Pour voir s’il y a des différences.
 
 
-## Commandes d'administration  système
+- Utilisiser des clés privées et publiques
 
 
-### Les disques 
-- Vous connaissez déjà la commande :
-```bash
-$df -h
-```
-- Essayons maintenant 
-```bash
-$sudo fdisk -l | less
-```
-- Essayons maintenant les commandes pour voir les partitions LVM: 
-```bash
-$sudo pvdisplay
-$sudo vgdisplay
-$sudo lvdisplay
-```
-- Afficher le contenu du fichier /etc/fstab
+- Gérerer un serveur à distance
 
 
-```bash
-$sudo cat /etc/fstab
-```
-**Question** : Quel est l'utilité du fichier /etc/fstab ?
-- Essayez man fstab
+- Sécuriser l'accès SSH
 
 
+## Utilisation de votre clé SSH sur GitHub
+
+
+- Connectez-vous votre station de travail Ubuntu.
+- Prenez la clé publique générée lors de l'exercice 1 et publiez-la sur votre compte GitHub. Bien sûr, si vous n'avez pas de compte créez-en un. Vous pouvez-vous aidé du livre Pro Git page 163. Ce livre est  disponible sur Léa.
+- Rendez-vous sur mon dépôt à l'adresse [https://github.com/jpduchesneauCegep/ITV_Exercice7](https://github.com/jpduchesneauCegep/ITV_Exercice7)
+- Faite un Fork de mon dépôt. Voir dans le coin droite cet outil.
+**Question**: Qu'est-ce qu'un "fork" en Git?
 <details>
-Le fichier fstab (file systems table) est la table des différents systèmes de fichiers sur un ordinateur sous Unix/Linux : il contient une liste des disques utilisés au démarrage et des partitions de ces disques. Pour chaque partition, il indique comment elle sera utilisée et intégrée à l’arborescence du système de fichiers global (c'est-à-dire le point de montage).
-</details>
-### Gestion des processus
+Les utilisateurs qui n’ont pas la permission de pousser sur un dépôt peuvent en faire un fork (créer leur propre copie), pousser des commits sur cette copie et ouvrir une requête de tirage (Pull Request)
+depuis leur fork vers le projet principal. Ce modèle permet au propriétaire de garder le contrôle total sur ce qui entre dans le dépôt et quand, tout en autorisant les contributions des utilisateurs non fiables.
 
 
-- Tapez la commande 
-```bash
-$ps 
-```
-- Vous voyez les processus appartenant à votre usager.
-- Ajouter les paramètres suivants : 
-```bash
-$ps aux
-```
-- Vous voyez maintenant l'ensemble des processus de votre système. Remarquer la dernière ligne, elle représente la commande que vous venez d'exécuter  qui est elle aussi un processus.
-
-
-- Tapez la commande :
-```bash
-$ps -ef
-```
-
-
-**Question** : Indiquer  quel est le processus qui est au tout début et qui est considéré comme le père de tous les processus
-
-
-<details>
-
-
-```bash
-UID      PID     PPID 
-
-
-root      1        0
-```
+Source : Pro Git
 
 
 </details>
 
 
-- Tapez la commande :
-```bash
-$ps aux |grep mysql
-```
-- Vous devriez voir deux processus : 
-    - Le premier est le processus du serveur MySQL (/usr/sbin/mysqld)
-    - le deuxième est votre commande ps aux...
-    - 
-**Question**: comment allez-vous faire pour trouvez les processus du serveur Web ?
+- Récupérer votre fork don mon dépôt par la commande git clone nom de votre copie sur votre poste de travail.
+- Modifier le fichier README.md en y ajoutant votre nom dans la liste des contributeurs.
+- Pousser votre modification sur votre dépôt sur Git Hub avec la commande push. Si vous avez bien inséré votre clé SSH sur GitHub, vous ne devriez pas avoir besoin de vous authentifier.
+- Sur votre page de GitHub, faites une demande de Pull Request pour que j'accepte de modifier le dépôt principal de votre contribution. Soyez gentil, écrivez un message avec votre demande. ;-)
 
 
-<details>
+Votre clé SSH pourra être utilisée toute la session entre votre poste client et votre compte GitHub.
 
 
-```bash
-$ps aux |grep nginx
-```
-Résultat : 
-</details>
+## Utilisation de votre clé SSH sur votre serveur de test
 
 
-**Question** : qui est le propriétaire du premier processus nginx ?
-<details>
-root
-
-
-</details>
-
-
-
-**Question** : qui est propriétaire des processus suivant  ?
-
-
-<details>
-www-data
-</details>
-
-
-**Question** : trouvez le numéro de l'usager qui est propriétaire des processus suivant ?
-
-
-<details>
-cat /etc/password |grep www-data
-</details>
-
-
-**Question** est-ce que cet usager à accès au Shell ?
-<details>
-non :
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-</details>
-
-
-**Question** est-ce que cet usager est membre d'un groupe ?
-<details>
-oui :
-cat /etc/group |grep www-data
-</details>
-
-<hr>
-
-**Sur votre poste client :**
-- tapez la commande top
+- À l'aide de la commande scp copiez votre clé SSH sur votre serveur :
 
 
 
 ```bash
-$top
+$scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/autorized_keys
+#Exemple sur mon poste :
+$scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/autorized_keys
 ```
-- Remarquez les informations suivantes : le nombre total de tâches affichées, l'utilisation du CPU, la mémoire vive et la partition d'échange SWAP.
-- Laissez la commande top et ouvrez le navigateur Firefox
-- Prennez en note le PID et ouvrez une deuxième console et taper la commande suivante : 
-
-```bash
-$kill -9 {No du processus (PID)}
-# Fait man kill pour comprendre le signal -9
-```
-
-
-## La recherche de fichiers
-
-
-- Taper la commande :
+- Vous pouvez par la suite vous connecter au serveur : 
 
 
 ```bash
-$cd
+$scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/autorized_keys
+#Exemple sur mon poste :
+$scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/autorized_keys
 ```
-
-
-**Question**  : Dans quel répertoire vous ramène cette commande  ? 
-
-
-<details>
-- utiliser pwd pour trouver
-
-
-- Vouz devez être dans votre répertoire d'usager
-
-
-Remarque : votre répertoire personnel par défaut est indiqué par le tilde dans l’invite de commandes.
-</details>
-
-
-- Taper la commande :
+## Création d'un fichier de configuration personnel pour SSH
+Lorsque vous installez SSH, un répertoire ~/.ssh est créé automatiquement. Ce répertoire contient votre clé publique, votre clé privée et un fichier known_hosts. Votre configuration est également stockée ici.
+Au moins sur Ubuntu, le fichier de configuration SSH n'est pas créé par défaut. Vous pouvez facilement créer ce fichier en utilisant la commande touch comme ceci :
 ```bash
-$touch toto
-#suivie de :
-$locate toto
+$touch ~/.ssh/config
 ```
-***Attention***: Au besoin installer la commande ***mlocate***.
 
 
-**Question** : Est-ce que votre fichier nouvellement créé a été trouvé ?
+**Ajouter un profil SSH dans le fichier de configuration**
+Ce fichier va vous permettre de garder les informations de connexions sur les différentes machines sur lesquels vous devez vous connecter par SSH.
 
 
-<details>
-Non
-
-
-Locate, cherche dans une base de données. Si celle-ci n'a pas été mie à jour. Vous ne pouvez pas trouver les informations.
-Pour mettre à jour la base de données sur lequel se fie l'index utilisé par la commande locate, il faut utiliser la commande **sudo updatedb** (régulièrement).
-</details>
-
-
-
-- Taper la commande sudo updatedb et refaire ensuite la commande locate toto vous devriez maintînt trouver le fichier toto.
-
-
-- Taper maintenant la commande :
+Disons que vous vous connectez à un serveur dont l'IP est 10.100.2.50. Votre nom d'utilisateur est jpduches et le serveur est utilisé pour héberger votre site Web. Pour renforcer la sécurité de SSH, vous utilisez le port 1500 au lieu du port SSH 22 par défaut.
+Vous pouvez ajouter toutes ces informations de la manière suivante dans votre fichier ~/.ssh/config
+```bash
+Host website
+        Hostname 10.100.2.50
+        User jpduches
+        port 1500
+```     
+- Il suffit de sauvegarder les informations dans le fichier. Il n'est pas nécessaire de redémarrer un service.
+- Maintenant, au lieu d'écrire une longue commande comme celle-ci :
 
 
 ```bash
-$touch toto2
-#suivie de :
-$find . -name toto2
-```
-**Question** : Est-ce que le fichier nouvellement créé a été trouvé ?
-<details>
-Oui
+ssh jpduches@10.100.2.50 -p 1500
+``` 
 
 
-find, cherche dans le système de fichier. La commande n'a pas besoin d'index. La command est un outil puissant qui permet aux administrateurs système de localiser et de gérer des fichiers et des répertoires en fonction d'un large éventail de critères de recherche. Il peut trouver des répertoires et des fichiers par leur nom, leur type ou leur extension, leur taille, leurs autorisations, etc.
-Son apprentissage vous fera gagner beaucoup de temps.
-
-
-La syntaxe générale de la commande find est :
-```bash
-
-
-$find {path} {name -of-file or dir-to-search} {action-to-take}
-```
-- path : spécifie le répertoire de recherche
-- name -of-file or dir-to-search :Nom du fichier ou du répertoire à rechercher
-- action-to-take : comme copier, supprimer, déplacer, etc.
-</details>
-
-
-- Taper maintenant la commande :
+- Vous pouvez simplement utiliser cette commande (la complétion par tabulation fonctionne également) :
 
 
 ```bash
-$find / -name toto2
-```
-**Question** : pourquoi avez-vous un message d'erreur ?
+ssh website
+``` 
+Vous ajouter autant de Hosts que vous en avez besoin.
 
 
-<details>
-Vous faites une recherche sur la racine (/) donc dans des répertoires ou vous n'avez pas de droit de lecture.
+Vous pouvez toujours vous référer à la page de manuel de ssh_config pour en savoir plus sur les paramètres que vous pouvez utiliser lors de la création de votre fichier de configuration SSH.
+## Sécuriser l'accès SSH du serveur de test
 
 
-Changez la commande en ajoutant sudo devant et ça vas fonctionner. Mais le temps de réponse est un peu long, car vous lui avez demandé de chercher dans toutes l'arborescence de fichier (/) et non seulement dans l'emplacement courante (.).
-</details>q
+Les fichiers de configuration de SSH sont situés dans /etc/ssh/. Il est nécessaire de les sauvegarder avant de les modifier. 
+- Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
 
 
-- Taper maintenant la commande :
-
-
-```bash
-$which  toto
-#et en suite :
-$which find
-#suivi de :
-$man which
-```
-
-
-<hr>
-## Vérifier votre configuration réseau
-
-**Sur votre serveur :**
-
-Pour vérifier la configuration de votre réseau :
-
-
-- D'abord vérification des interfaces
-```bash
-$ip a
-#et en suite :
-$ifconfig
-```
-
-
-- La passerelle doit être vérifiée pour savoir si on peut sortir du réseau local 
-```bash
-route -n 
-#ou
-netstat -nr
-# Vérifier la réponse de la passerelle par un ping 
-$ping {Adresse IP passerelle}
-```
-
-
-- Par la suite, nous voulons savoir si la résolution de nom fonctionne : 
-```bash
-# Résolution de nom au niveau local :
-cat /etc/hosts
-# Résolution de nom au niveau des serveurs DNS
-cat /etc/resolv.conf
-resolvectl status 
-```
-
-
-- Vérifier si vous atteigniez les serveurs DNS : 
-
+- Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
 
 ```bash
-$ping {Adresse IP DNS}
-```
-- Au final ou au début ;-)
-- Ping sur un FQDN (Full qualified domain name)
-```bash
-$ping {domaine de votre choix}
-```
-- Si tous fonctionnent, vous êtes satisfait ;-)
+$cp /etc/ssh/sshd_config /etc/ssh/sshd_configOld 
+#au besoin récupérer votre fichier ainsi : 
+$cp /etc/ssh/sshd_configOld /etc/ssh/sshd_config
+``` 
 
-**Fin exercice 6**
+![Dossier ssh](/images/DossierSSH.png)
+
+##10 Techniques pour sécuriser votre serveur SSH : ##
+
+
+**1- Désactiver les mots de passe vides :**
+
+
+Oui, il est possible d'avoir des comptes utilisateurs sous Linux sans aucun mot de passe. Si ces utilisateurs essaient d'utiliser SSH, ils n'auront pas besoin de mots de passe pour accéder au serveur via SSH également.
+
+
+C'est un risque pour la sécurité. Vous devriez interdire l'utilisation de mots de passe vides. Dans le fichier /etc/ssh/sshd_config, veillez à définir l'option PermitEmptyPasswords sur no.
+
+
+***PermitEmptyPasswords no***
+
+
+**2- Changer le port SSH** 
+
+
+Si vous connaissez les bases de SSH, vous savez déjà que SSH utilise le port 22 par défaut.
+
+
+Lorsque vous vous connectez à un serveur via SSH, la plupart du temps, vous ne fournissez aucune information sur le port. Dans ce cas, votre connexion est dirigée vers le port 22 du serveur SSH.
+
+
+Vous pouvez modifier le port par défaut de 22 à un numéro de port de votre choix en suivant les étapes suivantes :
+- Localisez la ligne qui contient le port 22 (si elle est commentée par #, supprimez également le #).
+- Changez la ligne en Port 2522 (ou tout autre nombre de votre choix entre 1024 et 65535).
+- Assurez-vous que le nouveau port est autorisé par les pare-feu (si vous en avez).
+- Redémarrez le démon ssh avec sudo systemctl restart sshd.
+
+
+À partir de maintenant, vous devrez spécifier le port pour établir la connexion ssh ou utiliser votre fichier de configuration.
+
+
+**3- Désactiver la connexion root via SSH**
+
+
+L'utilisation du serveur en tant que root lui-même devrait être interdite. C'est risqué et cela ne laisse aucune trace d'audit. Des mécanismes comme sudo existent uniquement pour cette raison.
+
+
+Si vous avez ajouté des utilisateurs sudo sur votre système, vous devez utiliser cet utilisateur sudo pour accéder au serveur via SSH au lieu de root.
+
+
+- Désactiver la connexion de root en modifiant l'option PermitRootLogin et en lui attribuant la valeur no :
+
+
+***PermitRootLogin no***
+
+
+
+
+**4- Configurer le délai d'inactivité**
+
+
+L'intervalle de délai d'inactivité est la durée pendant laquelle une connexion SSH peut rester active sans aucune activité. Ces sessions inactives constituent également un risque pour la sécurité. C'est une bonne idée de configurer le délai d'inactivité.
+
+
+Le délai d'attente est exprimé en secondes et par défaut il est de 0. Vous pouvez le changer en 300 pour conserver un délai d'attente de cinq minutes.
+***ClientAliveInterval 300***
+
+
+Après cet intervalle, le serveur SSH enverra un message de vie au client. S'il ne reçoit pas de réponse, la connexion sera fermée et l'utilisateur final sera déconnecté.
+
+
+Vous pouvez également contrôler le nombre de fois qu'il envoie le message de vie avant de se déconnecter :
+***ClientAliveCountMax 2***
+
+
+**5- Autorisez l'accès SSH à des utilisateurs sélectionnés uniquement***
+
+
+En matière de sécurité, vous devez suivre le principe du moindre privilège. Ne donnez pas de droits lorsque cela n'est pas nécessaire.
+Vous avez probablement plusieurs utilisateurs sur votre système Linux. Devez-vous autoriser l'accès SSH à chacun d'entre eux ? Peut-être pas.
+Une approche dans ce cas serait d'autoriser l'accès SSH à quelques utilisateurs sélectionnés et de le restreindre pour tous les autres utilisateurs.
+
+
+***AllowUsers User1 User2***
+
+
+Vous pouvez également ajouter des utilisateurs sélectionnés à un nouveau groupe et autoriser uniquement ce groupe à accéder à SSH.
+
+
+***AllowGroups ssh_group***
+
+
+Vous pouvez également utiliser les options DenyUsers et DenyGroups pour refuser l'accès à SSH à certains utilisateurs et groupes.
+
+
+**6- Atténuer automatiquement les attaques par force brute**
+
+
+Pour contrecarrer les attaques SSH par force brute, vous pouvez utiliser un outil de sécurité comme Fail2Ban.
+Fail2Ban vérifie les tentatives de connexion échouées à partir de différentes adresses IP. Si ces mauvaises tentatives franchissent un seuil dans un intervalle de temps donné, il interdit à l'IP d'accéder à SSH pendant une certaine période.
+
+
+Vous pouvez configurer tous ces paramètres en fonction de vos préférences et de vos besoins. Il y a un guide d'introduction détaillé sur l'utilisation de Fail2Ban que vous pouvez lire.
+
+
+https://linuxhandbook.com/fail2ban-basic/
+
+
+
+**7- Désactiver la connexion SSH basée sur un mot de passe**
+
+
+Quels que soient vos efforts, vous verrez toujours de mauvaises tentatives de connexion via SSH sur votre serveur Linux. Les attaquants sont intelligents et les scripts qu'ils utilisent prennent souvent en charge les paramètres par défaut des outils de type Fail2Ban.
+
+
+Pour vous débarrasser de ces attaques constantes par force brute, vous pouvez opter pour une connexion SSH basée uniquement sur une clé.
+
+
+Dans cette approche, vous ajoutez la clé publique des systèmes clients distants à la liste des clés connues sur le serveur SSH. De cette façon, ces machines clientes peuvent accéder à SSH sans saisir le mot de passe du compte utilisateur.
+
+
+Lorsque vous avez cette configuration, vous pouvez désactiver la connexion SSH basée sur le mot de passe. 
+
+
+Désormais, seules les machines clientes qui possèdent les clés SSH spécifiées peuvent accéder au serveur via SSH.
+
+
+**Attention :**
+Avant d'opter pour cette approche, assurez-vous que vous avez ajouté votre propre clé publique au serveur et qu'elle fonctionne. Sinon, vous vous bloquerez et vous risquez de perdre l'accès au serveur distant, surtout si vous utilisez un serveur en nuage où vous n'avez pas d'accès physique au serveur.
+
+
+Avant de le faire, vous devez garder à l'esprit les points suivants :
+
+
+- Veillez à créer votre paire de clés ssh sur votre ordinateur personnel/professionnel et ajoutez cette clé SSH publique au serveur afin que vous puissiez au moins vous connecter au serveur.
+- La désactivation de l'authentification par mot de passe signifie que vous ne pouvez pas vous connecter à votre serveur à partir d'ordinateurs aléatoires.
+-    Vous ne devez pas perdre vos clés ssh. Si vous formatez votre ordinateur personnel et perdez les clés ssh, vous ne pourrez jamais accéder au serveur.
+- Si vous êtes verrouillé, vous ne pourrez jamais accéder à votre serveur.
+
+
+**Comment procéder:**
+    - Éditez le fichier /etc/ssh/sshd_config
+    - Trouvez la ligne **Password Authentication Yes**
+    - Changer la pour **Password Authentication no**
+    - S'il y a un # (signifie commenté) au début de cette ligne, supprimez-le.
+    - Sauvegardez le fichier après avoir effectué ces modifications et redémarrez le service SSH en utilisant cette commande :
+
+```bash
+systemctl restart ssh
+``` 
+**8- Allez plus loin avec l'authentification à deux facteurs avec SSH**
+
+
+Pour faire passer la sécurité SSH au niveau supérieur, vous pouvez également activer l'authentification à deux facteurs. Dans cette approche, vous recevez un mot de passe à usage unique sur votre téléphone portable, par courriel ou par le biais d'une application d'authentification tierce.
+Vous trouverez ici des informations sur la configuration de l'authentification à deux facteurs avec SSH.
+
+
+https://www.linode.com/docs/guides/use-one-time-passwords-for-two-factor-authentication-with-ssh-on-ubuntu-16-04-and-debian-8/
+
+
+***9- Désactiver le transfert X11***
+
+
+Le X11 ou le serveur d'affichage X est le cadre de base d'un environnement graphique. La redirection X11 vous permet d'utiliser une application GUI via SSH.
+En principe, le client exécute l'application GUI sur le serveur, mais grâce à la redirection X11, un canal est ouvert entre les machines et les applications GUI sont affichées sur la machine cliente.
+Le protocole X11 n'est pas axé sur la sécurité. Si vous n'en avez pas besoin, vous devriez désactiver la redirection X11 dans SSH.
+
+
+***X11Forwarding no***
+
+
+
+
+**10- Désactiver le protocole ssh 1**
+
+
+Si vous utilisez une ancienne distribution Linux. Certaines versions plus anciennes de SSH peuvent encore avoir le protocole SSH 1 disponible. Ce protocole présente des vulnérabilités connues et ne doit pas être utilisé.
+
+
+Les versions plus récentes de SSH ont automatiquement activé le protocole 2, mais il n'y a pas de mal à le vérifier.
+
+
+**Fin de l'exercice 7**
 
 
 ### Lecture complémentaire :
-
-[Tutoriel pour comprendre et changer de noyaux Linux avec Ubuntu 20.04 LTS](https://lafibre.info/serveur-linux/noyaux-linux/)
+Plusieurs parties de cet exercice proviennent du site Web https://linuxhandbook.com/
