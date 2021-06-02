@@ -45,25 +45,6 @@ Source : Pro Git
 
 Votre clé SSH pourra être utilisée toute la session entre votre poste client et votre compte GitHub.
 
-
-## Utilisation de votre clé SSH sur votre serveur de test
-
-
-- À l'aide de la commande scp copiez votre clé SSH sur votre serveur :
-
-
-
-```bash
-$scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/autorized_keys
-#Exemple sur mon poste :
-$scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/autorized_keys
-```
-- Vous pouvez par la suite vous connecter au serveur : 
-
-
-```bash
-$ssh [Addresse IP serveur]
-```
 ## Création d'un fichier de configuration personnel pour SSH
 Lorsque vous installez SSH, un répertoire ~/.ssh est créé automatiquement. Ce répertoire contient votre clé publique, votre clé privée et un fichier known_hosts. Votre configuration est également stockée ici.
 Au moins sur Ubuntu, le fichier de configuration SSH n'est pas créé par défaut. Vous pouvez facilement créer ce fichier en utilisant la commande touch comme ceci :
@@ -254,11 +235,33 @@ Avant de le faire, vous devez garder à l'esprit les points suivants :
 
 
 **Comment procéder:**
-    - Éditez le fichier /etc/ssh/sshd_config
+
+**Copier votre clé SSH sur votre serveur de test**
+
+
+- À l'aide de la commande scp copiez votre clé SSH sur votre serveur :
+
+
+
+```bash
+$scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
+#Exemple sur mon poste :
+$scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
+```
+- Vous pouvez par la suite vous connecter au serveur : 
+
+
+```bash
+$ssh [Addresse IP serveur]
+```
+
+- Éditez le fichier /etc/ssh/sshd_config
     - Trouvez la ligne **Password Authentication Yes**
     - Changer la pour **Password Authentication no**
     - S'il y a un # (signifie commenté) au début de cette ligne, supprimez-le.
-    - Sauvegardez le fichier après avoir effectué ces modifications et redémarrez le service SSH en utilisant cette commande :
+    - PubKeyAuthentification yes
+    - Décommenté AuthorizedKeysFile
+ - Sauvegardez le fichier après avoir effectué ces modifications et redémarrez le service SSH en utilisant cette commande :
 
 ```bash
 systemctl restart ssh
