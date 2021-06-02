@@ -242,8 +242,9 @@ Avant de le faire, vous devez garder à l'esprit les points suivants :
 - À l'aide de la commande scp copiez votre clé SSH sur votre serveur :
 
 
-
-```bash
+- Créer le dossier .ssh dans votre usager sur le serveur et créer le fichier authorized_keys dans le dossier
+- Par la suite, sur votre client taper la commande suviante : 
+- ```bash
 $scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
 #Exemple sur mon poste :
 $scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
