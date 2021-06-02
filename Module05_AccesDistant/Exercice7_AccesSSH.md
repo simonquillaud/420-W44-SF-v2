@@ -238,23 +238,17 @@ Avant de le faire, vous devez garder à l'esprit les points suivants :
 
 **Copier votre clé SSH sur votre serveur de test**
 
-
-- À l'aide de la commande scp copiez votre clé SSH sur votre serveur :
-
-
 - Créer le dossier .ssh dans votre usager sur le serveur et créer le fichier authorized_keys dans le dossier
-- Par la suite, sur votre client taper la commande suviante : 
-- ```bash
+
+- Par la suite, sur votre client à l'aide de la commande scp copiez votre clé SSH sur votre serveur :
+
+```bash
 $scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
 #Exemple sur mon poste :
 $scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
 ```
 - Vous pouvez par la suite vous connecter au serveur : 
 
-
-```bash
-$ssh [Addresse IP serveur]
-```
 
 - Éditez le fichier /etc/ssh/sshd_config
     - Trouvez la ligne **Password Authentication Yes**
@@ -267,6 +261,9 @@ $ssh [Addresse IP serveur]
 ```bash
 systemctl restart ssh
 ``` 
+
+- Testez la connexion depuis votre client vers votre serveur
+
 **8- Allez plus loin avec l'authentification à deux facteurs avec SSH**
 
 
