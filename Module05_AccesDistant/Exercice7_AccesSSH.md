@@ -62,9 +62,7 @@ $scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/autorized_keys
 
 
 ```bash
-$scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/autorized_keys
-#Exemple sur mon poste :
-$scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/autorized_keys
+$ssh [Addresse IP serveur]
 ```
 ## Création d'un fichier de configuration personnel pour SSH
 Lorsque vous installez SSH, un répertoire ~/.ssh est créé automatiquement. Ce répertoire contient votre clé publique, votre clé privée et un fichier known_hosts. Votre configuration est également stockée ici.
