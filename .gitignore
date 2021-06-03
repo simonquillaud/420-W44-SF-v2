@@ -5,7 +5,6 @@ obj
 **/*.zip
 **/.vs
 **/*.user
-
+**/*.pptx
 /Documentation/*
 /Gestion/*
-/*.pptx
