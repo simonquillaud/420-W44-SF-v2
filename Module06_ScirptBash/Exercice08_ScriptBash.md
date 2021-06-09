@@ -2,7 +2,7 @@
 
 ## Réaliser les scripts suivants
 
-** Attention : n'oublier pas de donner les droits d'exécution sur les script 
+**Attention : n'oublier pas de donner les droits d'exécution sur les script 
 (chmod a+x)**
 
 1- De quelle manière peut-on écrire un code qui permette d'afficher à l'écran : 
