@@ -69,7 +69,7 @@ Visual Studio Code est déjà présent sur votre machine virtuelle, par contre, 
 
 Attention l'extension permet à VisualStudio de reconnaitre le langage de programmation utilisé et de ce fait, d'utiliser la bonne extension. Donc, c'est une bonne habitude de toujours nommer vos fichiers avant de débuter
 
-- Vous devriez maitenant avoir l'affichage de la figure \ref{Fig6} avec votre fichier en haut et le terminal PowerShell en bas.
+- Vous devriez maitenant avoir l'affichage avec votre fichier en haut et le terminal PowerShell en bas.
 - Vous avez tous ce qu'il faut pour travailler.
 - Taper une commande simple pour afficher la liste des processus en cours d'exécutions : Get-Process
     - Vous pouvez la taper directement dans le terminal.
