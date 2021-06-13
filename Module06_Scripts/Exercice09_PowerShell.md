@@ -26,7 +26,7 @@ Après l'enregistrement, procédez à son installation.
 
 **Vos premières commandes**
 - Comme première pratique avec PowerShell, exécuter les commandes du cours PowerShell  présentes dans le dépôt GitHub suivant :
-[Commandes PowerShell](https://github.com/jpduchesneauCegep/420-W44-SF-4391/blob/master/Module06_/CmdPowerShell.md)
+[Commandes PowerShell](https://github.com/jpduchesneauCegep/420-W44-SF-4391/blob/master/Module06_Scripts/CmdPowerShellCoursTheorique.md)
 
 **Manipulation des dossiers et fichiers**
 
