@@ -61,6 +61,7 @@ Visual Studio Code est déjà présent sur votre machine virtuelle, par contre, 
 - 	Pour en savoir d'avantage sur l'utilisation de PowerShell dans VS Code, je vous invite à lire :[https://docs.microsoft.com/fr-fr/powershell/scripting/dev-cross-plat/vscode/how-to-replicate-the-ise-experience-in-vscode?view=powershell-7.1]
 	
 **Passer des one-liners PowerShell aux scripts**
+
  Celà est bien plus simple que ça n’en a l’air. Un script n’est rien de plus qu’un ensemble de commandes identiques ou similaires que vous exécutez de manière interactive dans la console PowerShell, sauf que ces commandes sont enregistrées dans un fichier .PS1
 
 - Cliquez sur Ctrl+N, ou file --> New File pour créer un nouveau fichier.
