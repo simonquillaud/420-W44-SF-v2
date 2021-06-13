@@ -36,9 +36,9 @@ Après l'enregistrement, procédez à son installation.
 - Pour y arriver, vous avez probablement taper quatre fois la commande New-Item comme dans la figure suivante : 
 ![Commandes tapées](./Resultat.png)
 
-#PowerShell Script
+# PowerShell Script
 
-##Utilisation de Visual Studio Code pour PowerShell
+## Utilisation de Visual Studio Code pour PowerShell
 
 Comme nous l'avons précisé dans le cours, Microsoft a presque arrêté de développer PowerShell ISE et recommande d'utiliser à la place un outil plus puissant, pratique, flexible et gratuit - Visual Studio Code (VS Code); de plus, Visual Studio Code est multiplate-forme donc est aussi disponible sur Mac et Linux et intègre le système de gestion de code Git.	
 Visual Studio Code est déjà présent sur votre machine virtuelle, par contre, il n'a pas été paramétré pour travailler avec PowerShell.
