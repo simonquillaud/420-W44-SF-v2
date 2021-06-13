@@ -53,7 +53,9 @@ Visual Studio Code est déjà présent sur votre machine virtuelle, par contre, 
 ![Version PowerShell](versionPS.png)
 
 - Pour le rendre plus pratique, vous pouvez configurer les paramètres d'interface VSCode suivants (une icône d'engrenage dans le coin inférieur gauche) à Color Theme = PowerShell ISE :
+
 ![Thème PowerShell dans VSCode](themeVScode.png)
+
 - Si vous planifiez uniquement l’utilisation de VS Code pour les scripts PowerShell, vous pouvez masquer la Console de débogage, car elle n’est pas utilisée par l’extension PowerShell. Pour ce faire, cliquez avec le bouton droit sur Console de débogage puis cliquez sur la coche pour la masquer.
 - Il est possible que VS Code vous propose des mises à jour en bas à droite sur l'icône d'engrenage. N'hésitez pas à faire ces mises à jour.
 - 	Pour en savoir d'avantage sur l'utilisation de PowerShell dans VS Code, je vous invite à lire :[https://docs.microsoft.com/fr-fr/powershell/scripting/dev-cross-plat/vscode/how-to-replicate-the-ise-experience-in-vscode?view=powershell-7.1]
