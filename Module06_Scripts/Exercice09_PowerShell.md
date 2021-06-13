@@ -107,7 +107,7 @@ Attention l'extension permet à VisualStudio de reconnaitre le langage de progra
 - Dans le terminal, déplacez-vous dans le répertoire de votre script et exécutez-le.
 
 ```PowerShell
-    set-location c:\Users\jpduches\Documents\PowerShell\Script
+    set-location [Adresse absolue de votre script]
     .\MonPremierScript.ps1
 ```
 
