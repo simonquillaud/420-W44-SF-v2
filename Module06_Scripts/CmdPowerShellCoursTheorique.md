@@ -6,7 +6,7 @@
 ```powershell
 Pwsh –command Get-Date
 Pwsh –NoExit –command Get-Date
-pwsh – version
+pwsh –version
 pwsh –WorkingDirectory C:\Windows
 Pwsh /?
 ```
