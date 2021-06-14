@@ -15,10 +15,10 @@
 
 4- Réalisation un compteur  qui commencer au chiffre rentré par l'utilisateur et qui descend jusqu'à 1.
 
-6- Crer un jeu qui permet à l'utilisateur de deviner un chiffre généré par le script entre 1 et 50. A chaque fois que l'utilisateur entre un chiffre, le script lui indique si le chiffre à trouver est supérieur ou inférieur à celui qu'il a entré, etc…
+5- Crer un jeu qui permet à l'utilisateur de deviner un chiffre généré par le script entre 1 et 50. A chaque fois que l'utilisateur entre un chiffre, le script lui indique si le chiffre à trouver est supérieur ou inférieur à celui qu'il a entré, etc…
 
-7- Réaliser un script bash qui permet de vérifier si l'utilisateur a bien saisi des arguments, et si les fichiers placés en arguments existent bien.
+6- Réaliser un script bash qui permet de vérifier si l'utilisateur a bien saisi des arguments, et si les fichiers placés en arguments existent bien.
 
-8- Réaliser un script faisant appel a une fonction qui prend comme paramètre un login d'un user et vérifie si l'utilisateur existe déjà.
+7- Réaliser un script faisant appel a une fonction qui prend comme paramètre un login d'un user et vérifie si l'utilisateur existe déjà.
 
 **Fin de l'exercice 8**
