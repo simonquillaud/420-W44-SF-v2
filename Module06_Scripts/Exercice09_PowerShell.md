@@ -93,7 +93,7 @@ Attention l'extension permet à VisualStudio de reconnaitre le langage de progra
 		# Programme :
 		Clear-Host
 		Write-Host $ligneDouble
-		Write-Host "Exécution du Scprit le $($date)"
+		Write-Host "Exécution du Script le $($date)"
 		Write-Host $ligne
 		Write-Output "Le nom de l'ordinateur est : $($nomPC)"
 		Write-Host $ligne
