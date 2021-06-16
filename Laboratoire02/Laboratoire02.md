@@ -17,6 +17,8 @@ Le temps alloué en classe est deux (2) séances.
 
 - L'adresse IPv4 du serveur est : 10.100.2.[Votre numéro d'équipe +50]/24
   
+  - Utiliser l'adapteur réseau VM DFC2
+  
   - La passerelle est 10.10.100.2.1
   
   - Les serveur DNS sont : 199.202.105.108, 199.202.105.1
