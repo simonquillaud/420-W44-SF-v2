@@ -29,7 +29,7 @@ Le temps alloué en classe est deux (2) séances.
 
 - Le serveur de base de données intallé doit être MySQL 8.
 
-- Vous devez avoir une page d'acceuil dans WordPress qui permet d'identifier le cours et l'équipes  et la date de réalisation.
+- Vous devez avoir une page d'acceuil dans WordPress qui permet d'identifier le cours, l'équipes et la date de réalisation.
 
 - Je dois pouvoir vérifier la page dans mon navigateur sur ma VM.
 
