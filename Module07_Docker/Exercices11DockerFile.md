@@ -1,6 +1,5 @@
 # Exercice 11 - Dockerfile
 
-
 ## Exercice 1 - Créez le programme hello-world
 
 - Sous Windows : utilisez le terminal Windows, lancez une console Ubuntu ; sous Linux lancez un terminal
@@ -17,15 +16,17 @@ int main(int argc, char** argv) {
 ```
 
 - Pour compiler votre programme, utilisez la commande ```g++ premier-programme.cpp -o premier-programme -static ```
+
 - Créez le fichier "Docker" avec le contenu suivant :
-```dockerfile
-FROM scratch
+  
+  ```dockerfile
+  FROM scratch
+  ```
 
 COPY premier-programme /
 ENTRYPOINT ["/premier-programme"]
 
 ```
-
 - À partir du fichier et de la documentation, décrivez ce que fait le fichier Dockerfile
 - Tapez la commande ```docker build --tag premier-programme:latest .```
 - Validez que l'image a bien été créée
