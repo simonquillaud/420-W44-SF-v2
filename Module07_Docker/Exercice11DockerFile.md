@@ -21,10 +21,11 @@ int main(int argc, char** argv) {
   
   ```dockerfile
   FROM scratch
+  COPY premier-programme /
+ENTRYPOINT ["/premier-programme"]
   ```
 
-COPY premier-programme /
-ENTRYPOINT ["/premier-programme"]
+
 
 ```
 - À partir du fichier et de la documentation, décrivez ce que fait le fichier Dockerfile
