@@ -1,6 +1,6 @@
-# Module 16 - Orchestrateur - Kubernetes
+# Exercice 13 - Orchestrateur - Kubernetes
 
-Ce module a pour but de vous faire explorer et découvrir kubernetes. 
+Cette exercice a pour but de vous faire explorer et découvrir kubernetes. 
 
 ## Pre-requis - Activer kubernetes dans docker desktop
 
