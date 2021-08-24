@@ -36,7 +36,7 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 ```
 
 - Créez vous un contexte avec la commande 'kubectl config set-context', spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster et l'utilisateur que vous venez de spécifier.
-- Définissez votre nouveau context comme étant le contexte courant (use-context)
+- Définissez votre nouveau contexte comme étant le contexte courant (use-context)
 - Affichez les noeuds et les pods du cluster (tous les namespaces) et de votre namespace pour valider que tout fonctionne
 
 ## Partie 3 - Création d'un Pod
