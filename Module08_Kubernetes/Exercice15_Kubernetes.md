@@ -1,4 +1,4 @@
-# Module 17 - Kubernetes - Manisfeste et Services
+# Exercice 15 - Kubernetes - Manisfeste et Services
 
 Dans les exercices qui le permettent, assurez-vous de toujours indiquer un espace de nom qui correspond à votre numéro de matricule. 
 
