@@ -65,6 +65,15 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 - Modifiez le fichier "Views/Home/Index.cshtml" pour y ajouter votre prénom / nom
 - Testez que l'application fonctionne localement
 
+<details>
+- Création de l'application MVC
+
+```bash
+dotnet new mvc -au None -n webapp
+dotnet run
+```
+- Testez l'application localement: Ouvrez un navigateur avec localhost et le port mentionné pour le dotnet run. Probablement 5001.
+</details>
 ### Exercice 4.2 - Création d'un compte docker hub
 
 - Allez sur le site de docker hub et créez-vous un compte
@@ -93,7 +102,7 @@ ENTRYPOINT ["dotnet", "webapp.dll"]
 
 - Assurez-vous de bien comprendre chaque ligne du fichier Dockerfile
 - Construisez l'image "<votre_docker_id>/webapp" avec la version "latest"
-- Exécutez un conteneur à partir de cette image en liant le port 80 du conteneur au port 8080 de l'hôte
+- Exécutez un conteneur à partir de cette image en liant le port 80 du conteneur au port 5000 de l'hôte
 - Validez que le tout fonctionne (attention vous allez être en http)
 
 ### Exercice 4.3 - Publication
