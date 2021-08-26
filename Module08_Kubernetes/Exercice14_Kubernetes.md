@@ -36,6 +36,7 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 ```
 
 - Créez vous un contexte avec la commande 'kubectl config set-context', spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster et l'utilisateur que vous venez de spécifier.
+<<<<<<< HEAD
  ```
 $kubectl config set-contex [matricule] --cluster=kubernetes-distant --user=kubernetes-distant-admin
 ```
@@ -44,6 +45,9 @@ $kubectl config set-contex [matricule] --cluster=kubernetes-distant --user=kuber
 ```
 $kubectl config set-contex [matricule] 
 ```
+=======
+- Définissez votre nouveau contexte comme étant le contexte courant (use-context)
+>>>>>>> 00cbf917702d9eb68519058169b1b745390fc07b
 - Affichez les noeuds et les pods du cluster (tous les namespaces) et de votre namespace pour valider que tout fonctionne
 
 ## Partie 3 - Création d'un Pod
