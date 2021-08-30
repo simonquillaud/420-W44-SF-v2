@@ -4,7 +4,7 @@ Le but de se laboratoire est de monter un site Wordpress avec MySQL dans Kuberne
 
 Le laboratoire s'effectue en groupe de 4 maximum. Vous devez créer vos objets dans un espace de nom qui contient la liste de vos matricules séparés par un tiret. Exemple "1234567-2134567-3214567-2234567".
 
-Le temps alloué est de 2 séances. La remise est pour le 12 octobre 2020 minuit.
+Le temps alloué est de 2 séances. La remise est pour le 6 septembre 2021 minuit.
 
 Vous devez fournir :
 
@@ -21,7 +21,7 @@ Vous devez fournir :
 - Il faut passer les informations de la base de données à Wordpress et à MySQL par des variables d'environnement
 - Si vous exposez votre MySQL avec un service, vous pouvez le contacter avec son adresse DNS
 
-Pour que le montage du volume fonctionne bien pour MySQL, vous devez ajouter une propriété "securityContexte" dans la spec du pod ou du template et ajouter la clef "runAsUser: 2000" (Merci à Kevin Ricard !) :
+Pour que le montage du volume fonctionne bien pour MySQL, vous devez ajouter une propriété "securityContexte" dans la spec du pod ou du template et ajouter la clef "runAsUser: 2000"  :
 
 ```yaml
 ...
