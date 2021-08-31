@@ -81,7 +81,7 @@ Activez le client pour NFS en allant dans les fonctionnalités Windows :
 Pour monter le partage dans le lecteur x :
 
 ```bash
-mount 10.100.1.6:/srv/exports x: -o fileaccess=777
+mount 10.100.2.90:/srv/exports x: -o fileaccess=777
 ```
 
 ### Linux
@@ -91,7 +91,7 @@ Installez le package nfs-common.
 Pour monter le partage sur le répertoire "/tmp/nfs" :
 
 ```bash
-mount 10.100.1.6:/srv/exports /tmp/nfs
+mount 10.100.2.90:/srv/exports /tmp/nfs
 ```
 
 ## Exercice 2 - Nginx
