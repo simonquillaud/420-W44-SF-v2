@@ -78,7 +78,7 @@ Activez le client pour NFS en allant dans les fonctionnalités Windows :
 
 [Activer le client pour NFS](img/windows_install_nfs_client.png)
 
-Pour monter le partage dans le lecteur x :
+Pour monter le partage dans le lecteur x (Utiliser cmd et non PowerShell) :
 
 ```bash
 mount -o fileaccess=777 \\10.100.2.90:\srv\exports x:  
