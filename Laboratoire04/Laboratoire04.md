@@ -26,7 +26,7 @@ Vous devez fournir :
 
 - Créez un projet d'équipe avec le modèle Agile.
 - Donnez-vous les droits entre membres d'équipe (utilisateur minimalement).
-- Ajoutez jpduchesneauF@csfoy.ca comme utilisateur et administrateur.
+- Ajoutez jpduchesneau@csfoy.ca comme utilisateur et administrateur.
 - Créez un dépot Git.
 - Créez un projet Visual Studio .Net core MVC 3.1 avec authentification individuelle.
 - Modifications et validations que vous devez faire dans le fichier Startup.cs :
