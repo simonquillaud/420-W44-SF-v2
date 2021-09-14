@@ -4,7 +4,7 @@ Le but de se laboratoire est de monter un site .Net core MVC avec SQL serveur da
 
 Le laboratoire s'effectue en groupe de 4 maximum.
 
-Le temps alloué est de 2 1/2 séances. La remise est pour le mardi 20 octobre 2020 minuit.
+Le temps alloué est de 2 1/2 séances. La remise est pour le 22 septembre 2021 minuit.
 
 Vous devez fournir :
 
@@ -26,7 +26,7 @@ Vous devez fournir :
 
 - Créez un projet d'équipe avec le modèle Agile.
 - Donnez-vous les droits entre membres d'équipe (utilisateur minimalement).
-- Ajoutez pfleon@csfoy.ca comme utilisateur et administrateur.
+- Ajoutez jpduchesneauF@csfoy.ca comme utilisateur et administrateur.
 - Créez un dépot Git.
 - Créez un projet Visual Studio .Net core MVC 3.1 avec authentification individuelle.
 - Modifications et validations que vous devez faire dans le fichier Startup.cs :
