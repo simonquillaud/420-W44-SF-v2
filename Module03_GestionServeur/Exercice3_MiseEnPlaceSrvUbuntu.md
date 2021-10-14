@@ -12,14 +12,14 @@ Système d'exploitation : Ubuntu 20.04 serveur Lts
 
 ## Préparation de la machine virtuelle
 
-- Sélectectionnez le dossier E21_4391_420244_ITV_JPD
-- Créer une nouvelle machine virtuelle avec comme nom H21_4391_420W44_ITV_Ub_2004Srv_Matricule
+- Sélectectionnez le dossier A21_4392_420244_ITV_JPD
+- Créer une nouvelle machine virtuelle avec comme nom A21_4392_420W44_ITV_Ub_2004Srv_Matricule
 
 - Donnez-lui les spécifications suivantes :
   -- CPU : 2
   -- Mémoire : 4 Go
   -- 3 nouveaux disques avec 10 Go, 20 Go e 20 Go sur SAN-DFC.  <a href="Images/Disque.png">Images ajout des disques</a>
-  -- Fichier ISO : Synology-DFC -> ISO -> Ubuntu-20.04.2-live-serveur-amd64.iso
+  -- Fichier ISO : SAN-DFC -> ISO -> Ubuntu-20.04.2-live-serveur-amd64.iso
   Images de références : <a href="Images/ConfigVM.png">Image ConfigVM</a> , <a href="Images/ConfigVM.png">Fin de la config</a>.
 
 ## Consigne pour l'utilisation du clavier :
