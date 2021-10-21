@@ -64,7 +64,7 @@ $ssh {adresse ip du serveur}  [-l votre nom d'usager sur le serveur] [- port]
 - Vérifier par quelques commandes que vous êtes bien sur le serveur : 
 ```bash
 $uname
-$ip -a
+$ip a
 $netstat -tap
 $df
 $pwd
