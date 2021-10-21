@@ -97,6 +97,7 @@ $sudo cat /etc/fstab
 <details>
 Le fichier fstab (file systems table) est la table des différents systèmes de fichiers sur un ordinateur sous Unix/Linux : il contient une liste des disques utilisés au démarrage et des partitions de ces disques. Pour chaque partition, il indique comment elle sera utilisée et intégrée à l’arborescence du système de fichiers global (c'est-à-dire le point de montage).
 </details>
+
 ### Gestion des processus
 
 
