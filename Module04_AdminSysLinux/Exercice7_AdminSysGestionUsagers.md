@@ -66,14 +66,14 @@ $sudo adduser ebedard
 2- RH :
    * Propriétaire : root 
    * Accessible en lecture, écriture et exécution pour le propriétaire
-   * Accessible en lecture, écriture et exécution pour le groupe admin
+   * Accessible en lecture, écriture  pour le groupe rh
    * Pas accessible pour les autres
 
 3- Users :
-    * Propriétaire : root 
-	* Groupe : users
-	* Accessible en lecture, écriture et exécution pour le propriétaire
-	* Accessible en lecture, écriture et exécution pour le groupe
-	* Accessible en lecture seule pour tous
-	* Seul le propriétaire et root a le droit de supprimer ou de renommer * un fichier ou un répertoire et cela indépendamment des droits déjà affectés
+   * Propriétaire : root 
+   * Groupe : users
+   * Accessible en lecture, écriture et exécution pour le propriétaire
+   * Accessible en lecture pour le groupe users
+   * Accessible en lecture seule pour tous
+
 
