@@ -56,21 +56,24 @@ $sudo adduser ebedard
 ![Structure à créer](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module04_AdminSysLinux/images/varExercice7.png)
 
 - Modifiez les attributs de ces répertoires de la manière suivante :
+
 1- DSTI :
-    Propriétaire : root 
-    Accessible en lecture, écriture et exécution pour le propriétaire
-    Accessible en lecture, écriture et exécution pour le groupe admin
-    Pas accessible pour les autres
+   * Propriétaire : root 
+   * Accessible en lecture, écriture et exécution pour le propriétaire
+   * Accessible en lecture, écriture et exécution pour le groupe admin
+   * Pas accessible pour les autres
+
 2- RH :
-    Propriétaire : root 
-    Accessible en lecture, écriture et exécution pour le propriétaire
-    Accessible en lecture, écriture et exécution pour le groupe admin
-    Pas accessible pour les autres
-3- Users : 
-	Propriétaire : root 
-	Groupe : users
-	Accessible en lecture, écriture et exécution pour le propriétaire
-	Accessible en lecture, écriture et exécution pour le groupe
-	Accessible en lecture seule pour tous
-	Seul le propriétaire et root a le droit de supprimer ou de renommer un fichier ou un répertoire et cela indépendamment des droits déjà affectés
+   * Propriétaire : root 
+   * Accessible en lecture, écriture et exécution pour le propriétaire
+   * Accessible en lecture, écriture et exécution pour le groupe admin
+   * Pas accessible pour les autres
+
+3- Users :
+    * Propriétaire : root 
+	* Groupe : users
+	* Accessible en lecture, écriture et exécution pour le propriétaire
+	* Accessible en lecture, écriture et exécution pour le groupe
+	* Accessible en lecture seule pour tous
+	* Seul le propriétaire et root a le droit de supprimer ou de renommer * un fichier ou un répertoire et cela indépendamment des droits déjà affectés
 
