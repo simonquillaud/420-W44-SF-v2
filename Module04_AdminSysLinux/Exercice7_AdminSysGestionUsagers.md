@@ -50,6 +50,4 @@ $sudo adduser ebedard
 
 ## Création d’une structure de fichiers
 
-- Créez la structure suivante :
-
-![Structure à créer](/images/varExercice7.png)
+- Créez la structure suivante : ![Structure à créer](/images/varExercice7.png)
