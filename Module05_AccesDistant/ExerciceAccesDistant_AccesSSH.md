@@ -296,7 +296,7 @@ Si vous utilisez une ancienne distribution Linux. Certaines versions plus ancien
 Les versions plus récentes de SSH ont automatiquement activé le protocole 2, mais il n'y a pas de mal à le vérifier.
 
 
-**Fin de l'exercice **
+**Fin de l'exercice**
 
 
 ### Lecture complémentaire :
