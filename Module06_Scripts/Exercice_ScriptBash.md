@@ -1,4 +1,4 @@
-﻿# Exercice 8 - Script bash
+﻿# Exercice - Script bash
 
 ## Réaliser les scripts suivants
 
@@ -21,4 +21,4 @@
 
 7- Réaliser un script faisant appel a une fonction qui prend comme paramètre un login d'un user et vérifie si l'utilisateur existe déjà.
 
-**Fin de l'exercice 8**
+**Fin de l'exercice **

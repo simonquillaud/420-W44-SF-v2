@@ -1,4 +1,4 @@
-﻿# Exercice 7 - Administration système : gestion d'usager
+﻿# Exercice - Administration système : gestion d'usager
 
 
 - Évaluation : formative

@@ -1,4 +1,4 @@
-﻿# Exercice 6 - Administration système
+﻿# Exercice  - Administration système
 
 - Évaluation : formative
 - Durée estimée : 2 heures
@@ -374,7 +374,7 @@ $ping {domaine de votre choix}
 ```
 - Si tous fonctionnent, vous êtes satisfait ;-)
 
-**Fin exercice 6**
+**Fin exercice **
 
 
 ### Lecture complémentaire :

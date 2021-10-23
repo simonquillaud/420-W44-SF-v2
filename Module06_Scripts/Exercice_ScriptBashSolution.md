@@ -1,4 +1,4 @@
-﻿# Exercice 8 - Script bash
+﻿# Exercice  - Script bash
 
 ##Solutionnaire
 

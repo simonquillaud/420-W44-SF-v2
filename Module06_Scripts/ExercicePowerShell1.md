@@ -1,4 +1,4 @@
-﻿# Exercice 9 - PowerShell
+﻿# Exercice  - PowerShell
 
 **Sysèteme d'exploitation** : Windows 10 Éducation. Vous pouvez utiliser votre poste ou la vm générale.
 
