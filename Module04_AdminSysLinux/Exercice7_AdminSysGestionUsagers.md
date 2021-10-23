@@ -43,7 +43,8 @@ $sudo adduser ebedard
 |----------     | ----------    |
 | users | tous les usagers du système |
 | admin | Vous et Raja Ayadi |
-| cdrom | cdrom | tous les usagers du système |
+| cdrom | tous les usagers du système |
+| rh | Eric Bédard et Joanie Slyte |
 
 - Modifier les mot de passe des utilisateurs **ebedard** et **jslyte** pour "Pa$$ord01"
 
@@ -53,3 +54,23 @@ $sudo adduser ebedard
 - Créez la structure suivante : 
 
 ![Structure à créer](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module04_AdminSysLinux/images/varExercice7.png)
+
+- Modifiez les attributs de ces répertoires de la manière suivante :
+1- DSTI :
+    Propriétaire : root 
+    Accessible en lecture, écriture et exécution pour le propriétaire
+    Accessible en lecture, écriture et exécution pour le groupe admin
+    Pas accessible pour les autres
+2- RH :
+    Propriétaire : root 
+    Accessible en lecture, écriture et exécution pour le propriétaire
+    Accessible en lecture, écriture et exécution pour le groupe admin
+    Pas accessible pour les autres
+3- Users : 
+	Propriétaire : root 
+	Groupe : users
+	Accessible en lecture, écriture et exécution pour le propriétaire
+	Accessible en lecture, écriture et exécution pour le groupe
+	Accessible en lecture seule pour tous
+	Seul le propriétaire et root a le droit de supprimer ou de renommer un fichier ou un répertoire et cela indépendamment des droits déjà affectés
+
