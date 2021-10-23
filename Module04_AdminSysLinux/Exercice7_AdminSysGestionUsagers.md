@@ -1,43 +1,54 @@
 ﻿# Exercice 7 - Administration système : gestion d'usager
 
+
 - Évaluation : formative
-- Durée estimée : 1 heures
+- Durée estimée : 1 heure
 - Système d'exploitation : Ubuntu 20.04 Lts Client et serveur
 
 
+
 **Objectifs :**
+
 
 - Effectuer des tâches de gestion du système d’exploitation.
 - Création correcte des comptes et des groupes d’utilisateurs.
 - Attribution correcte des droits d’accès.
 
+
 ## Création d'usagers
+
 
 - Connectez-vous à votre serveur depuis votre station de travail.
 
+
 - Créer les groupes suivants :
+
 
 |Groupe | Membres |
 |----------     | ----------    |
 | users | tous les usagers du système |
 
-- Créez les usagers du tableau suivants 
+
+- Créez les usagers du tableau suivant 
 - Pour les login respectez la nomenclature première lettre du prénom et le nom. 
-- Tous ces utilisateur doivent avoir comme groupe principale **users**
+- Tous ces utilisateurs doivent avoir comme groupe principale **users**
 
 
-|Nom            | Répertoire    | Mot de passe  | Intérpréteur de commande |
+
+|Nom            | Répertoire    | Mot de passe  | Interpréteur de commande |
 |----------     | ----------    | ------------- |------------- |
 | Éric Bédard   | /home/ebedard | S0l&il01      |/bin/bash
 | Joanie Slyte  | /home/jslyte  | S0l&il01      |/bin/bash
 | Raja Ayadi    | /home/rayadi  | S0l&il01      |/bin/sh
-| Usager1       | aucun     | acun     | aucun  |
+| Usager1       | aucun     | aucun     | aucun  |
+
 
 Exemple de création : 
 ```bash
 $sudo adduser ebedard
 ```
-- Au besoin créer les groupes suivants et  ajouter les bon usager au membres des groupes  :
+- Au besoin créer les groupes suivants et  ajouter les bons usagers aux membres des groupes  :
+
 
 |Groupe | Membres |
 |----------     | ----------    |
@@ -46,16 +57,22 @@ $sudo adduser ebedard
 | cdrom | tous les usagers du système |
 | rh | Eric Bédard et Joanie Slyte |
 
-- Modifier les mot de passe des utilisateurs **ebedard** et **jslyte** pour "Pa$$ord01"
+
+- Modifier les mots de passe des utilisateurs **ebedard** et **jslyte** pour "Pa$$ord01"
+
 
 
 ## Création d’une structure de fichiers
 
+
 - Créez la structure suivante : 
+
 
 ![Structure à créer](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module04_AdminSysLinux/images/varExercice7.png)
 
+
 - Modifiez les attributs de ces répertoires de la manière suivante :
+
 
 1- DSTI :
    * Propriétaire : root 
@@ -63,11 +80,13 @@ $sudo adduser ebedard
    * Accessible en lecture, écriture et exécution pour le groupe admin
    * Pas accessible pour les autres
 
+
 2- RH :
    * Propriétaire : root 
    * Accessible en lecture, écriture et exécution pour le propriétaire
    * Accessible en lecture, écriture  pour le groupe rh
    * Pas accessible pour les autres
+
 
 3- Users :
    * Propriétaire : root 
@@ -75,5 +94,4 @@ $sudo adduser ebedard
    * Accessible en lecture, écriture et exécution pour le propriétaire
    * Accessible en lecture pour le groupe users
    * Accessible en lecture seule pour tous
-
 
