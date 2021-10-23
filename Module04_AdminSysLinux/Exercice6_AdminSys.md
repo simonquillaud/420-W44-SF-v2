@@ -6,6 +6,7 @@
 
 
 **Objectifs :**
+Gestion appropriée desprocessus, de la mémoire et de l’espace disque.
 - Localiser l'emplacement et la taille du noyau (kernel) Linux
 - Localiser les modules associés au noyau de Linux
 - Vérifier les modules chargés en mémoire

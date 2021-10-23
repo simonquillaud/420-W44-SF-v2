@@ -12,8 +12,8 @@ Système d'exploitation : Ubuntu 20.04 serveur Lts
 
 ## Préparation de la machine virtuelle
 
-- Sélectectionnez le dossier E21_4391_420244_ITV_JPD
-- Créer une nouvelle machine virtuelle avec comme nom H21_4391_420W44_ITV_Ub_2004Srv_Matricule
+- Sélectectionnez le dossier A21_4392_420244_ITV_JPD
+- Créer une nouvelle machine virtuelle avec comme nom A21_4392_420W44_ITV_Ub_2004Srv_Matricule
 
 - Donnez-lui les spécifications suivantes :
   -- CPU : 2
@@ -32,7 +32,7 @@ Système d'exploitation : Ubuntu 20.04 serveur Lts
 
 - Choix de la langue : Fraçais  et Install Ubuntu.
 - Disposition du Clavier : French(Canada) Variante canadien multilingue            
-- Connexions réseau : DHCP_v4    
+- Connexions réseau : Fixe, 10.100.2.VotreÉcran/24, (voir les capture du cours théorique) 
 - Adresse du proxy : laissez vide.
 - Utilisez l'adresse de miroir proposée.    
 
