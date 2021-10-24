@@ -101,3 +101,10 @@ $sudo adduser ebedard
 - La commande doit être faite à partir de votre usager principal sans avoir a vous déplacer dans l'arborescence.
 
 **Fin de l'exercice**
+
+
+
+
+# Corrigé :
+
+$sudo useradd 
