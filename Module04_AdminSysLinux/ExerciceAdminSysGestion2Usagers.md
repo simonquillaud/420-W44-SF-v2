@@ -98,3 +98,6 @@ $sudo adduser ebedard
 ## Utilisation de liens symboliques
 
 - Pour tous les usagers, sauf root, créer un lien symbolique dans son répertoire personnel vers /var/data.
+- La commande doit être faite à partir de votre usager principal sans avoir a vous déplacer dans l'arborescence.
+
+**Fin de l'exercice**
