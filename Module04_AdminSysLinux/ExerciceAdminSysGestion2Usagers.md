@@ -65,7 +65,7 @@ $sudo adduser ebedard
 ## Création d’une structure de fichiers
 
 
-- Créez la structure suivante : 
+- Créez la structure suivante sur le serveur : 
 
 
 ![Structure à créer](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module04_AdminSysLinux/images/VarData.png)
