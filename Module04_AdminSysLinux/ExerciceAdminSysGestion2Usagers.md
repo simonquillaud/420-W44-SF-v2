@@ -68,7 +68,7 @@ $sudo adduser ebedard
 - Créez la structure suivante : 
 
 
-![Structure à créer](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module04_AdminSysLinux/images/varExercice7.png)
+![Structure à créer](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module04_AdminSysLinux/images/VarData.png)
 
 
 - Modifiez les attributs de ces répertoires de la manière suivante :
