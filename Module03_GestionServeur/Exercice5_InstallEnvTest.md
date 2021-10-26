@@ -230,7 +230,8 @@ server {
 
 ```
 [Image du fichier modifier](Images/default.png)
-[Fichier modifié] (/default)
+
+[Fichier modifié](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module03_GestionServeur/default)
 
 ***Attention***: J'ai supprimé des commentaires dans le fichier pour pouvoir faire une capture de l'ensemble nous concernant.
 
