@@ -230,7 +230,7 @@ server {
 
 ```
 [Image du fichier modifier](Images/default.png)
-[Fichier modifié] (default)
+[Fichier modifié] (/default)
 
 ***Attention***: J'ai supprimé des commentaires dans le fichier pour pouvoir faire une capture de l'ensemble nous concernant.
 
