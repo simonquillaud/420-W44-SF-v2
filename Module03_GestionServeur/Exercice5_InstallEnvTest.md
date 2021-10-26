@@ -208,6 +208,13 @@ $sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
 - Répondez oui 
 
 - Maitenant, vous devez éditer le fichier de configuration du site virtuel par défaut de Nginx.
+- Mais avant d'éditer un fichier de configuration, procéder toujours à une copie de sauvegarde comme ceci : 
+```bash
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/defaultOld
+# Au besoin, erreur dans le fichier que vous ne pouvez trouver. Vous pourrez revenir au fichier original en enversant la commande : 
+sudo cp /etc/nginx/sites-available/defaultOld /etc/nginx/sites-available/default
+```
+
 - Éditez le fichier suivant : 
 ```bash
 $sudo nano /etc/nginx/sites-available/default
