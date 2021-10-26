@@ -18,7 +18,7 @@ Système d'exploitation : Ubuntu 20.04 serveur Lts
     - CPU : 2
     - Mémoire : 4 Go
     - 3 nouveaux disques avec 10 Go, 20 Go e 20 Go sur SAN-DFC.  <a href="Images/Disque.png">Images ajout des disques</a>
-    - **Attention** : Vos trois disques (3) doivent être en provisionnement dynamique. Regardez l'image du provisionnement dynamique en <a href="Images/DisqueDynamique.png">anglais</a> ou en  <a href="Images/DisqueDynamiqueFr.png">français</a>sselon la langue de votre vSphere. Au besoin, demander de l'aide.
+    - **Attention** : Vos trois disques (3) doivent être en provisionnement dynamique. Regardez l'image du provisionnement dynamique en <a href="Images/DisqueDynamique.png">anglais</a> ou en  <a href="Images/DisqueDynamiqueFr.png">français</a> selon la langue de votre vSphere. Au besoin, demander de l'aide.
     - Fichier ISO : SAN-DFC -> ISO -> Ubuntu-20.04.2-live-serveur-amd64.iso
 Images de références : <a href="Images/ConfigVM.png">Image ConfigVM</a> , <a href="Images/ConfigVM.png">Fin de la config</a>.
 
