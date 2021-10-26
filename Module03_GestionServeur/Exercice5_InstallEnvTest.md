@@ -199,7 +199,7 @@ quit
 ## Le langage de programmation PHP
 
 
-Mise en situation :  Nous allons avoir besoin du langage de programmation PHP pour la mise ne production de notre site Web avec WorPress dans les futurs exercices.
+Mise en situation :  Nous allons avoir besoin du langage de programmation PHP pour la mise ne production de notre site Web avec WordPress dans les futurs exercices.
 
 
 ```bash
@@ -212,7 +212,7 @@ $sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
 ```bash
 $sudo nano /etc/nginx/sites-available/default
 ```
-- Ajoutez les lignes suivantes :
+- Éditez le fichier pour qu'il correspondent aux lignes suivantes :
 ```bash
 server {
         listen 80;
@@ -229,11 +229,8 @@ server {
 
 
 ```
-[Image du fichier modifier](Images/default.png)
-
+- Au besoins, aidez-vous du fichier suivant, pris de mon serveur : 
 [Fichier modifié](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module03_GestionServeur/default)
-
-***Attention***: J'ai supprimé des commentaires dans le fichier pour pouvoir faire une capture de l'ensemble nous concernant.
 
 - Enregistrez et fermez le fichier puis activez le fichier de configuration de l'hôte virtuel Nginx avec la commande suivante :
 ```bash
