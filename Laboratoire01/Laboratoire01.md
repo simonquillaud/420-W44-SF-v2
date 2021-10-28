@@ -9,10 +9,8 @@
 **Contexte :** Le laboratoire s'effectue en groupe de 2 personnes.
 
 
-
-**Remise :** Vous devez déposer votre travail dans l'espace prévu sur LÉA au plus tard, le 7 juin à 23h59.
-Le temps alloué en classe est d'une (1) séance.
-
+**Remise :** Vous devez déposer votre travail dans l'espace prévu sur LÉA au plus tard, le 13 novembre à 23h59.
+Le temps alloué en classe est d'environ 3 heures.
 
 
 ## Voici les sections qui doivent être incluses dans votre procédure (document):
@@ -67,7 +65,7 @@ Le temps alloué en classe est d'une (1) séance.
 
 
 - Votre fichier avec toutes les parties demandées. Vous pouvez utiliser les formats suivant : Word (docx) ou Markdown (md).
-- Ce fichier doit comprendre en plus des éléments nommés plus haut les sections :
+- Ce fichier doit comprendre en plus des éléments nommés plus haut et les sections suivantes :
     - Page couverture selon les normes.
     - Introduction
     - Chacune des sections clairement identifiées.
