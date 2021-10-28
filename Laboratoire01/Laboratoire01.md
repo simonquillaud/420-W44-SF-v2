@@ -55,7 +55,7 @@ Le temps alloué en classe est d'environ 3 heures.
 
 
 - Votre fichier avec toutes les parties demandées. Vous pouvez utiliser les formats suivant : Word (docx) ou Markdown (md).
-- Ce fichier doit comprendre en plus des éléments nommés plus haut les sections :
+- Ce fichier doit comprendre en plus des éléments nommés plus haut et les sections suivantes :
     - Page couverture selon les normes.
     - Introduction
     - Chacune des sections clairement identifiées.
