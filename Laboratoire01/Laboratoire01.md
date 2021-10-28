@@ -79,4 +79,4 @@ Le temps alloué en classe est d'environ 3 heures.
 
 - WordPress : https://fr-ca.wordpress.org/
 - Installation de WordPress sur Ubuntu : https://www.linuxshelltips.com/install-wordpress-on-ubuntu/, attention il s'agit d'une installation sur Apache et non Nginx.
-
+- https://guides.github.com/features/mastering-markdown/
