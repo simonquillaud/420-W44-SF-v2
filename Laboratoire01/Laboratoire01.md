@@ -35,7 +35,7 @@ Le temps alloué en classe est d'environ 3 heures.
    
    - Programmes : Nom, version, procédure d'installation.
    - Répertoire utilisé pour le programme, ses fichiers de configuration, ses données.
-   - Espace espace utilisé et droits sur les répertoires.
+   - Espace utilisé et droits sur les répertoires.
    - Nom d'usager (UID) et groupe (GID) pour le programme au sein du système et dans l'application.
    - Liste des commandes nécessaires pouvant être exécutées par une tierce personne.
 
