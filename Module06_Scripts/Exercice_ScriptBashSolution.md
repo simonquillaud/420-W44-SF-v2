@@ -57,22 +57,29 @@ echo "Voici votre compteur à terminé son travail"
 MIN=1
 MAX=50
 
-NOMBRE=$(((RANDOM % ($((MAX - MIN)) + 1)) + MIN))
+NOMBRE=$[($RANDOM % ($[$MAX - $MIN] +1)) + $MIN]
+#Compexité des nombres. Présence de la fonction RANDOM.
+CHIFFRE=0 
+#En initialisant la variable è 0, on fait en sorte
+# que bash interprête  CHIFFRE comme une valeur numérique.
 
-echo "Le chiffre a trouver est compris entre $MIN et $MAX, Trouvez-le!"
 
-read -r REPONSE;
+read -r CHIFFRE;
 
-while [ $REPONSE -ne $NOMBRE ]; do
-    if [ $REPONSE -lt $NOMBRE ]; then
+while [ $CHIFFRE -ne $NOMBRE ]
+do
+    echo "Le chiffre a trouver est compris entre $MIN et $MAX, Trouvez-le !"
+    read CHIFFRE
+    if [ $CHIFFRE -lt $NOMBRE ]
+    then
         echo "Le chiffre est plus grand"
-        read -r REPONSE;
-    else
+        
+    elif [ $CHIFFRE -gt $NOMBRE ]
+    then
         echo "Le chiffre est plus petit"
-        read -r REPONSE;
     fi
-done
-echo "Trouvé !! le chiffre etais: $NOMBRE"
+done()[]
+echo "Trouvé !! le chiffre etait: $NOMBRE"
 ```
 
 6- Réaliser un script bash qui permet de vérifier si l'utilisateur a bien saisi des arguments, et si les fichiers placés en arguments existent bien.
