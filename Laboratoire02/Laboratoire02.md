@@ -4,8 +4,8 @@
 
 **Contexte :** Le laboratoire s'effectue en groupe de 2 personnes.
 
-**Remise :** Vous devez déposer votre travail dans l'espace prévu sur LÉA au plus tard, le 25 juin à 23h59.
-Le temps alloué en classe est deux (2) séances.
+**Remise :** Vous devez déposer votre travail dans l'espace prévu sur LÉA au plus tard, le 2 décembre à 23h59.
+Le temps alloué en classe est de trois (3) séances.
 
 ## Exigences :
 
@@ -15,7 +15,7 @@ Le temps alloué en classe est deux (2) séances.
 
 - Le nom de la vm est votre srvwebequipe[x]
 
-- L'adresse IPv4 du serveur est : 10.100.2.[Votre numéro d'équipe +50]/24
+- L'adresse IPv4 du serveur est : 10.100.2.[Votre numéro d'équipe +100]/24
   
   - Utiliser l'adapteur réseau VM DFC2
   
