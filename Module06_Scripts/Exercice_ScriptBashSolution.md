@@ -84,6 +84,65 @@ echo "Trouvé !! le chiffre etait: $NOMBRE"
 
 6- Réaliser un script bash qui permet de vérifier si l'utilisateur a bien saisi des arguments, et si les fichiers placés en arguments existent bien.
 
+```bash
+#!/bin/bash
+#Recuperation des noms des fichiers
+FICHIERS=$@
+NOMBRE_ARGUMENTS=$#
+
+#Verification que l'utilisateur a bien saisi des arguments
+function verif_arguments(){
+        if [ $NOMBRE_ARGUMENTS -eq 0 ]
+        then
+                echo "Attention, vous n'avez pas saisi les noms des fichiers"
+                exit 2
+        fi
+}
+#Verification que le fichier n'existe pas déjà
+function verif_fichier_existe(){
+        for FICHIER in $FICHIERS
+        do
+
+                ls $FICHIER 2> /dev/null
+
+                if [ $? -eq 0 ]
+                then
+                        echo "Le fichier $FICHIER existe"
+                else
+                        echo "Le fichier $FICHIER n'existe pas"
+                fi
+        done
+}
+
+verif_arguments
+verif_fichier_existe $FICHIERS
+```
+
+
 7- Réaliser un script faisant appel a une fonction qui prend comme paramètre un login d'un user et vérifie si l'utilisateur existe déjà.
+
+
+```bash
+#!/bin/bash
+function saisirUser { 
+    echo "Saisir l'utilisateur" 
+    read -r util 
+} 
+#Au sein de la commande grep, l'accent circonflexe ^ et le symbole dollar $ sont des méta-caractères correspondant respectivement à une chaîne vide au début et en fin de ligne. 
+function verifyUser { 
+    if grep "^$util:" /etc/passwd > /dev/null; 
+    then 
+        echo "L'utilisateur existe" 
+    else 
+        echo "L'utilisateur n'existe pas" 
+    fi 
+    
+} 
+
+
+ saisirUSer
+ verifyUser 
+ 
+```
 
 **Fin de l'exercice 8**
