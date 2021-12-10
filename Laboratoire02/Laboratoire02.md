@@ -11,7 +11,7 @@ Le temps alloué en classe est de trois (3) séances.
 
 - Votre machine virtuelle doit ête un Ubuntu serveur 20.04 Lts.
 
-- Elle doit être situé dans le dossier E21_4391_420W44_ITV_JPD/Lab2
+- Elle doit être situé dans le dossier A21_4392_420W44_ITV_JPD/Lab2
 
 - Le nom de la vm est votre srvwebequipe[x]
 

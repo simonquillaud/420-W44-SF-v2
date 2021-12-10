@@ -1,4 +1,4 @@
-# Exercice 10 Conteneurs docker
+# Exercice prise en main des conteneurs docker
 
 
 ## Préambule - testez votre installation
