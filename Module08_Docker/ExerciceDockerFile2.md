@@ -1,4 +1,4 @@
-# Exercice 11 - Dockerfile
+# Exercice 2 - Dockerfile
 
 ## Exercice 1 - Créez le programme hello-world
 
