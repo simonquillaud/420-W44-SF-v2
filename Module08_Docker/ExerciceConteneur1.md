@@ -114,7 +114,7 @@ Sur Linux ctrl+C éteint le conteneur. Sur Windows il fonctionne toujours.
    ```bash
   docker container run --publish 8080:80 --detach --name nginx_webserver nginx
   ```
-  - À partir de l'aide, trouvez la signification de l'option --publish 80:8080. 
+  - À partir de l'aide, trouvez la signification de l'option --publish 8080:80. 
   ```bash
   docker container run --help
   ```
