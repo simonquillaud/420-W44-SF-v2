@@ -1,6 +1,6 @@
-﻿# Exercice 12 - Docker : volume et redirection de port
+﻿# Docker - Exercice 3 : volume et redirection de port
 
-Note : créez répertoire Exercice12 puis un répertoire par exercice.
+Note : créez répertoire Exercice3 puis un répertoire par exercice.
 
 ## Exercice 1 - Busybox
 
