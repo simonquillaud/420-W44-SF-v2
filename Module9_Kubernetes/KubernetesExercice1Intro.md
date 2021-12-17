@@ -1,4 +1,4 @@
-# Exercice 13 - Orchestrateur - Kubernetes
+# Kubernetes - Exercice 1 - Orchestrateur 
 
 Cette exercice a pour but de vous faire explorer et découvrir kubernetes. 
 

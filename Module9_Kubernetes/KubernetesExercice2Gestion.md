@@ -1,4 +1,4 @@
-﻿# Exercice 14 - Kubernetes - Gestion
+﻿# Kubernetes - Exercice 2 - Gestion
 
 Dans les exercices qui le permettent, assurez-vous de toujours indiquer un espace de nom qui correspond à votre numéro de matricule. Pour vous aider, ne sautez pas l'exercice 2.
 
