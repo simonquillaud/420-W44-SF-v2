@@ -25,7 +25,6 @@ int main(int argc, char** argv) {
   ENTRYPOINT ["/premier-programme"]
   ```
 
-```
 - À partir du fichier et de la documentation, décrivez ce que fait le fichier Dockerfile
 - Tapez la commande ```docker build --tag premier-programme:latest .```
 - Validez que l'image a bien été créée

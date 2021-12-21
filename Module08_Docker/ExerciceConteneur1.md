@@ -17,9 +17,15 @@
 
 Si aucun message d'erreur ne s'affiche, vous pouvez débuter l'exercice 1.
 
+<details>
+    <summary>Qu'est-ce que WSL</summary>
+Depuis la version 2.2.0.3 de Docker Desktop pour Windows, Docker offre la possibilité d’utiliser WSL2 (Windows Subsystem for Linux 2) afin d’éviter l’obligation de créer une machine virtuelle dans Hyper-V. Avant de pouvoir dire à Docker d’utiliser ce système, il est nécessaire de configurer Windows pour activer WSL2.
+La version minimum de Windows 10 pour utiliser WSL 2 est Windows 10 Build 18917.
+</details>
 
 <details>
-    <summary>Installation de docker</summary>
+
+   <summary>Installation de docker</summary>
 
 
 ```bash
