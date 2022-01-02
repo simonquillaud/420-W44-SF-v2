@@ -24,7 +24,8 @@ docker run username/repository:tag       # Run image from a registry
 ## Création d'images
 ```bash
 docker build -t vieux/apache:2.0 .
-docker build -t friendlyhello .  # Create image using this directory's Dockerfile
+docker build -t friendlyhello .             # Create image using this directory's Dockerfile
+docker build -f /path/to/a/AutreFichier .   # Utilisez une autre fichier que Dockerfile.
 ```
 
 ## Démarrer les conteneurs : 
