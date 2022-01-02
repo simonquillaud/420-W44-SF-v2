@@ -33,7 +33,7 @@ docker build -t friendlyhello .  # Create image using this directory's Dockerfil
 docker run --name test1 -it busybox
 docker run -p 4000:80 friendlyhello          # Run "friendlyname" mapping port 4000 to 80
 docker run -d -p 4000:80 friendlyhello        # Same thing, but in detached mode
-docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=ybo4ufp -d --name MonMySQL  mysql:latest
+docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=Passw0rd -d --name MonMySQL  mysql:latest
 # Autre exemple avec mappage et nom de conteneur.
 ```
 
@@ -49,7 +49,9 @@ docker run \
     -v d:\\DockerVolume\\VolumeNginx:/usr/share/nginx/html \
     -p 1234:80 --name monNginxWin nginx
 
-docker run -v d:\\DockerVolume\\VolumeMySQL:/var/lib/mysql -d --rm --name MonMysql -e MYSQL_ROOT_PASSWORD=Passw0rd -p 3307:3306 mysql
+docker run -v d:\\DockerVolume\\VolumeMySQL:/var/lib/mysql \
+    -d --rm --name MonMysql -e MYSQL_ROOT_PASSWORD=Passw0rd \
+    -p 3307:3306 mysql
 
 #En lecture seule
 docker run \
