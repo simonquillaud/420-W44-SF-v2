@@ -52,7 +52,9 @@ docker run \
 docker run -v d:\\DockerVolume\\VolumeMySQL:/var/lib/mysql -d --rm --name MonMysql -e MYSQL_ROOT_PASSWORD=Passw0rd -p 3307:3306 mysql
 
 #En lecture seule
-docker run -v /tmp/volumeNginx:/usr/share/nginx/html:ro -p 1234:80 --name monNginxLinux nginx
+docker run \
+    -v /tmp/volumeNginx:/usr/share/nginx/html:ro \
+    -p 1234:80 --name monNginxLinux nginx
 ```
 
 ## Création de WordPress :
