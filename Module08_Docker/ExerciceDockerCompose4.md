@@ -202,7 +202,7 @@ Actualisez l'application dans votre navigateur. Le message d'accueil devrait êt
 
 Si vous souhaitez exécuter vos services en arrière-plan, vous pouvez passer le drapeau -d (pour le mode "détaché") à docker-compose up et utiliser docker-compose ps pour voir ce qui est en cours d'exécution :
 ```bash
-$docker-com
+$docker-comose up
 
 Starting composetest_redis_1...
 Starting composetest_web_1...
