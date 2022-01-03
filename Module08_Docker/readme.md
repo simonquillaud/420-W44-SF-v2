@@ -74,7 +74,7 @@ $docker run --rm --name wordpress -d \
 
 # Docker-Compose
 ```bash
-docker-compose --help # pour voir les autres commandes
+$docker-compose --help # pour voir les autres commandes
 $docker-compose up -d # Mode détaché
 $docker-compose ls
 $docker-compose top #Affiche les processus en cours d'exécution sur mes conteneurs`
