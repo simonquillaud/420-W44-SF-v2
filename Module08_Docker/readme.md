@@ -36,6 +36,12 @@ $docker run -d -p 4000:80 friendlyhello        # Same thing, but in detached mod
 $docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=Passw0rd -d --name MonMySQL  mysql:latest
 # Autre exemple avec mappage et nom de conteneur.
 ```
+## Gestion des réseau : 
+```bash
+$docker network ls                          # Lister les réseaux de Docker
+$docker network inspect {NomDuRéseau}       # Avoir les informations détaillées sur un réseau
+                                            # Révoi aussi les conteneurs qui sont liés par ce réseau.
+```
 
 ## Utilisation d'un volume :
 
