@@ -35,7 +35,6 @@ Références à lire :
 
 - Les branches : 
 - [GIT, GitFlow et l’intégration continue pour les nuls](https://jp-lambert.me/git-gitflow-et-lint%C3%A9gration-continue-pour-les-nuls-a0b2f0b7c788)
-- Vidéo sur Gitflow : https://www.youtube.com/watch?v=ZQAQ4HcskAY (peux-être)
 - https://hub.docker.com/_/mysql
 - Outils d'enregistrement : OBS, Screencast-o-matic, etc.
 
