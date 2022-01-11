@@ -28,7 +28,7 @@ Vous devez fournir sur Léa ou par une adresse d'un dépôt GitLab:
     - Je veux pouvoir historiser votre travail. C'est le rôle des commits. Faites-en plus que moins. 
     
 - Le fichier docker-compose.yml qui est dans votre dépôt doit permettre de mettre en place l'ensemble de votre environnement de développement avec ses services, ses volumes (en bind mounting) et son propre réseau virtuel.
-    - Voici un exemple des sections dont doit comprendre votre fichier docker-compose :
+    - Voici un exemple des sections que votre fichier docker-compose doit comprendre  :
         ```Dockerfile
 
         version: '3'
