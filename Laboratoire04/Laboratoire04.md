@@ -2,9 +2,9 @@
 
 Le but de se laboratoire est de monter un site .Net core MVC avec SQL serveur dans Azure.
 
-Le laboratoire s'effectue en groupe de 4 maximum.
+Le laboratoire s'effectue en groupe de 3 maximum.
 
-Le temps alloué est de 2 1/2 séances. La remise est pour le 22 septembre 2021 minuit.
+Le temps alloué est de 3 1/2 séances. La remise est pour le 22 février minuit.
 
 Vous devez fournir :
 
