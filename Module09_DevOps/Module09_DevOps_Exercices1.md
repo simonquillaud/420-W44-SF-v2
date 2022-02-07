@@ -1,4 +1,4 @@
-# Exerice 1 - DevOps - Retour Git, pipelines
+# Exerice 1 - DevOps - Retour Git
 
 ## Exercice 1 - Contrôle de version avec Azure DevOps et Git
 
