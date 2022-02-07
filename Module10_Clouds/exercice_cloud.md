@@ -46,8 +46,6 @@
     - Au besoin, sélectionnez votre abonnement
     - Créer un Groupe de ressources : Module10
     - Pour le nom, entrez le nom : MaVM
-    - Dans la pile d'exécution : .Net 6 (LTS)
-    - Système d'exploitation : Linux
     - Changer la taille pour Standard_B1ls- processeur virtuel, 0,5 Gio de mémoire (5,97 $CA/mois)
     - Changer le type d'authentification pour : Mot de passe
     - Choisir un nom d'utilisation : Exemple AdminVM
