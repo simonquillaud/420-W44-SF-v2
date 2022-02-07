@@ -54,7 +54,6 @@
 4. Cliquez sur Suivant : Disques
 
     - Sélectionner HDD Standart
-    - Modifier la taille pour Dev/Test et F1
 
 5. Cliquez sur Créer
 
