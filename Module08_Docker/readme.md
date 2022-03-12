@@ -41,56 +41,56 @@ docker container exec -it nom_du_conteneur bash
 ```
 ## Gestion des réseaux : 
 ```bash
-$docker network ls                          # Lister les réseaux de Docker
-$docker network inspect <NETWORK_NAME>      # Avoir les informations détaillées sur un réseau.
+docker network ls                          # Lister les réseaux de Docker
+docker network inspect <NETWORK_NAME>      # Avoir les informations détaillées sur un réseau.
                                             # Renvoi aussi les conteneurs qui sont liés par ce réseau.
-$docker network create <NETWORK_NAME>       # Création d'un nouveau réseau auquel des nouveaux contenurs pourront s'attacher. 
+docker network create <NETWORK_NAME>       # Création d'un nouveau réseau auquel des nouveaux contenurs pourront s'attacher. 
                                             # Le driver par défaut est bridge
 # Pour utiliser un nouveau réseau :
-$docker container run --name webserver --network new-network -d nginx
+docker container run --name webserver --network new-network -d nginx
 # Pour déplacer un conteneur vers un réseau : 
-$docker network connect <NETWORK_NAME> <CONTAINER_NAME>
+docker network connect <NETWORK_NAME> <CONTAINER_NAME>
 # Pour le déconnecter :
-$docker network disconnec <CONTAINER_NAME>
+docker network disconnec <CONTAINER_NAME>
 ```
 **Attention : Pour utiliser le service DNS de Docker, il faut nécessairement créer de nouveaux réseaux. Le réseau par défaut bridge n'est pas géré par le service DNS de Docker.**
 
 ## Utilisation des volumes :
 
 ```bash
-$docker volume ls # Lister les volumes
-$docker volume create <VOLUME_NAME>
-$docker volume rm <VOLUME_NAME/ID>
-$docker volume inspect <VOLUME_NAME/ID>
+docker volume ls # Lister les volumes
+docker volume create <VOLUME_NAME>
+docker volume rm <VOLUME_NAME/ID>
+docker volume inspect <VOLUME_NAME/ID>
 # Exemple d'utilisation d'un volume (Bind Mounting) sur Linux
-$docker container run \
+docker container run \
     -v /tmp/volumeNginx:/usr/share/nginx/html \
     -p 11234:80 -d --name monNginxLinux nginx
 # Exemple d'utilisation d'un volume (Bind Mounting) sur Windows
-$docker container run \
+docker container run \
     -v d:\\DockerVolume\\VolumeNginx:/usr/share/nginx/html \
     -p 1234:80 -d --name -d monNginxWin nginx
 
-$docker container run -v d:\\DockerVolume\\VolumeMySQL:/var/lib/mysql \
+docker container run -v d:\\DockerVolume\\VolumeMySQL:/var/lib/mysql \
     --rm -d --name MonMysql -e MYSQL_ROOT_PASSWORD=Passw0rd \
     -p 3307:3306 mysql
 #En lecture seule
-$docker run \
+docker run \
     -v /tmp/volumeNginx:/usr/share/nginx/html:ro \
     -p 1234:80 --name monNginxLinux nginx
 ## Atention ##
-$docker volume prune #Attention : supprimer tous les volumes qui ne sont pas utilisés par Docker. Donc disparition des données.
+docker volume prune #Attention : supprimer tous les volumes qui ne sont pas utilisés par Docker. Donc disparition des données.
 
 ```
 
 ## Création de WordPress :
 ```bash
-$docker run -d --rm --name mysql \
+docker run -d --rm --name mysql \
     -e MYSQL_ROOT_PASSWORD=Passw0rd -e MYSQL_DATABASE=wordpress \
     -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=Passw0rd \
     -p 3306:3306 -v /Users/pfl/tmp/msyql:/var/lib/mysql mysql
 
-$docker run --rm --name wordpress -d \
+docker run --rm --name wordpress -d \
     -e WORDPRESS_DB_HOST=172.17.0.2 -e WORDPRESS_DB_USER=wordpress \
     -e WORDPRESS_DB_PASSWORD=Passw0rd -e WORDPRESS_DB_NAME=wordpress \
     -e WORDPRESS_TABLE_PREFIX=wp_ -p 8080:80 wordpress
@@ -98,12 +98,12 @@ $docker run --rm --name wordpress -d \
 
 # Docker-Compose
 ```bash
-$docker-compose --help         # pour voir les autres commandes
-$docker-compose up -d          # mode détaché
-$docker-compose ls
-$docker-compose top            # affiche les processus en cours d'exécution sur mes conteneurs`
-$docker-compose run web env    # voir les variables d'environnements du conteneur web
-$docker-compose stop           # arrêter vos services
-$docker-compose down           # tout démonter, en supprimant entièrement les conteneurs
-$docker-compose down --volumes # supprimer également les données.
+docker-compose --help         # pour voir les autres commandes
+docker-compose up -d          # mode détaché
+docker-compose ls
+docker-compose top            # affiche les processus en cours d'exécution sur mes conteneurs`
+docker-compose run web env    # voir les variables d'environnements du conteneur web
+docker-compose stop           # arrêter vos services
+docker-compose down           # tout démonter, en supprimant entièrement les conteneurs
+docker-compose down --volumes # supprimer également les données.
 ```
