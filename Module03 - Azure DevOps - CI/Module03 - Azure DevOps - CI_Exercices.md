@@ -4,9 +4,8 @@
 
 - Évaluation : formative
 - Type de travail : Individuel
-- Durée : 1 heures
+- Durée : 3 heures
 - Plate forme : Azure DevOps
-- Lien vers le groupe Azure DevOps : https://dev.azure.com/A22-4393-ITV/
 
 ### Objectifs
 
