@@ -173,4 +173,7 @@ Téléchargez votre artefact et validez qu’il fonctionne en local :
 
 ## Pour vérification
 
-Résumé ce que vous avez compris dans un document Word.
+- Résumé ce que vous avez compris dans un document Word.
+- Copies d'écran comprenant l'adresse URL de vos pipelines : édition et exécution
+- Code YAML
+- Copies d'écran du site qui tourne en local
