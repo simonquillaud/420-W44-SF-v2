@@ -4,7 +4,7 @@
 
 - Évaluation : formative
 - Type de travail : Individuel
-- Durée : 1 heures
+- Durée : 3 heures
 - Plate forme : Azure DevOps
 
 ## Objectifs
