@@ -1,14 +1,13 @@
 # Exercice 4 –  Création d’un pipeline avec l’interface classique
 
-### Informations
+## Informations
 
 - Évaluation : formative
 - Type de travail : Individuel
 - Durée : 1 heures
 - Plate forme : Azure DevOps
-- Lien vers le groupe Azure DevOps : https://dev.azure.com/A22-4393-ITV/
 
-### Objectifs
+## Objectifs
 
 - Créer un projet Azure DevOps
 - Créer un pipeline d'intégration continue à travers l'interface classique
