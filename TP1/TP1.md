@@ -39,7 +39,7 @@
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
 - Fichier AUTHORS.md : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
-  - lien DevOps
+  - lien du projet sur Azure DevOps
   - Vos informations (prénom / nom / matricule)
 
 ## Projet
