@@ -33,7 +33,7 @@
 - Fichier YAML (pipeline YAML) (15 points)
 - Liste des commandes de compilation, ajout de projets / package nuget (10 points)
 - Répartition des tâches entre partenaires avec nombre d'heures (5 points)
-- Ajoutez pfleon@csfoy.ca comme utilisateur et administrateur (-10 points si je dois courrir après vous)
+- Ajoutez pfleon@csfoy.ca comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courrir après vous)
 - Répondre aux questions suivantes (20 points):
   - En quoi l'utilisation des outils DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
