@@ -33,13 +33,13 @@
 - Fichier YAML (pipeline YAML) (15 points)
 - Liste des commandes de compilation, ajout de projets / package nuget (10 points)
 - Répartition des tâches entre partenaires avec nombre d'heures (5 points)
-- Ajoutez pfleon@csfoy.ca comme utilisateur et administrateur (-10 points si je dois courir après vous)
+- Ajoutez pfleon@csfoy.ca comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courrir après vous)
 - Répondre aux questions suivantes (20 points):
   - En quoi l'utilisation des outils DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
 - Fichier AUTHORS.md : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
-  - lien DevOps
+  - lien du projet sur Azure DevOps
   - Vos informations (prénom / nom / matricule)
 
 ## Projet
@@ -53,7 +53,7 @@ Vous devez mettre le projet sous contrôle de source et mettre en place des pipe
 - Vous devez créer un nouveau projet d'équipe et y ajouter le code du projet dans le dépôt par défaut dans la branche "main" (n'oubliez pas le .gitignore !)
 - Vous devez créer une branche "develop"
 - Vous devez créer un pipeline classic d'intégration continue qui construit 3 artefacts (donc 3 "Azure publish" et non 1 comme dans les exercices) : un pour l'interface utilisateur (GC.ConsoleUI) et un par traitement lot (GC.Batch.ModifierNomPrenomPremiereLettreMajuscules et GC.Batch.ModifierPaysMajusculesClients)
-- Créer une nouvelle version de ce pipeline YAML
+- Reproduire une nouvelle version de ce pipeline avec des fichiers de descripton YAML
 - Les pipelines doivent se déclencher automatiquement à chaque modification des branches "main" et "develop"
 
 ## Étape 2 - Préparation d'un projet web
