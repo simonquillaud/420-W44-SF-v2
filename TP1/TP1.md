@@ -13,7 +13,7 @@
 
 ## Objectifs
 
-- Montrer que vous avez compris l'utilisation de branches, des pull-requests et des migrations
+- Montrer que vous avez compris l'utilisation de branches, des pull-requests
 - Montrer que vous avez compris le principe d'intégration continue et son intégration dans le cycle DevOps
 - Créer deux pipelines d'intégration continue dans Azure, un en mode classic et l'autre en YAML
 - Être capable d'expliquer la partie théorique et technique
