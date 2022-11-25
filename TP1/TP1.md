@@ -20,7 +20,7 @@
 
 ## Remise
 
-- Vidéo sur YouTube (non listée) (35 points):
+- Vidéo sur YouTube (non listée - autour de 5 mins) (35 points):
   - Branches et pull-requests (10 points)
   - Démonstration des étapes à réaliser localement (5 points)
   - Explication et démonstration des pipelines (15 points)
