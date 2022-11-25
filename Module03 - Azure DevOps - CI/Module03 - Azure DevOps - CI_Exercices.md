@@ -170,7 +170,7 @@ Téléchargez votre artefact et validez qu’il fonctionne en local :
 - En ligne de commande, placez-vous dans le répertoire décompressé
 - Lancez l’exécution du site web et validez qu’il fonctionne dans le navigateur (si vous avez une erreur SQL, reportez-vous à la solution de modifier la source de données dans le fichier « appsettings.json ».
 
-## Pour vérification
+## Pour vérifications
 
 - Résumé ce que vous avez compris dans un document Word.
 - Copies d'écran comprenant l'adresse URL de vos pipelines : édition et exécution
