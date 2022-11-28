@@ -62,7 +62,7 @@ Une nouvelle équipe de développeur va être prochainement créée afin de mode
 
 Vous devez donc :
 
-- Créer une branche pour ajouter le nouveau projet web
+- Créer une branche pour ajouter le nouveau projet web (Créé à partir de l'utilitaire dotnet en ligne de commandes - mettre la ligne utilisée dans la documentation)
 - Faire une pull-request pour l'intégrer dans la branche la plus logique
 - Modifier les pipelines afin d'ajouter un artefact pour l'application Web
 - Tester vos pipelines, ainsi que les artefacts de sortie
