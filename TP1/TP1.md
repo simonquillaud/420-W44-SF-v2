@@ -9,7 +9,9 @@
 - L’emprunt ou la copie de code ou de portions de code est interdite
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
 - Durée : 2 x 3 heures + travail à la maison
-- Plate forme : Azure DevOps et dotnet/react
+- Plate forme : Azure DevOps, Visual Studio Code et dotnet/react
+- Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire ne ligne de commande
+- Le nouveau projet Web à créer doit avoir les références vers les projets nécessaires à sa création pour la gestion de clients (références de projets)
 
 ## Objectifs
 
