@@ -102,3 +102,13 @@ Supprimez les ressources créées dans l'exercice 2 / tâche 3 :
   - Exécutez la commande `az group delete --name "M04-Exercice2-T03"`
 - Validez que le groupe de ressources a bien été supprimé
   - Exécutez la commande `az group list`
+
+## Exercice 4 - Création d'une VM Linux
+
+Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La première partie de l'exercice est à faire dans le portail Azure, la seconde partie est à faire avec le Azure CLI.
+
+### Tâche 1 - Création d'une VM Linux dans le portail Azure
+
+À l'aide du portail Azure, créez une VM Linux avec le port 80 ouvert :
+
+- Créez 
