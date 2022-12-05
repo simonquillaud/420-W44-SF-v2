@@ -173,3 +173,16 @@ az group create --name M04-Ex04-T02 --location canadaeast --tags "cohorte=4393" 
 ```
 
 </details>
+
+### Tâche 3 - Création d'une VM Linux à partir d'un template ARM
+
+- Débutez la création de la VM Linux "M04-Ex04-T03-VM" à partir du portail Azure. Au lieu de créer la ressource, téléchargez le template ARM de la VM
+- Positionnez-vous dans le répertoire de votre choix et désarchiver le fichier téléchargé
+- Modifiez le fichier `parameters.json` pour définir le mot de passe du compte administrateur (vers la fin du document JSON)
+- En ligne de commande, créez le groupe de ressources `M04-Ex04-T03`
+- Pour exécuter le déploiement, utilisez la commande `az deployment group create --resource-group M04-Ex04-T03 --template-file template.json --parameters @parameters.json`
+- Installez Ngnix et ouvrez le port 80 avec les mêmes commandes que dans la tâche précédente mais en remplaçant le nom de la VM et celui du groupe de ressources
+- Validez que le tout fonctionne (Si le port n'est pas ouvert, l'ouvrir !)
+- Supprimer le groupe de ressources "M04-Ex04-T03" avec tout ce que vous avez dedans pour ne pas gaspiller d'argent avec la commande `az group delete --name "M04-Ex04-T03" --yes`
+
+Fini !
