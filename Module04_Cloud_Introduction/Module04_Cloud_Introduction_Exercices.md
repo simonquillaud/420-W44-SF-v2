@@ -15,6 +15,7 @@
   - Sur votre cahier de laboratoire, notez le nom de votre abonnement
 - Si vous n'avez pas de compte Azure, vous pouvez en créer un gratuitement (si crédit non utilisé) :
   - https://azure.microsoft.com/fr-ca/free/students/
+- Pour accéder au menu étudiant à partir du portail, simplement se rendre sur le service Azure "Education".
 
 ### Tâche 2 - Installation du Azure CLI
 
@@ -41,7 +42,7 @@
   - Choisissez votre abonnement, un groupe de ressources et le nom "M04-Exercice2-T01" pour votre compte de stockage
   - Au niveau de la région, choisissez `Canada east`
   - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
-  - Ajoutez les tags suivants :
+  - Ajoutez les étiquettes (tags) suivantes :
     - `cohorte` : `4393`
     - `session` : `A22`
     - `cours` : `420-W44-SF`
@@ -55,6 +56,11 @@
   - Cliquez sur le bouton `Cloud Shell` (en haut à droite) (Vous pouvez aussi utiliser l'URI https://shell.azure.com/)
   - Choisissez `Bash` (en haut à droite)
   - Si vous n'avez pas de Cloud Shell, cliquez sur `Créer un Cloud Shell`
+    - Cliquez sur "Afficher les paramètres avancés". Autrement, un nouveau compte de stockage sera créé. Sélectionnez&nbsp;:
+       - Votre bonne région
+       - Votre groupe de ressources
+       - Votre compte de stockage
+       - Créez un partage de fichier (le nom a peu d'importance)
   - Une fois le Cloud Shell ouvert, exécutez la commande `az account show`
   - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
 - Allez dans le dossier `~/clouddrive`
