@@ -195,7 +195,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 
 - Connectez-vous au portail Azure
 - Créez le nouveau groupe de ressources "M04-Ex05-T01"
-- Créez une nouvelle instance de base de données nommée "M04-Ex05-T01-SQL" dans le groupe de ressources "M04-Ex05-T01" : vous aurez besoin de créer un serveur SQL, choisissez l'authentification de type "SQL"
+- Créez une nouvelle instance de base de données nommée "M04-Ex05-T01-SQL-<matricule>" dans le groupe de ressources "M04-Ex05-T01" : vous aurez besoin de créer un serveur SQL, choisissez l'authentification de type "SQL"
 - Pour l'environnement de charge de travail, choisissez "Développement"
 - Choisissez le niveau de calcul "Serverless" (Calcul + stockage) :
   - Niveau de service, choisissez "Usage général"
