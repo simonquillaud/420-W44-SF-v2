@@ -185,4 +185,145 @@ az group create --name M04-Ex04-T02 --location canadaeast --tags "cohorte=4393" 
 - Validez que le tout fonctionne (Si le port n'est pas ouvert, l'ouvrir !)
 - Supprimer le groupe de ressources "M04-Ex04-T03" avec tout ce que vous avez dedans pour ne pas gaspiller d'argent avec la commande `az group delete --name "M04-Ex04-T03" --yes`
 
+## Exercice 5 - Création d'une instance de base de données et une application web à partir du portail Azure
+
+Dans cet exercice, nous allons créer un serveur de base de données et une base de données à partir de la ligne de commande et du portail Azure. Nous allons utiliser un service PaaS (Platform as a Service) qui est une base de données relationnelle (SQL) gérée par Microsoft. Nous allons utiliser le service Azure SQL Database. Ce service est disponible dans le portail Azure et en ligne de commande. Nous allons utiliser les deux méthodes pour créer une base de données.
+
+Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui est un niveau de calcul qui permet de payer uniquement pour le temps d'exécution de la base de données. Ce niveau de calcul est idéal pour les applications qui ont des pics d'utilisation et qui ne sont pas utilisées en permanence. Nous allons utiliser ce niveau de calcul pour notre base de données.
+
+### Tâche 1 - Création d'une instance de base de données à partir du portail Azure
+
+- Connectez-vous au portail Azure
+- Créez le nouveau groupe de ressources "M04-Ex05-T01"
+- Créez une nouvelle instance de base de données nommée "M04-Ex05-T01-SQL" dans le groupe de ressources "M04-Ex05-T01" : vous aurez besoin de créer un serveur SQL, choisissez l'authentification de type "SQL"
+- Pour l'environnement de charge de travail, choisissez "Développement"
+- Choisissez le niveau de calcul "Serverless" (Calcul + stockage) :
+  - Niveau de service, choisissez "Usage général"
+  - Niveau de calcul, choisissez "Serverless"
+  - Mettez le curseur "vCores max" à 1
+  - Validez que la case à cocher "Délai de pause automatique" est cochée et que le délai est de 1 heure
+  - Baissez la taille du stockage à 5 Go (Coûts mensuel autour de 1.15$)
+- Choisissez un type de stockage "redondant localement"
+
+### Tâche 2 - Création d'une application web à partir du portail
+
+- Créez une application web nommée "M04-Ex05-T01-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex05-T01" :
+  - Choisissez publier "Code"
+  - Pile d'exécution, choisissez ".NET 6 (LTS)"
+  - Systeme d'exploitation, choisissez "Linux"
+  - Région, choisissez "Canada Central"
+  - Modifier plan de tarification, choisissez "Gratuit F1" (Dans Dev/Test)
+  - Dans la section "Application Insights", choisissez "Désactiver" (Surveillance)
+  - Dans la section balises, ajoutez les balises suivantes :
+    - cohorte=4393
+    - session=A22
+    - cours=420-W44-SF
+    - module=M04
+  - Créez le service
+- Ouvrez le service et vérifier que l'app web est bien en ligne en utilisant l'URL fournie par le portail Azure (Exemple : https://m04-ex05-t01-web-<matricule>.azurewebsites.net)
+- Vous devriez voir une page web avec le texte "Your web app is running and waiting for your content"
+
+#### Tâche 3 - Nettoyage des ressources
+
+- Supprimer le groupe de ressources "M04-Ex05-T01" avec tout ce que vous avez dedans pour ne pas gaspiller d'argent par le portail Azure
+
+## Exercice 6 - Création d'une instance de base de données et une application web à partir de la ligne de commande
+
+### Tâche 1 - Création d'une instance de base de données à partir de la ligne de commande
+
+- Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé "M04-Ex05-T02", utilisez la ligne de commande `az group create --name M04-Ex06-T01 --location canadacentral --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"`
+- Utilisez la commande `az sql server create --resource-group "M04-Ex06-T01" --name "M04-Ex06-T01-SQL" --location "canadacentral" --admin-user "adminuser" --admin-password "Password123.." --enable-public-network true` pour créer un serveur de bases de données.
+- Créez une base de données en utilisant la commande `az sql db create     --resource-group "M04-Ex06-T01" --server "M04-Ex06-T01-SQL-<matricule>" --name "M04-Ex06-T01-DB" --edition "GeneralPurpose" --compute-model "Serverless" --family "Gen5" --capacity 1 --max-size 5GB`
+
+### Tâche 2 - Création d'une application web à partir de la ligne de commande
+
+- Créez un plan de service nommé "M04-Ex06-T02-AppServicePlan" dans le groupe de ressources "M04-Ex06-T02" à partir de la ligne de commande suivante : `az appservice plan create --name "M04-Ex06-T02-AppServicePlan" --resource-group "M04-Ex06-T01" --location "canadacentral" --sku "F1" --is-linux --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"`
+- Créez une application web nommée "M04-Ex06-T02-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex06-T01" et le plan de service nommé "M04-Ex06-T02-AppServicePlan" à partir de la ligne de commande suivante : `az webapp create --resource-group "M04-Ex06-T01" --plan "M04-Ex06-T02-AppServicePlan" --name "M04-Ex06-T02-Web-<matricule>" --runtime "DOTNETCORE|6.0" --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"`
+- Notez la valeur de la clef "defaultHostName" dans la sortie de la commande précédente. Vous aurez besoin de cette valeur pour essayer votre application web.
+- Testez votre application web
+- Construisez votre chaine de connexion pour la base de données à partir de la chaine suivante :
+`connexionString="Server=tcp:m04-ex06-t01-sql-<matricule>.database.windows.net,1433;Initial Catalog=M04-Ex06-T01-DB;Persist Security Info=False;User ID=adminuser;Password=Password123..;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"` et exécuté la ligne dans bash (vous pouvez l'adapter pour cmd ou powershell)
+- Ajoutez les chaines de connexion pour l'application avec les commandes suivantes : `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "CatalogConnection=$connexionString" --connection-string-type SQLServer` et `az webapp config connection-string set --name "M04-Ex06-T02-Web-<matricule>" --resource-group "M04-Ex06-T01" --settings "IdentityConnection=$connexionString" --connection-string-type SQLServer`
+- Reprenez la version compilée et publiée de eShopOnWeb (https://github.com/dotnet-architecture/eShopOnWeb) : vous devriez avoir un fichier zip nommé "publishedArtifac.zip" dans le répertoire courant du dépôt.
+- Déployez l'application web à partir du répertoire "Exercice6" à partir de la ligne de commande suivante : `az webapp deployment source config-zip --src publishedArtifac.zip --resource-group M04-Ex06-T01 --name "M04-Ex06-T02-Web-<matricule>"` 
+- Testez votre application web
+
+<details>
+    <summary>Générer une version qui crée les tables au démarrage de l'application web</summary>
+
+Modifiez le code :
+
+```csharp
+using (var scope = app.Services.CreateScope())
+{
+    var scopedProvider = scope.ServiceProvider;
+    try
+    {
+        var catalogContext = scopedProvider.GetRequiredService<CatalogContext>();
+        await CatalogContextSeed.SeedAsync(catalogContext, app.Logger);
+
+        var userManager = scopedProvider.GetRequiredService<UserManager<ApplicationUser>>();
+        var roleManager = scopedProvider.GetRequiredService<RoleManager<IdentityRole>>();
+        var identityContext = scopedProvider.GetRequiredService<AppIdentityDbContext>();
+        await AppIdentityDbContextSeed.SeedAsync(identityContext, userManager, roleManager);
+    }
+    catch (Exception ex)
+    {
+        app.Logger.LogError(ex, "An error occurred seeding the DB.");
+    }
+}
+```
+
+Pour :
+```csharp
+using (var scope = app.Services.CreateScope())
+{
+    var scopedProvider = scope.ServiceProvider;
+    try
+    {
+        var catalogContext = scopedProvider.GetRequiredService<CatalogContext>();
+        catalogContext.Database.EnsureCreated(); // Crée les tables si elles n'existent pas
+        await CatalogContextSeed.SeedAsync(catalogContext, app.Logger);
+
+        var userManager = scopedProvider.GetRequiredService<UserManager<ApplicationUser>>();
+        var roleManager = scopedProvider.GetRequiredService<RoleManager<IdentityRole>>();
+        var identityContext = scopedProvider.GetRequiredService<AppIdentityDbContext>();
+        await AppIdentityDbContextSeed.SeedAsync(identityContext, userManager, roleManager);
+    }
+    catch (Exception ex)
+    {
+        app.Logger.LogError(ex, "An error occurred seeding the DB.");
+    }
+}
+```
+
+</details>
+
+### Tâche 3 - Nettoyage
+
+- Supprimez les ressources créées dans les tâches précédentes
+<!-- 
+## Exercice 7 - Création d'une application web et base de données à partir des fichiers ARMs
+
+### Tâche 1 - Utilisation du portail
+
+- Débutez la création d'une application web et base de données à partir du portail : choisissez "Web App + Database" dans la liste des services
+- Configurez l'ensemble par le portail
+- Faite l'extraction des fichiers ARM
+- Testez les en ligne de commande (seul les chaines de connexion à la BD ne devraient pas fonctionner)
+
+### Tâche 2 - Azure DevOps
+
+- À partir site web de Azure DevOps, retourner dans le projet d'équipe que vous aviez utilisé dans le module 3 pour l'application eShopOnWeb
+- Modifiez le code source de l'application pour intégrer la création de la BD au démarrage de l'application (Pour simplifier la migration)
+- Dans votre dossier Git, créez un nouveau répertoire nommé "IAC" (pour Infrastructure as Code)
+- Copier vos fichiers ARM dans ce répertoire
+- Modifiez votre pipeline pour qu'il copie les fichiers ARM dans le répertoire "IAC" et publiez le dans un nouvel artefact nommé "IAC"
+- Créez un "Release" pour déployer les fichiers ARM
+- Essayez de déployer votre infrastructure
+- Dans le release, ajoutez une étape "Azure CLI" pour créer les chaines de connexion à la BD
+- Dans le release, ajoutez une étape de déploiement de l'application web
+
+Pour vous aider, vous pouvez utiliser le PDF que vous allez trouver à la racine de ce répertoire. -->
+
 Fini !

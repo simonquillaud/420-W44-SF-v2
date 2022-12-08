@@ -30,7 +30,7 @@
 ### Testez la solution localement
 
 - Naviguez le répertoire « src/Web »
-- Exécutez le projet 
+- Exécutez le projet
   - Si vous avez un problème de bases de données, vous pouvez éditer le fichier « appsettings.Development.json » et ajouter la clef « UseOnlyInMemoryDatabase » avec la valeur « true » : la base de données sera alors en mémoire
 - Lancez votre navigateur Web afin de valider que le site fonctionne correctement
 
@@ -55,7 +55,7 @@ cd <cheminDepot>
 dotnet restore eShopOnWeb.sln 
 dotnet build --configuration Release eShopOnWeb.sln
 dotnet test --configuration Release eShopOnWeb.sln
-dotnet publish src/Web --configuration Release --output bin/publishedArtifact
+dotnet publish src/Web --configuration Release --output bin/publishedArtifac
 cd bin/publishedArtifact ; dotnet Web.dll
 ```
 
