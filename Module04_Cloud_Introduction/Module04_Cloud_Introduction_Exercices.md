@@ -302,28 +302,5 @@ using (var scope = app.Services.CreateScope())
 ### Tâche 3 - Nettoyage
 
 - Supprimez les ressources créées dans les tâches précédentes
-<!-- 
-## Exercice 7 - Création d'une application web et base de données à partir des fichiers ARMs
-
-### Tâche 1 - Utilisation du portail
-
-- Débutez la création d'une application web et base de données à partir du portail : choisissez "Web App + Database" dans la liste des services
-- Configurez l'ensemble par le portail
-- Faite l'extraction des fichiers ARM
-- Testez les en ligne de commande (seul les chaines de connexion à la BD ne devraient pas fonctionner)
-
-### Tâche 2 - Azure DevOps
-
-- À partir site web de Azure DevOps, retourner dans le projet d'équipe que vous aviez utilisé dans le module 3 pour l'application eShopOnWeb
-- Modifiez le code source de l'application pour intégrer la création de la BD au démarrage de l'application (Pour simplifier la migration)
-- Dans votre dossier Git, créez un nouveau répertoire nommé "IAC" (pour Infrastructure as Code)
-- Copier vos fichiers ARM dans ce répertoire
-- Modifiez votre pipeline pour qu'il copie les fichiers ARM dans le répertoire "IAC" et publiez le dans un nouvel artefact nommé "IAC"
-- Créez un "Release" pour déployer les fichiers ARM
-- Essayez de déployer votre infrastructure
-- Dans le release, ajoutez une étape "Azure CLI" pour créer les chaines de connexion à la BD
-- Dans le release, ajoutez une étape de déploiement de l'application web
-
-Pour vous aider, vous pouvez utiliser le PDF que vous allez trouver à la racine de ce répertoire. -->
 
 Fini !
