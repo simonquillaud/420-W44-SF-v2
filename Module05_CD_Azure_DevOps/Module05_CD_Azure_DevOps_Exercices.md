@@ -29,7 +29,7 @@ Pour vous aider, vous pouvez utiliser le PDF que vous allez trouver à la racine
 - Poussez le modification dans votre dépôt distant
 - Créez un pipeline d'intégration continu pour le dépôt Git "eShopOnWeb-IaC" qui copie simplement les fichiers ARM dans un artefact nommé "IaC"
 
-### Tâche 3 - Créer d'un pipeline de déploiement continu
+### Tâche 3 - Création d'un pipeline de déploiement continu
 
 - Créez un "Release Pipeline" nommé "eShopOnWeb-Release"
 - Ajoutez l'artefact "IaC" qui a été créé dans le pipeline d'intégration continu
