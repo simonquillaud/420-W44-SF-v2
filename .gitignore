@@ -8,3 +8,4 @@ obj
 **/*.pptx
 /Documentation/*
 /Gestion/*
+node_modules
