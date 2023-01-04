@@ -31,22 +31,25 @@
   - Liste des tâches
   - Paramètres de chaque tâche
   - Variables
-  - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique
+  - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique ou les copies d'écran sont dans un fichier Word ou PDF
 - Fichier YAML (pipeline YAML) (15 points)
 - Liste des commandes de compilation, ajout de projets / package nuget (10 points)
 - Répartition des tâches entre partenaires avec nombre d'heures (5 points)
-- Ajoutez pfleon@csfoy.ca comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courrir après vous)
+- Ajoutez `pfleon@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
 - Répondre aux questions suivantes (20 points):
   - En quoi l'utilisation des outils DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
-- Fichier AUTHORS.md : (Jusqu'à -10 points pour non respect des consignes)
+- Fichier `AUTHORS.md` : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
   - lien du projet sur Azure DevOps
   - Vos informations (prénom / nom / matricule)
+  - le fichier doit être remis dans l'archive zip sur Léa
+
+En résumé, ce qui est noté est ce qui est dans l'archive zip sur Léa à l'exception de la vidéo sur YouTube dont je dois trouver le lien dans le fichier `AUTHORS.md`.
 
 ## Projet
 
-Le projet est un vieux projet développé en dotnet 3.1. Il se trouve dans le répertoire ```src``` du présent répertoire.
+Le projet est un vieux projet développé en dotnet 3.1. Il se trouve dans le répertoire ```src``` du présent répertoire. Vous pouvez le passe en version plus récente pour les besoins de ce travail pratique.
 
 ## Étape 1 - Gestion de source et intégration continue
 
