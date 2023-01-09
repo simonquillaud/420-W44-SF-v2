@@ -3,6 +3,7 @@ using GC.DAL.EF;
 using GC.DAL.EF.Models;
 using GC.Entites;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -17,7 +18,8 @@ namespace GC.WebReact
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString, b => b.MigrationsAssembly("GC.WebReact")));
+            //options.UseSqlServer(connectionString, b => b.MigrationsAssembly("GC.WebReact").EnableRetryOnFailure()));
+            options.UseSqlServer(connectionString, b => b.MigrationsAssembly("GC.WebReact")));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -42,6 +44,7 @@ namespace GC.WebReact
 
             builder.Services.AddScoped<IDepotClients, DepotClientsEF>();
             builder.Services.AddScoped<GestionClientsBL>();
+            builder.Services.AddHealthChecks().AddSqlServer(connectionString, tags: new[] { "db" });
 
             var app = builder.Build();
 
@@ -70,6 +73,14 @@ namespace GC.WebReact
             app.MapRazorPages();
 
             app.MapFallbackToFile("index.html");
+
+            app.MapHealthChecks("/healthz/live", new HealthCheckOptions
+            {
+                Predicate = healthCheck => !healthCheck.Tags.Contains("db")
+            });
+            app.MapHealthChecks("/healthz/auth")
+    .RequireAuthorization();
+            app.MapHealthChecks("/healthz/db");
 
             app.Run();
         }
