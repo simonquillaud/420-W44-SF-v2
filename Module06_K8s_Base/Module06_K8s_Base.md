@@ -57,7 +57,7 @@ kubectl exec monbash-78c9b77fb9-wb27p -it -- sh
 
 - Créez un déploiement nommé "nginx" avec la commande : ```kubectl create deployment nginx --image=nginx```. L'image expose un site sur le port 80.
 - Déterminez l'adresse IP du pod en utilisant les commandes que vous avez vues précèdement.
-- Créez un déploiement nommé "navigateur" à partir de l'image `browsh/browsh` en mode interactif en ajoutant `--rm` afin de supprimer le déploiement automatiquement à la terminaison du pod (Le démarrage du pod est long, soyez patient !)
+- Créez une exécution nommée "navigateur" à partir de l'image `browsh/browsh` en mode interactif en ajoutant `--rm` afin de supprimer le déploiement automatiquement à la terminaison du pod (Le démarrage du pod est long, soyez patient !)
 - Essayez d'accéder à votre site à partir de la machine locale (Votre ordinateur portable ou votre VM). Que se passe-t-il ? Pourquoi ?
 - Essayez d'accéder à votre site à partir du Pod "browsh" (Ctrl-L) qui devrait normalement être lancé. Est-ce que cela fonctionne ? Pourquoi ?
 - Supprimez votre déploiement
