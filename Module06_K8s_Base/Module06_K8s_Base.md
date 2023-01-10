@@ -56,15 +56,22 @@ kubectl exec monbash-78c9b77fb9-wb27p -it -- sh
 ### Exercice 3.1 - Nginx - Premier déploiement
 
 - Créez un déploiement nommé "nginx" avec la commande : ```kubectl create deployment nginx --image=nginx```. L'image expose un site sur le port 80.
-- Créez un déploiement nommé "navigateur" à partir de l'image `browsh/browsh` en mode intératif en ajoutant `--rm` afin de supprimer le déploiement automatiquement à la terminaison du pod
-- Essayez d'accéder à votre site à partir de la machine locale. Que se passe-t-il ? Pourquoi ?
+- Déterminez l'adresse IP du pod en utilisant les commandes que vous avez vues précèdement.
+- Créez un déploiement nommé "navigateur" à partir de l'image `browsh/browsh` en mode interactif en ajoutant `--rm` afin de supprimer le déploiement automatiquement à la terminaison du pod (Le démarrage du pod est long, soyez patient !)
+- Essayez d'accéder à votre site à partir de la machine locale (Votre ordinateur portable ou votre VM). Que se passe-t-il ? Pourquoi ?
+- Essayez d'accéder à votre site à partir du Pod "browsh" (Ctrl-L) qui devrait normalement être lancé. Est-ce que cela fonctionne ? Pourquoi ?
 - Supprimez votre déploiement
+
+Voici les principales touches que vous pouvez utiliser dans ce navigateur en mode texte :
+
+![Commandes Browsh](img/browsh_cmd.png)
 
 <details>
     <summary>Solution</summary>
 
 ```bash
 kubectl create deployment nginx --image=nginx
+kubectl get pods -o wide # récupération de l'adresse IP du Pod.
 kubectl run navigateur --image=browsh/browsh -it --rm
 kubectl delete deployment nginx
 ```
@@ -73,25 +80,26 @@ kubectl delete deployment nginx
 
 ### Exercice 3.2 - Nginx - Liaison d'un port
 
-- Créez un déploiement nommé `mon-nginx` avec l'image nginx
+- Créez un déploiement nommé `whoami` avec l'image `traefik/whoami`
 - Validez que le pod est bien créé en visualisant le pod et le déploiement
-- Créez de nouveau replica de votre pod en tapant la commande suivante : ```kubectl scale deployment --replicas 2 mon-nginx```
-- Listez les pods et validez que vous en avez bien 2 maintenant
-- Exposez vos pods sur votre hôte local avec la commande suivante : ```kubectl expose deployments mon-nginx --port=80 --type=LoadBalancer```
-- Testez votre site
+- Créez de nouveau replica de votre pod en tapant la commande suivante : ```kubectl scale deployment --replicas 10 whoami```
+- Listez les pods et validez que vous en avez bien 10 maintenant
+- Exposez vos pods sur votre hôte local avec la commande suivante : ```kubectl expose deployments whoami --port=80 --type=LoadBalancer```
+- Testez votre site en local
+- Testez plusieurs fois la commande suivante `wget -qO - http://127.0.0.1` (si la commande ne fonctionne pas, installez wget ou utilisez une commande équivalente comme curl)
 - Supprimez les ressources créées
 
 <details>
     <summary>Solution</summary>
 
 ```bash
-kubectl create deployment mon-nginx --image=nginx
+kubectl create deployment whoami --image=traefik/whoami
 kubectl get pods -o wide
 kubectl get deployments -o wide
-kubectl scale deployment --replicas 2 mon-nginx
-kubectl expose deployments mon-nginx --port=80 --type=LoadBalancer
-kubectl delete service mon-nginx
-kubectl delete deployment mon-nginx
+kubectl scale deployment --replicas 10 whoami
+kubectl expose deployments whoami --port=80 --type=LoadBalancer
+kubectl delete services whoami
+kubectl delete deployment whoami
 ```
 
 </details>
