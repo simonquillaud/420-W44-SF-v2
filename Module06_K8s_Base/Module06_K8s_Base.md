@@ -26,8 +26,8 @@ Ce module a pour but de vous faire explorer et découvrir kubernetes.
 
 Dans cet exercice, validez tout le temps que vous êtes bien si vous êtes dans le pod ou non en listant par exemple la liste des interfaces réseau. Vous noterez aussi que le prompt du shell est différent de celui de Powershell.
 
-- Utilisez la commande run de kubectl afin de démarrer une image busybox
-  - Appelez votre déployment (~ pods) `monbash`
+- Utilisez la commande `run` de `kubectl` afin de démarrer une image busybox
+  - Appelez votre exécution (~ pods) `monbash`
   - Redirigez stdin et utilisez le tty avec l'option `-it`
   - Et dans le conteneur, exécutez la commande `sh` sans argument en la passant après le séparateur de paramètres du kubectl et du pod (" -- ")
 - Tapez quelques commandes afin de valider que vous êtes bien dans votre pod et sortez du pod
