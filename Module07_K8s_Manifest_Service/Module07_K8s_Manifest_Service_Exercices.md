@@ -4,7 +4,7 @@ Dans les exercices qui le permettent, assurez-vous de toujours indiquer un espac
 
 ## Exercice 1 - Amélioration de votre bash (bash seulement)
 
-- Ouvrez un terminal avec bash et tapez la commande suivante et relancez un nouveau bash :
+L'autocomplétion est d'une grande aide, vous ne pourrez pas tout retenir. Pour l'activer, vous devez ajouter la ligne suivante dans votre fichier `.bashrc` :
 
 ```bash
 echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétion de manière permanente à votre shell bash
@@ -14,10 +14,12 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 
 ## Exercice 2 - Modification du contexte
 
+Dans cet exercice, vous allez apprendre à créer un contexte afin de simplifier vos lignes de commande ou, pour les prochains modules, viser un autre serveur Kubernetes.
+
 !!! Si vous êtes sous windows, ne passez pas par le Ubuntu de Windows mais par powershell !!!
 
-- Faites une copie de sauvegarde de votre fichier .kube/config 
-- Créez vous un contexte avec la commande 'kubectl config set-context', spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster local et l'utilisateur que vous venez de spécifier (Voir démonstration)
+- Faites une copie de sauvegarde de votre fichier `.kube/config`
+- Créez vous un contexte avec la commande `kubectl config set-context`, spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster local et l'utilisateur que vous venez de spécifier (Voir démonstration)
 - Définissez votre nouveau context comme étant le contexte courant (use-context, voir démonstration)
 - Affichez les noeuds et les pods du cluster (tous les namespaces) et de votre namespace pour valider que tout fonctionne
 - Créez un fichier manifeste afin de créer votre espace de noms et appliques le. Attention, étant donné que vous utilisez votre numéro de matricule comme nom, il faut le mettre entre guillemets sinon YAML va le prendre pour un entier et non une chaîne de caractères.
@@ -25,39 +27,41 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 
 ## Exercice 3 - Créez plusieurs déploiements - Sélection
 
+Dans cet exercice, nous allons créer des déploiements quelquonques dont nous allons nous servir afin de tester les requêtes sur les labels (i.e. l'image et la fonctionnalité n'a pas d'importance ici !).
+
 - Créez plusieurs déploiements avec les caractéristiques suivantes (un réplica) :
   - dep1.yaml :
-    - image : nginxdemos/hello
+    - image : `nginxdemos/hello`
     - replica : 1
     - labels :
       - tier : frontend
       - env : unit
   - dep2.yaml :
-    - image : nginxdemos/hello
+    - image : `nginxdemos/hello`
     - replica : 1
     - labels :
       - tier : backend
       - env : unit
   - dep3.yaml :
-    - image : nginxdemos/hello
+    - image : `nginxdemos/hello`
     - replica : 1
     - labels :
       - tier : frontend
       - env : fonc
   - dep4.yaml :
-    - image : nginxdemos/hello
+    - image : `nginxdemos/hello`
     - replica : 1
     - labels :
       - tier : backend
       - env : fonc
   - dep5.yaml :
-    - image : nginxdemos/hello
+    - image : `nginxdemos/hello`
     - replica : 1
     - labels :
       - tier : frontend
       - env : accept
   - dep6.yaml :
-    - image : nginxdemos/hello
+    - image : `nginxdemos/hello`
     - replica : 1
     - labels :
       - tier : backend
@@ -89,8 +93,11 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 - Affichez les pods avec une vue enrichie (wide)
 - Dans le pod qui contient votre shell, essayez différentes adresses
 - Amusez vous à supprimer des pods pour voir ce qui se passe
+- **Ne supprimez pas le déploiement, nous allons l'utiliser dans l'exercice suivant**
 
 ## Exercice 5 - Service
+
+Dans cet exercice, nous allons créer un service qui va nous permettre d'accéder à nos réplicas.
 
 - Créez le déploiement d'un service qui vous permet d'accéder à vos 10 réplica :
   - service :
@@ -99,7 +106,7 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
     - ne spécifiez pas de port pour le node et ne créez donc pas de propriété nodePort
     - type : nodePort
     - matchLabels : voir exercice précédent
-- À partir d'un pod qui a un shell, essayez la commande suivante :
+- À partir d'un pod qui a un shell, essayez la commande suivante (au passage, observez le nom du service et du site) :
 
 ```bash
 watch -n 1 wget -qO - mon-site | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+'
@@ -107,6 +114,7 @@ watch -n 1 wget -qO - mon-site | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+'
 
 - Cherchez le port d'exposition sur le noeud en affichant la liste des services
 - À partir de votre VM, naviguez l'adresse IP suivie du port
+- Supprimez le déploiement et le service
 
 ## Exercice 6 - Livre d'or
 
