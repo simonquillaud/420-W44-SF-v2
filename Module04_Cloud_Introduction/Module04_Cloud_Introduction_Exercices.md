@@ -207,7 +207,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 
 ### Tâche 2 - Création d'une application web à partir du portail
 
-- Créez une application web nommée "M04-Ex05-T01-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex05-T01" :
+- Créez une application web nommée "M04-Ex05-T01-Web-<matricule>" (Web App) dans le groupe de ressources "M04-Ex05-T01" :
   - Choisissez publier "Code"
   - Pile d'exécution, choisissez ".NET 6 (LTS)"
   - Systeme d'exploitation, choisissez "Linux"
