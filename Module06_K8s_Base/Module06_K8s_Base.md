@@ -48,6 +48,7 @@ Dans cet exercice, validez tout le temps que vous êtes bien dans le pod en list
   kubectl attach monbash-78c9b77fb9-wb27p -c monbash -i -t
   kubectl exec monbash-78c9b77fb9-wb27p -it -- sh
   ```
+
 </details>
 
 ## Exercice 3 - Nginx
@@ -74,6 +75,7 @@ Voici les principales touches que vous pouvez utiliser dans ce navigateur en mod
   kubectl run navigateur --image=browsh/browsh -it --rm
   kubectl delete deployment nginx
   ```
+
 </details>
 
 ### Exercice 3.2 - Nginx - Liaison d'un port
@@ -99,4 +101,5 @@ Voici les principales touches que vous pouvez utiliser dans ce navigateur en mod
   kubectl delete services whoami
   kubectl delete deployment whoami
   ```
+  
 </details>
