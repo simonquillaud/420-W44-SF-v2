@@ -34,7 +34,7 @@
   - L'ordre logique des images est indiqué par le tri des noms de fichier par ordre lexicographique ou les copies d'écran sont dans un fichier Word ou PDF
 - Répartition des tâches entre partenaires avec nombre d'heures par partenaire et total (5 points)
 - Ajoutez `pfleon@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
-- Répondre aux questions suivantes (15 points):
+- Répondre à la question suivante (15 points):
   - En quoi l'utilisation des outils DevOps permet une bonne compréhension des équipes et une diminution des risques de déploiement ?
 - Fichier `AUTHORS.md` : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
