@@ -8,6 +8,8 @@ Faites attention de bien garder une trace de vos ressources (fichiers YAML, comm
 
 ## Exercice 1 - Volume
 
+**Attention, sous Windows, vous devez référer le path à partir de `/run/desktop/mnt/host/c/PATH/TO/FILE`** (c:\PATH\TO\FILE)
+
 ### Exercice 1.1 - NGINX - On reprends le cours !
 
 - Créez un déploiement nommé "nginx" avec l'image `nginx:1.17.1` et les paramètres suivants :
