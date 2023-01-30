@@ -22,12 +22,13 @@
 
 ## Remise
 
-- Vidéo sur YouTube (non listée - autour de 10 mins maximum ! Pénalités si dépassé !) (40 points):
+- Vidéo sur YouTube (non listée - autour de 10 mins maximum ! Pénalités si dépassé !) (50 points):
   - Explication du fichier Dockerfile (10 points)
   - Explication des fichiers YAML de déploiement (10 points)
   - Explication de l'architecture de déploiement (10 points) (Lien entre les fichiers sources, les images Docker, les fichiers YAML de déploiement et les environnements de déploiement)
   - Démonstration du fonctionnement de l'application sur les trois environnements (10 points)
-- Fichiers YAML et Dockerfile (20 points) :
+  - Démonstration de la mise à l'échelle de l'application web sur au moins un environnement (10 points)
+- Fichiers YAML et Dockerfile (30 points)
 - Répartition des tâches entre partenaires avec nombre d'heures par partenaire et total (5 points)
 - Répondre à la question suivante (15 points):
   - En quoi l'utilisation de Docker et de Kubernetes peut aider les équipes de développements ?
