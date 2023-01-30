@@ -47,9 +47,13 @@ Pour modifier la configuration de la chaîne de connexion et écraser les valeur
 
 ![Modification de la chaîne de connexion](img/exemple_connectionString.png)
 
-## Étape 1 - Création d'un fichier Dockerfile 
+## Étape 1 - Création d'un fichier Dockerfile
 
 Vous devez créer une image Docker pour l'application Web (GC.WebReact). Vous devez publier l'image sur Docker Hub en public. L'adresse de l'image doit être dans le fichier `AUTHORS.md`.
+
+Pour vous remémorer comment containériser une application avec Docker, vous pouvez consulter la documentation suivante : [Tutorial: Containerize a .NET app](https://learn.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=linux).
+
+Si vous prenez l'image `mcr.microsoft.com/dotnet/sdk:6.0`, n'oubliez pas que vous pouvez installer des paquets avec la commande `apt-get install`.
 
 ## Étape 2 - Création des fichiers YAML de déploiement
 
