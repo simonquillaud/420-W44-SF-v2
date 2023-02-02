@@ -74,5 +74,9 @@ Chaque environnement doit :
   - unitaire : port 30000
   - acceptation : port 30001
   - production : port 30002
+  
+  ## Informations supplémentaires
+  
+  Pour forcer le port d'exposition du site web, vous pouvez utiliser la variable d'environnement `ASPNETCORE_URLS`. Voici un exemple de valeur pour exposer le site sur le port 5000 : `ASPNETCORE_URLS=http://+:5000`
 
 Tout partage de code, d'explication, de bouts de texte, etc. est considéré comme du plagiat. Pour plus de détails, consultez le site (et ses vidéos) [Sois intègre du Cégep de Sainte-Foy](http://csfoy.ca/soisintegre) ainsi que [l'article 6.1.12 de la PÉA](https://www.csfoy.ca/fileadmin/documents/notre_cegep/politiques_et_reglements/5.9_PolitiqueEvaluationApprentissages_2019.pdf)
