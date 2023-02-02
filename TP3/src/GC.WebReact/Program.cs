@@ -60,12 +60,20 @@ namespace GC.WebReact
                 app.UseHsts();
             }
 
-            using (var scope = app.Services.CreateScope())
+            try
             {
-                using (var context = scope.ServiceProvider.GetService<ApplicationDbContext>())
+                using (var scope = app.Services.CreateScope())
                 {
-                    context.Database.Migrate();
+                    using (var context = scope.ServiceProvider.GetService<ApplicationDbContext>())
+                    {
+                        context.Database.Migrate();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine(ex.Message);
+                throw;
             }
 
             app.UseHttpsRedirection();
