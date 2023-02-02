@@ -75,7 +75,7 @@ Chaque environnement doit :
   - acceptation : port 30001
   - production : port 30002
   
-  ## Informations supplémentaires
+## Informations supplémentaires
   
   Pour forcer le port d'exposition du site web, vous pouvez utiliser la variable d'environnement `ASPNETCORE_URLS`. Voici un exemple de valeur pour exposer le site sur le port 5000 : `ASPNETCORE_URLS=http://+:5000`
 
