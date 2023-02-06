@@ -27,18 +27,18 @@ namespace GC.WebReact
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             // PFL : https://github.com/dotnet/core/blob/main/release-notes/6.0/known-issues.md#spa-template-issues-with-individual-authentication-when-running-in-development
-            builder.Services.AddIdentityServer(options =>
-            {
-                string issuerUri = builder.Configuration.GetValue<string>("IdentityServer:IssuerUri");
-                if (!string.IsNullOrEmpty(issuerUri))
-                {
-                    options.IssuerUri = issuerUri;
-                }
-            })
-                .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
+            //builder.Services.AddIdentityServer(options =>
+            //{
+            //    string issuerUri = builder.Configuration.GetValue<string>("IdentityServer:IssuerUri");
+            //    if (!string.IsNullOrEmpty(issuerUri))
+            //    {
+            //        options.IssuerUri = issuerUri;
+            //    }
+            //})
+            //    .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
 
-            builder.Services.AddAuthentication()
-                .AddIdentityServerJwt();
+            //builder.Services.AddAuthentication()
+            //    .AddIdentityServerJwt();
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
@@ -75,14 +75,13 @@ namespace GC.WebReact
                 Console.Error.WriteLine(ex.Message);
                 throw;
             }
-
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseIdentityServer();
-            app.UseAuthorization();
+            //app.UseAuthentication();
+            //app.UseIdentityServer();
+            //app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
@@ -95,8 +94,8 @@ namespace GC.WebReact
             {
                 Predicate = healthCheck => !healthCheck.Tags.Contains("db")
             });
-            app.MapHealthChecks("/healthz/auth")
-    .RequireAuthorization();
+    //        app.MapHealthChecks("/healthz/auth")
+    //.RequireAuthorization();
             app.MapHealthChecks("/healthz/db");
 
             app.Run();
