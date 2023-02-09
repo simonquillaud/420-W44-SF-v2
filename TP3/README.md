@@ -63,7 +63,7 @@ Chaque environnement doit :
 
 - Être isolé dans un namespace Kubernetes
 - Être configuré à l'aide de configmaps et de secrets
-- Les fichiers YAML doivent être réutilisables d'un environnement à l'autre (Seuls les configmaps et secrets doivent être différents)
+- Les fichiers YAML doivent être réutilisables d'un environnement à l'autre (Seuls les configmaps et secrets doivent être différents). Si les configmaps ne sont pas utilisable pour certaines sections de vos fichiers YAML, n'oubliez pas que vous pouvez toujours lancer un script qui remplace des textes par d'autres comme vous le faisiez dans les releases avec Azure DevOps
 - Le conteneur contenant le serveur de bases de données doit avoir les tags suivants :
   - app : GC.WebReact
   - tier : database
