@@ -53,14 +53,14 @@ Pour créer votre premier cluster AKS, vous pouvez passer par le portail Azure.
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-name: azure-files-pvc-nginx
+  name: azure-files-pvc-nginx
 spec:
-accessModes:
-- ReadWriteMany
-resources:
+  accessModes:
+  - ReadWriteMany
+  resources:
     requests:
-    storage: 1Gi
-storageClassName: azurefile
+      storage: 1Gi
+  storageClassName: azurefile
 ```
 
 - Un compte de stockage Azure Files est automatiquement créé par AKS. Vous pouvez le voir dans le portail Azure dans le groupe de ressources `MC_M09_AKS_RG_M09_AKS_Cluster_canadacentral`
