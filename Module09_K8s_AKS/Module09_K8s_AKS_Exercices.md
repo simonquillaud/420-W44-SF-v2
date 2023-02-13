@@ -34,6 +34,7 @@ Pour créer votre premier cluster AKS, vous pouvez passer par le portail Azure.
 - Lancez un terminal
 - Utilisez l'utilitaire `az` pour vous connecter au cluster AKS
 - Récupérez les informations de connexion au cluster AKS : `az aks get-credentials --resource-group M09_AKS_RG --name M09_AKS_Cluster`
+  - Si vous avez une erreur de lecture du fichier de configuration, éditez le fichier `~/.kube/config` et validez que les nombres sont bien entre guillemets
 - Validez que le tout fonctionne en listant les noeuds du cluster ainsi que les pods en cours d'exécution
 
 ## Exercice 2 - Déploiement d'une application sur AKS
