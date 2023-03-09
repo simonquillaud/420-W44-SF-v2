@@ -37,7 +37,8 @@
 - Répartition des tâches entre partenaires avec nombre d'heures (5 points)
 - Ajoutez `pfleon@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
 - Répondre aux questions suivantes (20 points):
-  - En quoi l'utilisation des outils DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
+  - Quelles les technologies utilisées (Langages, versions de bibliothèques, versions de logiciels, services utilisées) ?
+  - En quoi l'utilisation des outils tels qu'Azure DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
 - Fichier `AUTHORS.md` : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
