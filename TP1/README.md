@@ -40,7 +40,7 @@
   - Quelles les technologies utilisées (Langages, versions de bibliothèques, versions de logiciels, services utilisées) ?
   - En quoi l'utilisation des outils tels qu'Azure DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
-- Écrivez un manuel d'utilisation de votre pipeline d'intégration continu (5 points)
+- Écrivez un manuel d'utilisation de votre pipeline d'intégration continue (5 points)
 - Fichier `AUTHORS.md` : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
   - lien du projet sur Azure DevOps
