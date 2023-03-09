@@ -36,10 +36,11 @@
 - Liste des commandes de compilation, ajout de projets / package nuget (10 points)
 - Répartition des tâches entre partenaires avec nombre d'heures (5 points)
 - Ajoutez `pfleon@csfoy.ca` comme utilisateur et administrateur avec une licence de type Basic (Le faire au niveau de l'organisation) (-10 points si je dois courir après vous)
-- Répondre aux questions suivantes (20 points):
+- Répondre aux questions suivantes (15 points):
   - Quelles les technologies utilisées (Langages, versions de bibliothèques, versions de logiciels, services utilisées) ?
   - En quoi l'utilisation des outils tels qu'Azure DevOps permet d'améliorer la traçabilité ? (Ne pas oublier de décrire ce qu'est la traçabilité)
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
+- Écrivez un manuel d'utilisation de votre pipeline d'intégration continu (5 points)
 - Fichier `AUTHORS.md` : (Jusqu'à -10 points pour non respect des consignes)
   - lien YouTube
   - lien du projet sur Azure DevOps
