@@ -23,10 +23,11 @@
 
 ## Remise
 
-- Vidéo sur YouTube (non listée - autour de 10 mins maximum ! Pénalités si dépassé !) (40 points):
-  - Explication des pipelines de CI (10 points)
+- Vidéo sur YouTube (non listée - autour de 10 mins maximum ! Pénalités si dépassé !) (30 points):
+  - Explication des pipelines de CI (5 points)
   - Explication et démonstration des pipelines de CD avec les variables et la modification des fichiers appsettings.json (20 points)
-  - Démonstration du fonctionnement de l'application sur les trois environnements (10 points)
+  - Démonstration du fonctionnement de l'application sur les trois environnements (5 points)
+- Manuels d'utilisation du pipeline de déploiement continu pour le développeur et les approbateurs (10 points)
 - Copies d'écran (pipelines) (10 points CI + 30 points CD) :
   - Liste des tâches
   - Paramètres de chaque tâche
