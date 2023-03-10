@@ -2,7 +2,7 @@
 
 ## Objectifs
 
-Dans cet exercice, vous allez développer des tâches liées à des branches d'un dépôt. Vous allez apprendre à créer les branches, à les fusionner et au besoin à régler les conflits. Pour réaliser cet exercice, vous allez prendre le code de votre TP2 du cours Installation de serveurs et de services (Mise en place d’un service Web).
+Dans cet exercice, vous allez développer des tâches liées à des branches d'un dépôt. Vous allez apprendre à créer les branches, à les fusionner et au besoin à régler les conflits.
 
 ## Étape 1 - Création d'un dépôt GitHub
 
