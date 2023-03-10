@@ -24,12 +24,13 @@ git config --global core.editor "code --wait"
 ### Installation Docker Desktop
 
 - Installez la dernière version de [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Activez le mode Kubernetes
 
 ## Installation Visual Studio Code
 
 - Au besoin, installer [Visual Studio Code](https://code.visualstudio.com/)
 - Installer les extensions suivantes :
-  - Contrôle de code source 
+  - Contrôle de code source
   - Docker
   - Kubernetes
 
