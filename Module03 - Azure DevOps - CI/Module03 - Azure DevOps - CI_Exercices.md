@@ -1,4 +1,4 @@
-# Exercice 4 –  Création d’un pipeline avec l’interface classique
+# Module 03 –  Création d’un pipeline avec l’interface classique
 
 ## Informations
 
