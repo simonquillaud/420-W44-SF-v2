@@ -22,8 +22,8 @@
 
 ## Remise
 
-- Vidéo sur YouTube (non listée - autour de 5 mins) (35 points):
-  - Branches et pull-requests (10 points)
+- Vidéo sur YouTube (non listée - 15 mins maximum) (35 points):
+  - Création d'un bug avec la création d'une branches et d'une pull-requests  pour le résoudre (10 points)
   - Démonstration des étapes à réaliser localement (5 points)
   - Explication et démonstration des pipelines (15 points)
   - Démonstration du fonctionnement des artefacts  (5 points)
