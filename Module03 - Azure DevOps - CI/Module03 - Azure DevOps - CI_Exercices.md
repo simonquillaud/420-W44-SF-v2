@@ -96,7 +96,7 @@ Le pipeline doit créer les artéfacts nécessaires à la publication d’eShopO
 
 ### Étapes
 
-- Créez le pipeline classique « eShopOnWeb_CI – YAML » qui s’appuie sur les sources de votre dépôt git :
+- Créez le pipeline « eShopOnWeb_CI – YAML » qui s’appuie sur les sources de votre dépôt git :
   - Choisissez le modèle « Azure Repos Git - YAML »
   - Sélectionnez votre dépôt
   - Choisissez le modèle « ASP.Net Core  (.NET Framework)
