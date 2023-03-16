@@ -119,44 +119,47 @@ Le pipeline doit créer les artéfacts nécessaires à la publication d’eShopO
     <summary>Solultion YAML</summary>
 
 ```yaml
-Solution YAML
 trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2022' 
 
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  projectsToTest: ''
 
 steps:
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'restore'
-    projects: '$(solution)'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: '$(solution)'
-    arguments: '--configuration $(BuildConfiguration) /p:Platform="$(buildPlatform)"'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: '**/*[Tt]ests/*.csproj'
-    arguments: '--configuration $(BuildConfiguration) /p:Platform="$(buildPlatform)" --collect "Code coverage"'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'publish'
-    publishWebProjects: true
-    arguments: '--configuration $(buildConfiguration) /p:Platform="$(buildPlatform)"  --output "$(Build.ArtifactStagingDirectory)"'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'Web'
-    publishLocation: 'Container'
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore'
+    inputs:
+      command: 'restore'
+      projects: '$(solution)'
+  - task: DotNetCoreCLI@2
+    displayName: 'Build'
+    inputs:
+      command: 'build'
+      projects: '$(solution)'
+      arguments: '--configuration $(BuildConfiguration) /p:Platform="$(BuildPlatform)"'
+  - task: DotNetCoreCLI@2
+    displayName: 'Tests'
+    inputs:
+      command: 'test'
+      projects: '**/*[Tt]ests/*.csproj'
+      arguments: '--configuration $(BuildConfiguration) /p:Platform="$(BuildPlatform)" --collect "Code coverage"'
+  - task: DotNetCoreCLI@2
+    displayName: 'Publication'
+    inputs:
+      command: 'publish'
+      publishWebProjects: true
+      arguments: '--configuration $(BuildConfiguration) /p:Platform="$(BuildPlatform)" --output "$(Build.ArtifactStagingDirectory)"'
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publication Azure'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'Web'
+      publishLocation: 'Container'
 ```
 
 </details>
