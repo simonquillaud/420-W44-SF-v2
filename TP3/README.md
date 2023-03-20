@@ -67,6 +67,7 @@ Chaque environnement doit :
 - Le conteneur contenant le serveur de bases de données doit avoir les tags suivants :
   - app : GC.WebReact
   - tier : database
+- Le conteneur contenant le serveur de bases de données doit être limité en ressources (CPU + RAM) sinon votre ordinateur va souffrir
 - Le conteneur contenant l'application Web doit avoir les tags suivants :
   - app : GC.WebReact
   - tier : web
