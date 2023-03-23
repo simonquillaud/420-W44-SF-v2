@@ -2,13 +2,13 @@
 
 ## Informations
 
-- Remise du travail: 30 novembre 2022, 23:59
+- Remise du travail: 29 mars 2023, 23:59
 - Ce travail est réalisé en équipe de 2 personnes et seuls les membres de cette équipe y contribuent
 - Toutes les réponses fournies doivent être originales (produites par l’étudiant ou un membre de l’équipe)
 - Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
 - L’emprunt ou la copie de code ou de portions de code est interdite
 - Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées
-- Durée : 2 x 3 heures + travail à la maison
+- Durée : 3 x 3 heures + travail à la maison
 - Plate forme : Azure DevOps, Visual Studio Code et dotnet/react
 - Pas d'utilisation de Visual Studio (vous êtes des DevOps et l'entreprise ne paie pas de licence pour cela) : vous devez tout faire ne ligne de commande
 - Le nouveau projet Web à créer doit avoir les références vers les projets nécessaires à sa création pour la gestion de clients (références de projets)
@@ -42,10 +42,10 @@
   - Quels types d'actions peut-on et devrait-on trouver dans un flux de travail d'intégration continue ?
 - Écrivez un manuel d'utilisation de votre pipeline d'intégration continue (5 points)
 - Fichier `AUTHORS.md` : (Jusqu'à -10 points pour non respect des consignes)
-  - lien YouTube
-  - lien du projet sur Azure DevOps
+  - Lien YouTube
+  - Lien du projet sur Azure DevOps
   - Vos informations (prénom / nom / matricule)
-  - le fichier doit être remis dans l'archive zip sur Léa
+  - Le fichier doit être remis dans l'archive zip sur Léa
 
 En résumé, ce qui est noté est ce qui est dans l'archive zip sur Léa à l'exception de la vidéo sur YouTube dont je dois trouver le lien dans le fichier `AUTHORS.md`.
 
