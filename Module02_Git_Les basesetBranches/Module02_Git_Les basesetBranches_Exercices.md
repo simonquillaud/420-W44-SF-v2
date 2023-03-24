@@ -52,6 +52,7 @@ FichierIgnore.md
   - Essayez de déduire ce que fait chacune de ces commandes
   - À l'aide de ces commandes, utilisez simplement les commandes les plus pertinentes (pas besoin de tout copier-coller):
     - Ajout du dépôt distant (`git remote add origin <url>`)
+    - Paramétrer la branche upstream pour les push (`git push --set-upstream origin master`)
     - Envoi des modifications sur le dépôt distant (`git push`)
 - Validez de nouveau les changements sur GitHub
 
