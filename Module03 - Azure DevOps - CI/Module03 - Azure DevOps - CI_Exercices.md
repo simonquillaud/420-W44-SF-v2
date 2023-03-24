@@ -55,7 +55,7 @@ cd <cheminDepot>
 dotnet restore eShopOnWeb.sln 
 dotnet build --configuration Release eShopOnWeb.sln
 dotnet test --configuration Release eShopOnWeb.sln
-dotnet publish src/Web --configuration Release --output bin/publishedArtifac
+dotnet publish src/Web --configuration Release --output bin/publishedArtifact
 cd bin/publishedArtifact ; dotnet Web.dll
 ```
 
