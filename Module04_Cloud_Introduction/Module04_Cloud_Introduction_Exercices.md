@@ -40,7 +40,7 @@
   - Cliquez sur `Créer une ressource` (en haut à gauche)
   - Sélectionnez `Storage account` (Compte de stockage)
   - Choisissez votre abonnement, créez le groupe de ressources `rg-General`
-  - Donnez le nom `sa-general` pour votre compte de stockage
+  - Donnez le nom `sageneral` pour votre compte de stockage
   - Au niveau de la région, choisissez `Canada east`
   - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
   - Ajoutez les étiquettes (tags) suivantes :
@@ -59,8 +59,8 @@
   - Si vous n'avez pas de Cloud Shell, cliquez sur `Créer un Cloud Shell`
     - Cliquez sur "Afficher les paramètres avancés". Autrement, un nouveau compte de stockage sera créé. Sélectionnez&nbsp;:
       - Votre bonne région
-      - Votre groupe de ressources (`rg-General`)
-      - Votre compte de stockage (`sa-general`)
+      - Votre groupe de ressources (`rg-general`)
+      - Votre compte de stockage (`sageneral`)
       - Créez un partage de fichier (le nom a peu d'importance)
   - Une fois le Cloud Shell ouvert, exécutez la commande `az account show`
   - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
