@@ -39,8 +39,8 @@
   - Ouvrez le portail Azure
   - Cliquez sur `Créer une ressource` (en haut à gauche)
   - Sélectionnez `Storage account` (Compte de stockage)
-  - Choisissez votre abonnement, créez le groupe de ressources `rg-general`
-  - Donnez le nom `sageneraldfccsfoy<matricule>` pour votre compte de stockage
+  - Choisissez votre abonnement, créez le groupe de ressources `rg-test`
+  - Donnez le nom `satestdfccsfoy<matricule>` pour votre compte de stockage
   - Au niveau de la région, choisissez `Canada east`
   - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
   - Ajoutez les étiquettes (tags) suivantes :
@@ -95,7 +95,7 @@
 Supprimez les ressources créées dans l'exercice 2 / tâche 1 :
 
 - À partir du portail, allez dans le groupe de ressources que vous aviez créé
-- Supprimez le groupe de ressources
+- Supprimez le groupe de ressources `rg-test`
 - Validez que le groupe de ressources a bien été supprimé
 
 ### Tâche 2 - Suppression des ressources par le Azure CLI
