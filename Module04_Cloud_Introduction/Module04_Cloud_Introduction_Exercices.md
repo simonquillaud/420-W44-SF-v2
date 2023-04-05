@@ -39,7 +39,7 @@
   - Ouvrez le portail Azure
   - Cliquez sur `Créer une ressource` (en haut à gauche)
   - Sélectionnez `Storage account` (Compte de stockage)
-  - Choisissez votre abonnement, un groupe de ressources et le nom "RG-General" pour votre compte de stockage
+  - Choisissez votre abonnement, un groupe de ressources et le nom "m04exercice2t01" pour votre compte de stockage
   - Au niveau de la région, choisissez `Canada east`
   - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
   - Ajoutez les étiquettes (tags) suivantes :
