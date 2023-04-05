@@ -61,7 +61,7 @@
       - Votre bonne région
       - Votre groupe de ressources (`rg-general`)
       - Votre compte de stockage (`sageneraldfccsfoy<matricule>`)
-      - Créez un partage de fichier (le nom a peu d'importance)
+      - Créez un partage de fichier (`partagegeneral`)
   - Une fois le Cloud Shell ouvert, exécutez la commande `az account show`
   - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
 - Allez dans le dossier `~/clouddrive`
