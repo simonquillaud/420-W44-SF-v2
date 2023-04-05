@@ -39,8 +39,8 @@
   - Ouvrez le portail Azure
   - Cliquez sur `Créer une ressource` (en haut à gauche)
   - Sélectionnez `Storage account` (Compte de stockage)
-  - Choisissez votre abonnement, créez le groupe de ressources `rg-test`
-  - Donnez le nom `satestdfccsfoy<matricule>` pour votre compte de stockage
+  - Choisissez votre abonnement, créez le groupe de ressources `test-rg`
+  - Donnez le nom `testdfccsfoy<matricule>sa` pour votre compte de stockage
   - Au niveau de la région, choisissez `Canada east`
   - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
   - Ajoutez les étiquettes (tags) suivantes :
@@ -59,8 +59,8 @@
   - Si vous n'avez pas de Cloud Shell, cliquez sur `Créer un Cloud Shell`
     - Cliquez sur "Afficher les paramètres avancés". Autrement, un nouveau compte de stockage sera créé. Sélectionnez&nbsp;:
       - Votre bonne région
-      - Votre groupe de ressources (`rg-general`)
-      - Votre compte de stockage (`sageneraldfccsfoy<matricule>`)
+      - Votre groupe de ressources (`general-rg`)
+      - Votre compte de stockage (`generaldfccsfoy<matricule>sa`)
       - Créez un partage de fichier (`partagegeneral`)
   - Une fois le Cloud Shell ouvert, exécutez la commande `az account show`
   - Notez le nom de votre abonnement sur votre cahier de laboratoire et valider que c'est le même que celui de la tâche précédente
@@ -85,7 +85,7 @@
     - Exécutez la commande `az group create --name "M04-Ex02-T03" --location "canadaeast" --tags "cohorte=<NumeroCohorte(ex:4394)>" "session=<Session(ex:H23)>" "cours=420-W44-SF" "module=M04"`
     - Validez le résultat de la commande avec la commande `az group list`
   - Créez un nouveau compte de stockage :
-    - Exécutez la commande `az storage account create --name "m04exercice2t03" --location "canadaeast" --resource-group "M04-Ex02-T03" --sku "Standard_LRS"`
+    - Exécutez la commande `az storage account create --name "m04exercice2t03<matricule>sa" --location "canadaeast" --resource-group "M04-Ex02-T03" --sku "Standard_LRS"`
     - Validez le résultat de la commande avec la commande `az storage account list`
 
 ## Exercice 3 - Nettoyage des ressources
@@ -95,7 +95,7 @@
 Supprimez les ressources créées dans l'exercice 2 / tâche 1 :
 
 - À partir du portail, allez dans le groupe de ressources que vous aviez créé
-- Supprimez le groupe de ressources `rg-test`
+- Supprimez le groupe de ressources `test-rg`
 - Validez que le groupe de ressources a bien été supprimé
 
 ### Tâche 2 - Suppression des ressources par le Azure CLI
