@@ -43,7 +43,7 @@
   - Au niveau de la région, choisissez `Canada east`
   - Pour la redondance de stockage, choisissez `Stockage localement redondant` (LRS)
   - Ajoutez les étiquettes (tags) suivantes :
-    - `cohorte` : `4393`
+    - `cohorte` : `4394`
     - `session` : `A22`
     - `cours` : `420-W44-SF`
     - `module` : `M04`
@@ -81,7 +81,7 @@
   - Valider que c'est le même que celui de la tâche précédente
 - Créez un nouveau compte de stockage :
   - Créez un nouveau groupe de ressources :
-    - Exécutez la commande `az group create --name "M04-Ex02-T03" --location "canadaeast" --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"`
+    - Exécutez la commande `az group create --name "M04-Ex02-T03" --location "canadaeast" --tags "cohorte=4394" "session=A22" "cours=420-W44-SF" "module=M04"`
     - Validez le résultat de la commande avec la commande `az group list`
   - Créez un nouveau compte de stockage :
     - Exécutez la commande `az storage account create --name "m04exercice2t03" --location "canadaeast" --resource-group "M04-Ex02-T03" --sku "Standard_LRS"`
@@ -128,7 +128,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Dans l'onglet "Mis en réseau", vérifiez que vous avez bien une adresse IP publique qui sera créée
 - Dans l'onglet "Administration", cochez l'option "Activer l'arrêt automatique". Laissez l'heure par défaut et modifiez le fuseau horaire à "(UTC-05:00) Eastern Time (US & Canada)"
 - Ajoutez les étiquettes (tags) suivantes :
-  - `cohorte` : `4393`
+  - `cohorte` : `4394`
   - `session` : `A22`
   - `cours` : `420-W44-SF`
   - `module` : `M04`
@@ -155,7 +155,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
 - Dans le résultat, recherchez la version 18.04-LTS et notez le nom de la version
 - Listez les tailles de VM disponibles. Utilisez la commande `az vm list-sizes --location canadaeast` pour lister les tailles de VM disponibles
 - Comme vous le voyez, il y a beaucoup de taille de VM. Pour cette tâche, nous allons utiliser la taille "Standard_B1ls" qui est la plus petite taille de VM Linux
-- Créez la VM avec la commande `az vm create --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --image "UbuntuLTS" --size "Standard_B1ls" --admin-username "adminuser" --admin-password "Password123.." --public-ip-sku Basic --location "canadaeast" --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"` (Si vous utilisez un autre groupe de ressources, n'oubliez pas de le changer dans la commande)
+- Créez la VM avec la commande `az vm create --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --image "UbuntuLTS" --size "Standard_B1ls" --admin-username "adminuser" --admin-password "Password123.." --public-ip-sku Basic --location "canadaeast" --tags "cohorte=4394" "session=A22" "cours=420-W44-SF" "module=M04"` (Si vous utilisez un autre groupe de ressources, n'oubliez pas de le changer dans la commande)
 - Listez les machines virtuelles pour vérifier que votre VM a bien été créée avec la commande `az vm list`
 - Installez Ngnix grâce à la commande suivante : `az vm run-command invoke --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --command-id RunShellScript --scripts "sudo apt -y update && sudo apt -y upgrade && sudo apt -y install nginx"`
 - Ouvrez le port 80 avec la commande suivante : `az vm open-port --resource-group "M04-Ex04-T02" --name "M04-Ex04-T02-VM" --port 80` si cela ne fonctionne pas allez dans le portail Azure et validez la configuration
@@ -169,7 +169,7 @@ Le but de cet exercice est de créer une VM Linux avec le port 80 ouvert. La pre
     <summary>Triche #1 - Création d'un groupe de ressources Exercice 4 / Tâche 2 :</summary>
 
 ```bash
-az group create --name M04-Ex04-T02 --location canadaeast --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"
+az group create --name M04-Ex04-T02 --location canadaeast --tags "cohorte=4394" "session=A22" "cours=420-W44-SF" "module=M04"
 ```
 
 </details>
@@ -215,7 +215,7 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
   - Modifier plan de tarification, choisissez "Gratuit F1" (Dans Dev/Test)
   - Dans la section "Application Insights", choisissez "Désactiver" (Surveillance)
   - Dans la section balises, ajoutez les balises suivantes :
-    - cohorte=4393
+    - cohorte=4394
     - session=A22
     - cours=420-W44-SF
     - module=M04
@@ -231,14 +231,14 @@ Nous allons utiliser un niveau de calcul de type sans serveur (serverless) qui e
 
 ### Tâche 1 - Création d'une instance de base de données à partir de la ligne de commande
 
-- Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé "M04-Ex05-T02", utilisez la ligne de commande `az group create --name M04-Ex06-T01 --location canadacentral --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"`
+- Créez un nouveau groupe de ressources. Utilisez la commande précédente pour créer un nouveau groupe de ressources nommé "M04-Ex05-T02", utilisez la ligne de commande `az group create --name M04-Ex06-T01 --location canadacentral --tags "cohorte=4394" "session=A22" "cours=420-W44-SF" "module=M04"`
 - Utilisez la commande `az sql server create --resource-group "M04-Ex06-T01" --name "M04-Ex06-T01-SQL" --location "canadacentral" --admin-user "adminuser" --admin-password "Password123.." --enable-public-network true` pour créer un serveur de bases de données.
 - Créez une base de données en utilisant la commande `az sql db create     --resource-group "M04-Ex06-T01" --server "M04-Ex06-T01-SQL-<matricule>" --name "M04-Ex06-T01-DB" --edition "GeneralPurpose" --compute-model "Serverless" --family "Gen5" --capacity 1 --max-size 5GB`
 
 ### Tâche 2 - Création d'une application web à partir de la ligne de commande
 
-- Créez un plan de service nommé "M04-Ex06-T02-AppServicePlan" dans le groupe de ressources "M04-Ex06-T02" à partir de la ligne de commande suivante : `az appservice plan create --name "M04-Ex06-T02-AppServicePlan" --resource-group "M04-Ex06-T01" --location "canadacentral" --sku "F1" --is-linux --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"`
-- Créez une application web nommée "M04-Ex06-T02-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex06-T01" et le plan de service nommé "M04-Ex06-T02-AppServicePlan" à partir de la ligne de commande suivante : `az webapp create --resource-group "M04-Ex06-T01" --plan "M04-Ex06-T02-AppServicePlan" --name "M04-Ex06-T02-Web-<matricule>" --runtime "DOTNETCORE:6.0" --tags "cohorte=4393" "session=A22" "cours=420-W44-SF" "module=M04"`
+- Créez un plan de service nommé "M04-Ex06-T02-AppServicePlan" dans le groupe de ressources "M04-Ex06-T02" à partir de la ligne de commande suivante : `az appservice plan create --name "M04-Ex06-T02-AppServicePlan" --resource-group "M04-Ex06-T01" --location "canadacentral" --sku "F1" --is-linux --tags "cohorte=4394" "session=A22" "cours=420-W44-SF" "module=M04"`
+- Créez une application web nommée "M04-Ex06-T02-Web-<matricule>" (App web) dans le groupe de ressources "M04-Ex06-T01" et le plan de service nommé "M04-Ex06-T02-AppServicePlan" à partir de la ligne de commande suivante : `az webapp create --resource-group "M04-Ex06-T01" --plan "M04-Ex06-T02-AppServicePlan" --name "M04-Ex06-T02-Web-<matricule>" --runtime "DOTNETCORE:6.0" --tags "cohorte=4394" "session=A22" "cours=420-W44-SF" "module=M04"`
 - Notez la valeur de la clef "defaultHostName" dans la sortie de la commande précédente. Vous aurez besoin de cette valeur pour essayer votre application web.
 - Testez votre application web
 - Construisez votre chaine de connexion pour la base de données à partir de la chaine suivante :
